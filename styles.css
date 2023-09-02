@@ -155,3 +155,6 @@ body {
 .user-digit {
     color: rgb(29, 106, 229);
 }
+.user-digit::selection {
+    background: transparent;
+}
