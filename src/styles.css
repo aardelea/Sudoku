@@ -161,3 +161,10 @@ body {
 .user-digit::selection {
     background: transparent;
 }
+
+@keyframes activeAnimation {
+    100% { background-color: rgb(232, 124, 241); }
+}
+.reset-button-active {
+    animation: activeAnimation 0.1s;
+  }

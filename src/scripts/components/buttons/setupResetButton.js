@@ -9,10 +9,10 @@ export function setupResetButton() {
                 cell.textContent = '';
             }
         });
-        resetButton.classList.add('active');
+        resetButton.classList.add('reset-button-active');
 
-        setTimeout(() => {
-            resetButton.classList.remove('active');
-        }, 100);
+        resetButton.addEventListener('animationend', function() {
+            resetButton.classList.remove('reset-button-active');
+        }, {once: true});
     });
 }
