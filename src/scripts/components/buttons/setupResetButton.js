@@ -4,6 +4,7 @@ export function setupResetButton() {
     resetButton.addEventListener('click', () => {
         const cells = document.querySelectorAll('.cell');
         cells.forEach(cell => {
+            cell.classList.remove('conflict-highlighted');
             if (!cell.classList.contains('fixed')) {
                 cell.textContent = '';
             }

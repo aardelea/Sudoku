@@ -72,6 +72,9 @@ body {
 .cell:focus {
     outline: none;
 }
+.cell.conflict-highlighted {
+    background-color: rgb(217,156,156);
+}
 
 
 .keypad {

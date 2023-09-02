@@ -1,4 +1,5 @@
 import { sudokuElements } from '/src/scripts/eventHandlers/eventManager.js';
+import { highlightConflicts } from '/src/scripts/eventHandlers/keys/highlightConflicts.js';
 
 
 export function setupKeydownEvents() {
@@ -8,6 +9,7 @@ export function setupKeydownEvents() {
                 if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
                     cell.textContent = e.key;
                     cell.classList.add('user-digit');
+                    highlightConflicts(e.key, cell);
                 }
             });
             e.preventDefault();
