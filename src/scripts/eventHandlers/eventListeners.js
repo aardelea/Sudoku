@@ -1,5 +1,6 @@
 import { solverState } from '../components/buttons/manageButtons.js';
 import { setupMouseDownEvents } from './setupMouseDownEvents.js';
+import { setupMouseOverEvents } from './setupMouseOverEvents.js';
 
 
 const sudokuGrid = document.querySelector('.sudoku-grid');
@@ -27,17 +28,6 @@ export function setupEventListeners() {
 export function deselectAllCells() {
     cells.forEach(cell => {
         cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
-    });
-}
-
-
-function setupMouseOverEvents() {
-    cells.forEach(cell => {
-        cell.addEventListener('mouseover', () => {
-            if (mouseState.isMouseDown) {
-                cell.classList.add('clicked');
-            }
-        });
     });
 }
 
