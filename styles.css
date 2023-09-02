@@ -9,9 +9,7 @@ body {
 
 
 .grid-container {
-    display: grid;
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: auto auto;
+    display: flex;
     align-items: center;
     gap: 20px;
 }
@@ -19,19 +17,14 @@ body {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 1px;
-    background-color: rgb(3,3,3);
+    background-color: rgb(3, 3, 3);
     border-width: 4px;
     border-style: solid;
-    border-color: rgb(3,3,3);
+    border-color: rgb(3, 3, 3);
     width: 608px;
     height: 608px;
     position: relative;
     flex: 1;
-}
-.keypad-container {
-    grid-row: 5 / span 1;
-    grid-column: 2 / span 1;
-    margin-left: 20px;
 }
 
 
@@ -46,8 +39,9 @@ body {
     border-width: 1px;
     border-color: rgb(3,3,3);
     box-sizing: border-box;
-    user-select: none; /* Prevent text selection within the cell */
-    cursor: pointer; /* Change cursor to a hand */
+    user-select: none;
+    cursor: pointer;
+    caret-color: transparent;
 }
 .cell[data-row="2"], .cell[data-row="5"], .cell[data-row="8"] {
     border-bottom-width: 4px;
@@ -75,6 +69,9 @@ body {
 .cell.highlighted-row {
     background-color: rgb(226,235,243);
 }
+.cell:focus {
+    outline: none;
+}
 
 
 .keypad {
@@ -87,18 +84,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .keypad-button {
     width: 69px;
     height: 69px;
-    padding: 0;
-    margin-right: 10px;
+    margin-right: 5px;
     cursor: pointer;
     font-size: 2rem;
     font-weight: 500;
     font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    line-height: 3rem;
     color: rgb(255, 255, 255);
     border: none;
     background-color: rgb(106,27,154);
@@ -107,7 +102,7 @@ body {
     justify-content: center;
 }
 .keypad-button.keypad-0 {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .keypad-button.keypad-delete {
     padding: 15px 75px;
@@ -118,4 +113,45 @@ body {
 }
 .keypad-button:hover {
     background-color: rgb(232, 124, 241);
+}
+.keypad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+}
+
+
+.mode-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.mode-button {
+    width: 100px;
+    height: 40px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(106,27,154);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.mode-button.active {
+    background-color: rgb(232, 124, 241);
+}
+.mode-keypad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-digit {
+    color: rgb(29, 106, 229);
 }
