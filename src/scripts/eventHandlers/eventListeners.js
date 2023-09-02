@@ -1,4 +1,5 @@
-import { activeMode } from '../components/buttons.js';
+import { solverState } from '../components/buttons/manageButtons.js';
+
 
 const sudokuGrid = document.querySelector('.sudoku-grid');
 let isMouseDown = false;
@@ -110,7 +111,7 @@ function setupDoubleClickEvents() {
 function setupKeydownEvents() {
     document.addEventListener('keydown', (e) => {
         const key = e.key;
-        if (activeMode === "Solver" && /[1-9]/.test(key)) {
+        if (solverState.activeMode === "Solver" && /[1-9]/.test(key)) {
             cells.forEach(cell => {
                 if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
                     cell.textContent = key;
@@ -136,7 +137,7 @@ function setupDeselection() {
 
 function setupEditMode() {
     sudokuGrid.addEventListener('click', (event) => {
-        if (activeMode === "Solver") {
+        if (solverState.activeMode === "Solver") {
             const clickedCell = event.target;
             if (!clickedCell.classList.contains('fixed')) {
                 clickedCell.contentEditable = true;
