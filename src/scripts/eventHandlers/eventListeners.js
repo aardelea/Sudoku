@@ -1,8 +1,11 @@
 import { solverState } from '../components/buttons/manageButtons.js';
+import { setupMouseDownEvents } from './setupMouseDownEvents.js';
 
 
 const sudokuGrid = document.querySelector('.sudoku-grid');
-let isMouseDown = false;
+export const mouseState = {
+    isMouseDown: false
+};
 export let cells = sudokuGrid.querySelectorAll('.cell');;
 
 export function setupEventListeners() {
@@ -21,23 +24,9 @@ export function setupEventListeners() {
 }
 
 
-function deselectAllCells() {
+export function deselectAllCells() {
     cells.forEach(cell => {
         cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
-    });
-}
-
-
-function setupMouseDownEvents() {
-    cells.forEach(cell => {
-        cell.addEventListener('mousedown', () => {
-            if (!isMouseDown) {
-                deselectAllCells();
-                isMouseDown = true;
-            }
-            cell.classList.add('clicked');
-            cell.focus();
-        });
     });
 }
 
@@ -45,7 +34,7 @@ function setupMouseDownEvents() {
 function setupMouseOverEvents() {
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
-            if (isMouseDown) {
+            if (mouseState.isMouseDown) {
                 cell.classList.add('clicked');
             }
         });
@@ -56,7 +45,7 @@ function setupMouseOverEvents() {
 function setupMouseUpEvents() {
     cells.forEach(cell => {
         cell.addEventListener('mouseup', () => {
-            isMouseDown = false; 
+            mouseState.isMouseDown = false; 
         });
     });
 }
