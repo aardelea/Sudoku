@@ -1,5 +1,5 @@
-import { solverState } from './manageButtons.js';
-import { setterButton } from './setupSetterButton.js';
+import { solverState } from '/src/scripts/components/buttons/manageButtons.js';
+import { setterButton } from '/src/scripts/components/buttons/setupSetterButton.js';
 
 
 export let solverButton = document.getElementById('solver-button');

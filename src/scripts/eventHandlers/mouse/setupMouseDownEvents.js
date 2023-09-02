@@ -1,4 +1,5 @@
-import { cells, mouseState, deselectAllCells } from './eventListeners.js';
+import { cells, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
+import { deselectAllCells } from '/src/scripts/eventHandlers/utils.js';
 
 
 export function setupMouseDownEvents() {

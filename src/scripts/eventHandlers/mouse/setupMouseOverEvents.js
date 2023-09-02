@@ -1,4 +1,4 @@
-import { cells, mouseState } from './eventListeners.js';
+import { cells, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
 
 
 export function setupMouseOverEvents() {
