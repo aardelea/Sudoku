@@ -7,6 +7,14 @@ body {
     background-color: rgb(255,255,255);
 }
 
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 20px;
+}
 .sudoku-grid {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -17,8 +25,15 @@ body {
     border-color: rgb(3,3,3);
     width: 608px;
     height: 608px;
-    position: relative
+    position: relative;
+    flex: 1;
 }
+.keypad-container {
+    grid-row: 5 / span 1;
+    grid-column: 2 / span 1;
+    margin-left: 20px;
+}
+
 
 .cell {
     display: flex;
@@ -34,7 +49,6 @@ body {
     user-select: none; /* Prevent text selection within the cell */
     cursor: pointer; /* Change cursor to a hand */
 }
-
 .cell[data-row="2"], .cell[data-row="5"], .cell[data-row="8"] {
     border-bottom-width: 4px;
 }
@@ -50,16 +64,58 @@ body {
     border-left-style: solid;           
 }
 
-.cell.clicked {
-    box-shadow: inset 0 0 0 8px rgb(76,164,255); /* Add an inset shadow for highlighting */
-}
 
-/* Highlight the entire column */
+
+.cell.clicked { 
+    box-shadow: inset 0 0 0 8px rgb(76,164,255);
+}
 .cell.highlighted-col {
     background-color: rgb(226,235,243);
 }
-
-/* Highlight the entire row */
 .cell.highlighted-row {
     background-color: rgb(226,235,243);
+}
+
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+.keypad-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.keypad-button {
+    width: 69px;
+    height: 69px;
+    padding: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    line-height: 3rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(106,27,154);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.keypad-button.keypad-0 {
+    margin-right: 10px;
+}
+.keypad-button.keypad-delete {
+    padding: 15px 75px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.keypad-button:hover {
+    background-color: rgb(232, 124, 241);
 }
