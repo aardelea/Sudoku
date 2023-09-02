@@ -1,11 +1,11 @@
-import { activeMode } from './buttons.js';
+import { activeMode } from '../components/buttons.js';
 
+const sudokuGrid = document.querySelector('.sudoku-grid');
 let isMouseDown = false;
-let cells = null;
+export let cells = sudokuGrid.querySelectorAll('.cell');;
 
 export function setupEventListeners() {
 
-    const sudokuGrid = document.querySelector('.sudoku-grid');
     cells = sudokuGrid.querySelectorAll('.cell');
 
     setupMouseDownEvents();
@@ -15,7 +15,7 @@ export function setupEventListeners() {
     setupDoubleClickEvents();
     setupKeydownEvents();
     setupDeselection();
-    setupEditMode(sudokuGrid)
+    setupEditMode()
 
 }
 
@@ -134,7 +134,7 @@ function setupDeselection() {
 }
 
 
-function setupEditMode(sudokuGrid) {
+function setupEditMode() {
     sudokuGrid.addEventListener('click', (event) => {
         if (activeMode === "Solver") {
             const clickedCell = event.target;
