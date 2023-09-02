@@ -1,15 +1,15 @@
-import { cells } from '/src/scripts/eventHandlers/eventManager.js';
+import { sudokuElements } from '/src/scripts/eventHandlers/eventManager.js';
 
 
 export function setupClickEvents() {
-    cells.forEach(cell => {
+    sudokuElements.cells.forEach(cell => {
         cell.addEventListener('click', () => {
             const row = cell.dataset.row;
             const col = cell.dataset.col;
             const boxRow = Math.floor(row / 3);
             const boxCol = Math.floor(col / 3);
 
-            cells.forEach(otherCell => {
+            sudokuElements.cells.forEach(otherCell => {
                 const otherRow = otherCell.dataset.row;
                 const otherCol = otherCell.dataset.col;
                 const otherBoxRow = Math.floor(otherRow / 3);

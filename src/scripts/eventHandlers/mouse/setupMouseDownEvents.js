@@ -1,9 +1,9 @@
-import { cells, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
+import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
 import { deselectAllCells } from '/src/scripts/eventHandlers/utils.js';
 
 
 export function setupMouseDownEvents() {
-  cells.forEach(cell => {
+  sudokuElements.cells.forEach(cell => {
     cell.addEventListener('mousedown', () => {
       if (!mouseState.isMouseDown) {
         deselectAllCells();

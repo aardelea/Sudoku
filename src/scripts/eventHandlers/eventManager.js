@@ -8,15 +8,17 @@ import { setupDeselection } from '/src/scripts/eventHandlers/clicks/setupDeselec
 import { setupKeydownEvents } from '/src/scripts/eventHandlers/keys/setupKeydownEvents.js';
 
 
-export const sudokuGrid = document.querySelector('.sudoku-grid');
 export const mouseState = {
     isMouseDown: false
 };
-export let cells = sudokuGrid.querySelectorAll('.cell');
+export const sudokuElements = {
+    sudokuGrid: document.querySelector('.sudoku-grid'),
+    cells: document.querySelector('.sudoku-grid').querySelectorAll('.cell'),
+}
 
 export function eventManager() {
 
-    cells = sudokuGrid.querySelectorAll('.cell');
+    sudokuElements.cells = sudokuElements.sudokuGrid.querySelectorAll('.cell');
 
     setupMouseDownEvents();
     setupMouseOverEvents();

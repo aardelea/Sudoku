@@ -1,8 +1,8 @@
-import { cells, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
+import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
 
 
 export function setupMouseUpEvents() {
-  cells.forEach(cell => {
+  sudokuElements.cells.forEach(cell => {
       cell.addEventListener('mouseup', () => {
           mouseState.isMouseDown = false; 
       });
