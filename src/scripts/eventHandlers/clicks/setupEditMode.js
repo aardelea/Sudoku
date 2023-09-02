@@ -7,7 +7,6 @@ export function setupEditMode() {
         if (solverState.activeMode === "Solver") {
             const clickedCell = event.target;
             if (!clickedCell.classList.contains('fixed')) {
-                clickedCell.contentEditable = true;
                 clickedCell.focus();
             }
         }
