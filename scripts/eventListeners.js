@@ -2,7 +2,6 @@ import { activeMode } from './buttons.js';
 
 let isMouseDown = false;
 let cells = null;
-let selectedCells = [];
 
 export function setupEventListeners() {
 
@@ -22,7 +21,6 @@ export function setupEventListeners() {
 
 
 function deselectAllCells() {
-    selectedCells = [];
     cells.forEach(cell => {
         cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
     });
@@ -38,7 +36,6 @@ function setupMouseDownEvents() {
             }
             cell.classList.add('clicked');
             cell.focus();
-            selectedCells.push(cell);
         });
     });
 }
@@ -49,7 +46,6 @@ function setupMouseOverEvents() {
         cell.addEventListener('mouseover', () => {
             if (isMouseDown) {
                 cell.classList.add('clicked');
-                selectedCells.push(cell);
             }
         });
     });
@@ -115,8 +111,8 @@ function setupKeydownEvents() {
     document.addEventListener('keydown', (e) => {
         const key = e.key;
         if (activeMode === "Solver" && /[1-9]/.test(key)) {
-            selectedCells.forEach(cell => {
-                if (!cell.classList.contains('fixed')) {
+            cells.forEach(cell => {
+                if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
                     cell.textContent = key;
                     cell.classList.add('user-digit');
                 }
