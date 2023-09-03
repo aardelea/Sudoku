@@ -1,17 +1,14 @@
 import { sudokuElements, pressedKeys, mostRecentActiveCell } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { moveActiveCell } from '/src/scripts/utils/moveActiveCell.js';
+import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/setupMouseDownEvents.js';
 
 
 export function setupKeydownEvents() {
     let lastSelectedRow = null;
     let lastSelectedCol = null;
 
-    sudokuElements.cells.forEach(cell => {
-        cell.addEventListener('mousedown', () => {
-            mostRecentActiveCell.cell = cell;
-        });
-    });
+    updateMostRecentActiveCell();
 
     document.addEventListener('keydown', (e) => {
         pressedKeys.ctrlOrShiftPressed = e.ctrlKey || e.shiftKey;
