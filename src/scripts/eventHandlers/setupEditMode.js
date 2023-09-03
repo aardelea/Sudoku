@@ -1,4 +1,4 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/eventManager.js';
+import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
 
 
 export function setupEditMode() {

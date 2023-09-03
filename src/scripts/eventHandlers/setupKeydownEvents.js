@@ -1,5 +1,5 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/eventManager.js';
-import { highlightConflicts } from '/src/scripts/eventHandlers/keys/highlightConflicts.js';
+import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
+import { highlightConflicts } from '/src/scripts/eventHandlers/highlightConflicts.js';
 
 
 export function setupKeydownEvents() {

@@ -1,4 +1,4 @@
-import { generateStartingGrid } from '/src/scripts/components/grid/generateStartingGrid.js';
+import { generateStartingGrid } from '/src/scripts/components/generateStartingGrid.js';
 
 
 export function setupGrid() {

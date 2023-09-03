@@ -1,4 +1,4 @@
-import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/eventManager.js';
+import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/manageEvents.js';
 
 
 export function setupMouseUpEvents() {
