@@ -1,4 +1,5 @@
 import { mostRecentActiveCell } from '/src/scripts/config.js';
+import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
 
 
 export function moveActiveCell(activeCell, direction, keepPrevious) {

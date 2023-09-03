@@ -28,8 +28,8 @@ export function highlightConflicts() {
                         cell.classList.add('conflict-highlighted');
                         conflictingCells.add(cell);
                     });
-                }
+                };
             });
-        }
+        };
     };
 };
