@@ -5,8 +5,6 @@ import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/setupMous
 
 
 export function setupKeydownEvents() {
-    let lastSelectedRow = null;
-    let lastSelectedCol = null;
 
     updateMostRecentActiveCell();
 
@@ -39,14 +37,8 @@ export function setupKeydownEvents() {
                     highlightConflicts('', cell);
                 };
             });
-        }
+        };
 
     });
 
-    sudokuElements.cells.forEach(cell => {
-        cell.addEventListener('mousedown', () => {
-            lastSelectedRow = parseInt(cell.dataset.row, 10);
-            lastSelectedCol = parseInt(cell.dataset.col, 10);
-        });
-    });
 };
