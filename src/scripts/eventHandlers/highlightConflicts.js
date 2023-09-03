@@ -14,6 +14,7 @@ export function highlightConflicts(digit, originCell) {
         const boxCol = Math.floor(col / 3) * 3;
 
         if (
+            cell != originCell &&
             cell.textContent === digit &&
             (
                 row === originRow ||
@@ -22,6 +23,7 @@ export function highlightConflicts(digit, originCell) {
             )
         ) {
             cell.classList.add('conflict-highlighted');
+            originCell.classList.add('conflict-highlighted');
         }
     });
-}
+};
