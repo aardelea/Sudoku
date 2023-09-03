@@ -1,37 +1,35 @@
 import { sudokuElements } from '/src/scripts/config.js';
 
 
-export function highlightConflicts(digit, originCell) {
-    let conflictFound = false;
+let conflictingCells = new Set();
 
-    const originRow = parseInt(originCell.dataset.row, 10);
-    const originCol = parseInt(originCell.dataset.col, 10);
-    const boxRowOrigin = Math.floor(originRow / 3) * 3;
-    const boxColOrigin = Math.floor(originCol / 3) * 3;
 
-    sudokuElements.cells.forEach(cell => {
-        const row = parseInt(cell.dataset.row, 10);
-        const col = parseInt(cell.dataset.col, 10);
-        const boxRow = Math.floor(row / 3) * 3;
-        const boxCol = Math.floor(col / 3) * 3;
+export function highlightConflicts() {
+    sudokuElements.cells.forEach(cell => cell.classList.remove('conflict-highlighted'));
+    conflictingCells.clear();
+  
+    for (let digit = 1; digit <= 9; digit++) {
+        for (let i = 0; i < 9; i++) {
+            const rowCells = [], colCells = [], boxCells = [];
 
-        cell.classList.remove('conflict-highlighted');
+            for (let j = 0; j < 9; j++) {
+                const rowCell = sudokuElements.cells[i * 9 + j];
+                const colCell = sudokuElements.cells[j * 9 + i];
+                const boxCell = sudokuElements.cells[Math.floor(i / 3) * 27 + (i % 3) * 3 + Math.floor(j / 3) * 9 + j % 3];
 
-        if (
-            cell !== originCell &&
-            cell.textContent === digit &&
-            (
-                row === originRow ||
-                col === originCol ||
-                (boxRow === boxRowOrigin && boxCol === boxColOrigin)
-            )
-        ) {
-            cell.classList.add('conflict-highlighted');
-            conflictFound = true;
+                if (rowCell.textContent === String(digit)) rowCells.push(rowCell);
+                if (colCell.textContent === String(digit)) colCells.push(colCell);
+                if (boxCell.textContent === String(digit)) boxCells.push(boxCell);
+            };
+
+            [rowCells, colCells, boxCells].forEach(cells => {
+                if (cells.length > 1) {
+                    cells.forEach(cell => {
+                        cell.classList.add('conflict-highlighted');
+                        conflictingCells.add(cell);
+                    });
+                }
+            });
         }
-    });
-
-    if (conflictFound) {
-        originCell.classList.add('conflict-highlighted');
-    }
-}
+    };
+};

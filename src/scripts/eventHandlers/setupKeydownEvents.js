@@ -21,7 +21,7 @@ export function setupKeydownEvents() {
                 if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
                     cell.textContent = e.key;
                     cell.classList.add('user-digit');
-                    highlightConflicts(e.key, cell);
+                    highlightConflicts();
                 };
             });
             e.preventDefault();
