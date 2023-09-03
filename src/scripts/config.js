@@ -9,6 +9,7 @@ export const sudokuElements = {
 
 export const buttons = {
     resetButton: document.getElementById('reset-button'),
+    undoButton: document.getElementById('undo-button'),
 };
 
 export const pressedKeys = {

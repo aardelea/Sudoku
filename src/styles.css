@@ -7,7 +7,6 @@ body {
     background-color: rgb(255,255,255);
 }
 
-
 .grid-container {
     display: flex;
     align-items: center;
@@ -26,7 +25,6 @@ body {
     position: relative;
     flex: 1;
 }
-
 
 .cell {
     display: flex;
@@ -117,6 +115,23 @@ body {
 .keypad-button:hover {
     background-color: rgb(232, 124, 241);
 }
+.keypad-button.other-button {
+    width: 50%;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(106,27,154);
+    background-color: rgb(238,238,238);
+    border: 2px solid rgb(206,206,206);
+}
+.keypad-button.other-button:hover{
+    background-color: rgb(232, 124, 241);
+}
+
 .keypad-container {
     display: flex;
     flex-direction: column;
@@ -125,30 +140,6 @@ body {
 }
 
 
-.mode-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-.mode-button {
-    width: 100px;
-    height: 40px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: 500;
-    font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    color: rgb(255, 255, 255);
-    border: none;
-    background-color: rgb(106,27,154);
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-}
-.mode-button.active {
-    background-color: rgb(232, 124, 241);
-}
 .mode-keypad-container {
     display: flex;
     flex-direction: column;
@@ -161,10 +152,3 @@ body {
 .user-digit::selection {
     background: transparent;
 }
-
-@keyframes activeAnimation {
-    100% { background-color: rgb(232, 124, 241); }
-}
-.reset-button-active {
-    animation: activeAnimation 0.1s;
-  }
