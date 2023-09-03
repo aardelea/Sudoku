@@ -18,6 +18,8 @@ export const pressedKeys = {
 
 export const mostRecentActiveCell = {
     cell: null,
-    enteredDigitsHistory: [],
-    globalCounter: 0,
+};
+
+export const history = {
+    digits: [],
 };

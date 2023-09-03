@@ -1,4 +1,4 @@
-import { sudokuElements, pressedKeys, mostRecentActiveCell } from '/src/scripts/config.js';
+import { sudokuElements, pressedKeys, mostRecentActiveCell, history } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { moveActiveCell } from '/src/scripts/utils/moveActiveCell.js';
 import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/setupMouseDownEvents.js';
@@ -19,7 +19,7 @@ export function setupKeydownEvents() {
                 if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
                     cell.textContent = e.key;
                     cell.classList.add('user-digit');
-                    mostRecentActiveCell.enteredDigitsHistory.push({ cell: cell, digit: e.key, actionID: actionID });
+                    history.digits.push({ cell: cell, digit: e.key, actionID: actionID });
                     highlightConflicts();
                 };
             });

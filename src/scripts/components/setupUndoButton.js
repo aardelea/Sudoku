@@ -1,12 +1,12 @@
-import { buttons, mostRecentActiveCell } from '/src/scripts/config.js';
+import { buttons, history } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 
 
 export function setupUndoButton() {
     buttons.undoButton.addEventListener('click', () => {
-        if (mostRecentActiveCell.enteredDigitsHistory.length > 0) {
-            mostRecentActiveCell.enteredDigitsHistory = mostRecentActiveCell.enteredDigitsHistory.filter(entry => {
-                if (entry.actionID === mostRecentActiveCell.enteredDigitsHistory[mostRecentActiveCell.enteredDigitsHistory.length - 1].actionID) {
+        if (history.digits.length > 0) {
+            history.digits = history.digits.filter(entry => {
+                if (entry.actionID === history.digits[history.digits.length - 1].actionID) {
                     entry.cell.textContent = "";
                     highlightConflicts();
                     return false;
