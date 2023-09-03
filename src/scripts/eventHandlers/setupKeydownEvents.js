@@ -1,6 +1,6 @@
 import { sudokuElements, pressedKeys, mostRecentActiveCell } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/eventHandlers/highlightConflicts.js';
-import { moveActiveCell } from '/src/scripts/utils.js';
+import { moveActiveCell } from '/src/scripts/utils/moveActiveCell.js';
 
 
 export function setupKeydownEvents() {

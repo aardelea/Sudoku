@@ -1,11 +1,4 @@
-import { sudokuElements, mostRecentActiveCell } from '/src/scripts/config.js';
-
-
-export function deselectAllCells() {
-    sudokuElements.cells.forEach(cell => {
-        cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
-    });
-};
+import { mostRecentActiveCell } from '/src/scripts/config.js';
 
 
 export function moveActiveCell(activeCell, direction, keepPrevious) {

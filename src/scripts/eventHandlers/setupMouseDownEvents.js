@@ -1,5 +1,5 @@
 import { mouseState, pressedKeys } from '/src/scripts/config.js';
-import { deselectAllCells } from '/src/scripts/utils.js';
+import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
 
 
 export function setupMouseDownEvents() {
