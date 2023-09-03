@@ -1,4 +1,4 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
+import { sudokuElements } from '/src/scripts/config.js';
 
 
 export function setupClickEvents() {
@@ -28,4 +28,4 @@ export function setupClickEvents() {
             cell.classList.remove('highlighted-row');
         });
     });
-}
+};

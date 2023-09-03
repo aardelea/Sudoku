@@ -1,12 +1,10 @@
-import { setupGrid } from './components/setupGrid.js';
+import { manageGrid } from './components/manageGrid.js';
 import { manageEvents } from './eventHandlers/manageEvents.js';
 import { manageButtons } from './components/manageButtons.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    setupGrid();
+    manageGrid();
     manageEvents();
     manageButtons();
-
 });

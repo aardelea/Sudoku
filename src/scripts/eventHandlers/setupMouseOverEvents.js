@@ -1,4 +1,4 @@
-import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/manageEvents.js';
+import { sudokuElements, mouseState } from '/src/scripts/config.js';
 
 
 export function setupMouseOverEvents() {
@@ -9,4 +9,4 @@ export function setupMouseOverEvents() {
             }
         });
     });
-}
+};

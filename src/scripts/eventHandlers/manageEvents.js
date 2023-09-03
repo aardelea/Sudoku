@@ -6,15 +6,8 @@ import { setupDoubleClickEvents } from '/src/scripts/eventHandlers/setupDoubleCl
 import { setupEditMode } from '/src/scripts/eventHandlers/setupEditMode.js';
 import { setupDeselection } from '/src/scripts/eventHandlers/setupDeselection.js';
 import { setupKeydownEvents } from '/src/scripts/eventHandlers/setupKeydownEvents.js';
+import { sudokuElements } from '/src/scripts/config.js';
 
-
-export const mouseState = {
-    isMouseDown: false
-};
-export const sudokuElements = {
-    sudokuGrid: document.querySelector('.sudoku-grid'),
-    cells: document.querySelector('.sudoku-grid').querySelectorAll('.cell'),
-}
 
 export function manageEvents() {
 
@@ -29,4 +22,4 @@ export function manageEvents() {
     setupDeselection();
     setupEditMode()
 
-}
+};

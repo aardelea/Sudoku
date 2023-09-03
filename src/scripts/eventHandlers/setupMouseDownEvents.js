@@ -1,5 +1,5 @@
-import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/manageEvents.js';
-import { deselectAllCells } from '/src/scripts/eventHandlers/utils.js';
+import { sudokuElements, mouseState } from '/src/scripts/config.js';
+import { deselectAllCells } from '/src/scripts/utils.js';
 
 
 export function setupMouseDownEvents() {
@@ -13,4 +13,4 @@ export function setupMouseDownEvents() {
       cell.focus();
     });
   });
-}
+};

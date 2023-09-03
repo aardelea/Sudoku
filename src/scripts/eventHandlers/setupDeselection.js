@@ -1,5 +1,5 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
-import { deselectAllCells } from '/src/scripts/eventHandlers/utils.js';
+import { sudokuElements } from '/src/scripts/config.js';
+import { deselectAllCells } from '/src/scripts/utils.js';
 
 
 export function setupDeselection() {
@@ -9,4 +9,4 @@ export function setupDeselection() {
             deselectAllCells();
         }
     });
-}
+};

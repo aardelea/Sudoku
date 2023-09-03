@@ -1,4 +1,4 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
+import { sudokuElements } from '/src/scripts/config.js';
 
 
 export function setupEditMode() {
@@ -8,4 +8,4 @@ export function setupEditMode() {
             clickedCell.focus();
         }
     });
-}
+};

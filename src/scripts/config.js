@@ -1,0 +1,12 @@
+export const mouseState = {
+    isMouseDown: false
+};
+
+export const sudokuElements = {
+    sudokuGrid: document.querySelector('.sudoku-grid'),
+    cells: document.querySelector('.sudoku-grid').querySelectorAll('.cell'),
+};
+
+export const buttons = {
+    resetButton: document.getElementById('reset-button'),
+};

@@ -1,4 +1,4 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
+import { sudokuElements } from '/src/scripts/config.js';
 
 
 export function highlightConflicts(digit, originCell) {

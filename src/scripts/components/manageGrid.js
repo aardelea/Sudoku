@@ -1,7 +1,7 @@
 import { generateStartingGrid } from '/src/scripts/components/generateStartingGrid.js';
 
 
-export function setupGrid() {
+export function manageGrid() {
     const sudokuGrid = document.querySelector('.sudoku-grid');
     const startingGrid = generateStartingGrid();
 

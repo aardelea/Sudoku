@@ -1,4 +1,4 @@
-import { sudokuElements, mouseState } from '/src/scripts/eventHandlers/manageEvents.js';
+import { sudokuElements, mouseState } from '/src/scripts/config.js';
 
 
 export function setupMouseUpEvents() {
@@ -7,4 +7,4 @@ export function setupMouseUpEvents() {
           mouseState.isMouseDown = false; 
       });
   });
-}
+};

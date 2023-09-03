@@ -1,4 +1,4 @@
-import { sudokuElements } from '/src/scripts/eventHandlers/manageEvents.js';
+import { sudokuElements } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/eventHandlers/highlightConflicts.js';
 
 
@@ -15,4 +15,4 @@ export function setupKeydownEvents() {
             e.preventDefault();
         }
     });
-}
+};
