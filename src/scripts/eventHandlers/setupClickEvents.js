@@ -20,7 +20,7 @@ export function setupClickEvents() {
                 ) {
                     otherCell.classList.add('highlighted-row');
                     otherCell.classList.add('highlighted-col');
-                }
+                };
             });
 
             cell.classList.add('clicked');

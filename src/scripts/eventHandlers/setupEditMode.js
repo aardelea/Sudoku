@@ -6,6 +6,6 @@ export function setupEditMode() {
         const clickedCell = event.target;
         if (!clickedCell.classList.contains('fixed')) {
             clickedCell.focus();
-        }
+        };
     });
 };

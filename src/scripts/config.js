@@ -10,3 +10,7 @@ export const sudokuElements = {
 export const buttons = {
     resetButton: document.getElementById('reset-button'),
 };
+
+export const pressedKeys = {
+    ctrlOrShiftPressed: false
+};

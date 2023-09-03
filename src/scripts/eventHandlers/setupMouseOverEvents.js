@@ -6,7 +6,7 @@ export function setupMouseOverEvents() {
         cell.addEventListener('mouseover', () => {
             if (mouseState.isMouseDown) {
                 cell.classList.add('clicked');
-            }
+            };
         });
     });
 };

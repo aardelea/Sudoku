@@ -15,8 +15,8 @@ export function manageGrid() {
             if (startingGrid[row][col] !== null) {
                 cell.textContent = startingGrid[row][col];
                 cell.classList.add('fixed');
-            }
+            };
             sudokuGrid.appendChild(cell);
-        }
-    }
-}
+        };
+    };
+};

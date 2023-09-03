@@ -6,6 +6,6 @@ export function setupDeselection() {
     document.addEventListener('click', event => {
         if (!sudokuElements.sudokuGrid.contains(event.target)) {
             deselectAllCells();
-        }
+        };
     });
 };

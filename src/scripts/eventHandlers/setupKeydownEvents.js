@@ -14,7 +14,7 @@ export function setupKeydownEvents() {
                     cell.textContent = e.key;
                     cell.classList.add('user-digit');
                     highlightConflicts(e.key, cell);
-                }
+                };
             });
             e.preventDefault();
         };

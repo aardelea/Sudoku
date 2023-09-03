@@ -7,7 +7,7 @@ export function setupResetButton() {
             cell.classList.remove('conflict-highlighted');
             if (!cell.classList.contains('fixed')) {
                 cell.textContent = '';
-            }
+            };
         });
         buttons.resetButton.classList.add('reset-button-active');
 

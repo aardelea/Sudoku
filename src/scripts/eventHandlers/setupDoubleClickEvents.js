@@ -8,9 +8,9 @@ export function setupDoubleClickEvents() {
                 sudokuElements.cells.forEach(otherCell => {
                     if (otherCell !== cell && otherCell.textContent === cell.textContent) {
                         otherCell.classList.add('clicked');
-                    }
+                    };
                 });
-            }
+            };
         });
     });
 };
