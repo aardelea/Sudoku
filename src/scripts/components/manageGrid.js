@@ -10,8 +10,8 @@ export function manageGrid() {
             const cell = document.createElement('div');
 
             cell.classList.add('cell');
-            cell.dataset.row = String(row);
-            cell.dataset.col = String(col);
+            cell.dataset.row = String(row + 1);
+            cell.dataset.col = String(col + 1);
             if (startingGrid[row][col] !== null) {
                 cell.textContent = startingGrid[row][col];
                 cell.classList.add('fixed');

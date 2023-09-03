@@ -1,16 +1,16 @@
-import { sudokuElements, mouseState } from '/src/scripts/config.js';
+import { mouseState, pressedKeys } from '/src/scripts/config.js';
 import { deselectAllCells } from '/src/scripts/utils.js';
 
 
 export function setupMouseDownEvents() {
-    sudokuElements.cells.forEach(cell => {
-        cell.addEventListener('mousedown', () => {
-            if (!mouseState.isMouseDown) {
+    document.addEventListener('mousedown', (e) => {
+        if (e.target.classList.contains('cell')) {
+            mouseState.isMouseDown = true;
+            if (!pressedKeys.ctrlOrShiftPressed) {
                 deselectAllCells();
-                mouseState.isMouseDown = true;
             };
-            cell.classList.add('clicked');
-            cell.focus();
-        });
+            e.target.classList.add('clicked');
+            e.target.focus();
+        };
     });
 };

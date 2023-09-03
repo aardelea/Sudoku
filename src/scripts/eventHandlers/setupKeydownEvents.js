@@ -1,13 +1,21 @@
-import { sudokuElements } from '/src/scripts/config.js';
-import { deselectAllCells } from '/src/scripts/utils.js';
+import { sudokuElements, pressedKeys, mostRecentActiveCell } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/eventHandlers/highlightConflicts.js';
+import { moveActiveCell } from '/src/scripts/utils.js';
 
 
 export function setupKeydownEvents() {
     let lastSelectedRow = null;
     let lastSelectedCol = null;
 
+    sudokuElements.cells.forEach(cell => {
+        cell.addEventListener('mousedown', () => {
+            mostRecentActiveCell.cell = cell;
+        });
+    });
+
     document.addEventListener('keydown', (e) => {
+        pressedKeys.ctrlOrShiftPressed = e.ctrlKey || e.shiftKey;
+
         if (/[1-9]/.test(e.key)) {
             sudokuElements.cells.forEach(cell => {
                 if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
@@ -19,32 +27,10 @@ export function setupKeydownEvents() {
             e.preventDefault();
         };
 
-        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
-            if (lastSelectedRow === null || lastSelectedCol === null) {
-                return;
-            };
-
-            let newRow = lastSelectedRow;
-            let newCol = lastSelectedCol;
-
-            switch (e.key) {
-                case 'ArrowUp':    newRow = (newRow - 1 + 9) % 9; break;
-                case 'ArrowDown':  newRow = (newRow + 1) % 9; break;
-                case 'ArrowLeft':  newCol = (newCol - 1 + 9) % 9; break;
-                case 'ArrowRight': newCol = (newCol + 1) % 9; break;
-            };
-
-            const newCell = Array.from(sudokuElements.cells).find(cell => 
-                parseInt(cell.dataset.row, 10) === newRow && 
-                parseInt(cell.dataset.col, 10) === newCol
-            );
-
-            if (newCell) {
-                deselectAllCells();
-                newCell.classList.add('clicked');
-                newCell.focus();
-                lastSelectedRow = newRow;
-                lastSelectedCol = newCol;
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
+            const activeCell = Array.from(sudokuElements.cells).find(cell => cell.classList.contains('clicked'));
+            if (activeCell) {
+                moveActiveCell(mostRecentActiveCell.cell, e.key, pressedKeys.ctrlOrShiftPressed);
             };
         };
 

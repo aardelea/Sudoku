@@ -14,3 +14,7 @@ export const buttons = {
 export const pressedKeys = {
     ctrlOrShiftPressed: false
 };
+
+export const mostRecentActiveCell = {
+    cell: null,
+}
