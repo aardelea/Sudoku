@@ -34,6 +34,16 @@ export function setupKeydownEvents() {
             };
         };
 
+        if (e.code === 'Delete') {
+            sudokuElements.cells.forEach(cell => {
+                if (cell.classList.contains('clicked') && cell.classList.contains('user-digit')) {
+                    cell.textContent = '';
+                    cell.classList.remove('user-digit');
+                    highlightConflicts('', cell);
+                };
+            });
+        }
+
     });
 
     sudokuElements.cells.forEach(cell => {
