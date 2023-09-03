@@ -1,5 +1,5 @@
 import { sudokuElements } from '/src/scripts/config.js';
-import { highlightConflicts } from '/src/scripts/eventHandlers/highlightConflicts.js';
+import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 
 
 export function setupDeleteButton() {
