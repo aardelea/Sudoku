@@ -6,17 +6,17 @@ export function setupClickEvents() {
         cell.addEventListener('click', () => {
             const row = cell.dataset.row;
             const col = cell.dataset.col;
-            const boxRow = Math.floor(row / 3);
-            const boxCol = Math.floor(col / 3);
+            const startRow = Math.floor((row - 1) / 3) * 3 + 1;
+            const startCol = Math.floor((col - 1) / 3) * 3 + 1;
+            const endRow = startRow + 2;
+            const endCol = startCol + 2;
 
             sudokuElements.cells.forEach(otherCell => {
-                const otherRow = otherCell.dataset.row;
-                const otherCol = otherCell.dataset.col;
-                const otherBoxRow = Math.floor(otherRow / 3);
-                const otherBoxCol = Math.floor(otherCol / 3);
+                const otherRow = parseInt(otherCell.dataset.row, 10);
+                const otherCol = parseInt(otherCell.dataset.col, 10);
         
                 if (otherRow === row || otherCol === col ||
-                    (otherBoxRow === boxRow && otherBoxCol === boxCol)
+                    (otherRow >= startRow && otherRow <= endRow && otherCol >= startCol && otherCol <= endCol)
                 ) {
                     otherCell.classList.add('highlighted-row');
                     otherCell.classList.add('highlighted-col');
