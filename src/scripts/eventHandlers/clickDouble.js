@@ -1,7 +1,7 @@
 import { sudokuElements } from '/src/scripts/config.js';
 
 
-export function setupDoubleClickEvents() {
+export function clickDouble() {
     sudokuElements.cells.forEach(cell => {
         cell.addEventListener('dblclick', () => {
             if (cell.textContent !== '') {

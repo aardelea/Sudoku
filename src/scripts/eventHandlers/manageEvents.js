@@ -1,12 +1,12 @@
-import { setupMouseDownEvents } from '/src/scripts/eventHandlers/setupMouseDownEvents.js';
-import { setupMouseOverEvents } from '/src/scripts/eventHandlers/setupMouseOverEvents.js';
-import { setupMouseUpEvents } from '/src/scripts/eventHandlers/setupMouseUpEvents.js';
-import { setupClickEvents } from '/src/scripts/eventHandlers/clicks/setupClickEvents.js';
-import { setupDoubleClickEvents } from '/src/scripts/eventHandlers/clicks/setupDoubleClickEvents.js';
-import { setupEditMode } from '/src/scripts/eventHandlers/clicks/setupEditMode.js';
-import { setupDeselection } from '/src/scripts/eventHandlers/clicks/setupDeselection.js';
-import { setupKeydownEvents } from '/src/scripts/eventHandlers/setupKeydownEvents.js';
-import { setupKeyupEvents } from '/src/scripts/eventHandlers/setupKeyupEvents.js';
+import { mouseDown } from '/src/scripts/eventHandlers/mouseDown.js';
+import { mouseOver } from '/src/scripts/eventHandlers/mouseOver.js';
+import { mouseUp } from '/src/scripts/eventHandlers/mouseUp.js';
+import { clickHighlighting } from '/src/scripts/eventHandlers/clickHighlighting.js';
+import { clickDouble } from '/src/scripts/eventHandlers/clickDouble.js';
+import { clickEditMode } from '/src/scripts/eventHandlers/clickEditMode.js';
+import { clickDeselectAllCells } from '/src/scripts/eventHandlers/clickDeselectAllCells.js';
+import { keyDown } from '/src/scripts/eventHandlers/keyDown.js';
+import { keyUp } from '/src/scripts/eventHandlers/keyUp.js';
 import { sudokuElements } from '/src/scripts/config.js';
 
 
@@ -14,14 +14,14 @@ export function manageEvents() {
 
     sudokuElements.cells = sudokuElements.sudokuGrid.querySelectorAll('.cell');
 
-    setupMouseDownEvents();
-    setupMouseOverEvents();
-    setupMouseUpEvents();
-    setupClickEvents();
-    setupDoubleClickEvents();
-    setupKeydownEvents();
-    setupKeyupEvents();
-    setupDeselection();
-    setupEditMode()
+    mouseDown();
+    mouseOver();
+    mouseUp();
+    clickHighlighting();
+    clickDouble();
+    keyDown();
+    keyUp();
+    clickDeselectAllCells();
+    clickEditMode()
 
 };

@@ -1,10 +1,10 @@
-import { setupResetButton } from '/src/scripts/components/setupResetButton.js';
-import { setupDeleteButton } from '/src/scripts/components/setupDeleteButton.js';
-import { setupUndoButton } from '/src/scripts/components/setupUndoButton.js';
+import { resetButton } from '/src/scripts/components/resetButton.js';
+import { deleteButton } from '/src/scripts/components/deleteButton.js';
+import { undoButton } from '/src/scripts/components/undoButton.js';
 
 
 export function manageButtons() {
-    setupResetButton()
-    setupDeleteButton()
-    setupUndoButton()
+    resetButton()
+    deleteButton()
+    undoButton()
 };

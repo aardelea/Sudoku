@@ -1,7 +1,7 @@
 import { sudokuElements, mouseState } from '/src/scripts/config.js';
 
 
-export function setupMouseOverEvents() {
+export function mouseOver() {
     sudokuElements.cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
             if (mouseState.isMouseDown) {

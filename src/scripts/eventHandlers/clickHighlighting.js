@@ -1,7 +1,7 @@
 import { sudokuElements } from '/src/scripts/config.js';
 
 
-export function setupClickEvents() {
+export function clickHighlighting() {
     sudokuElements.cells.forEach(cell => {
         cell.addEventListener('click', () => {
             const row = cell.dataset.row;

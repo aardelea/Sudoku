@@ -2,7 +2,7 @@ import { sudokuElements, mouseState, pressedKeys, mostRecentActiveCell } from '/
 import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
 
 
-export function setupMouseDownEvents() {
+export function mouseDown() {
     document.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('cell')) {
             mouseState.isMouseDown = true;

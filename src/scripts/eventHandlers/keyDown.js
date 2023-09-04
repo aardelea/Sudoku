@@ -1,13 +1,13 @@
 import { sudokuElements, pressedKeys, mostRecentActiveCell, history } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { moveActiveCell } from '/src/scripts/utils/moveActiveCell.js';
-import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/setupMouseDownEvents.js';
+import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/mouseDown.js';
 import { performUndo } from '/src/scripts/utils/performUndo.js';
 
 
 let actionID = 0;
 
-export function setupKeydownEvents() {
+export function keyDown() {
 
     updateMostRecentActiveCell();
 
