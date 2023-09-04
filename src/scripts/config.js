@@ -1,25 +1,11 @@
-export const mouseState = {
-    isMouseDown: false
-};
-
-export const sudokuElements = {
+export const vars = {
+    isMouseDown: false,
     sudokuGrid: document.querySelector('.sudoku-grid'),
     cells: document.querySelector('.sudoku-grid').querySelectorAll('.cell'),
-};
-
-export const buttons = {
     resetButton: document.getElementById('reset-button'),
     undoButton: document.getElementById('undo-button'),
-};
-
-export const pressedKeys = {
-    ctrlOrShiftPressed: false
-};
-
-export const mostRecentActiveCell = {
+    ctrlOrShiftPressed: false,
     cell: null,
-};
-
-export const history = {
     digits: [],
+    actionID: 0,
 };

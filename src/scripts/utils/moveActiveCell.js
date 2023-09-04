@@ -1,4 +1,4 @@
-import { mostRecentActiveCell } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
 
 
@@ -21,5 +21,5 @@ export function moveActiveCell(activeCell, direction, keepPrevious) {
     };
     newActiveCell.classList.add('clicked');
     newActiveCell.focus();
-    mostRecentActiveCell.cell = newActiveCell;
+    vars.cell = newActiveCell;
 };

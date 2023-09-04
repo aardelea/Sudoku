@@ -7,12 +7,12 @@ import { clickEditMode } from '/src/scripts/eventHandlers/clickEditMode.js';
 import { clickDeselectAllCells } from '/src/scripts/eventHandlers/clickDeselectAllCells.js';
 import { keyDown } from '/src/scripts/eventHandlers/keyDown.js';
 import { keyUp } from '/src/scripts/eventHandlers/keyUp.js';
-import { sudokuElements } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 
 
 export function manageEvents() {
 
-    sudokuElements.cells = sudokuElements.sudokuGrid.querySelectorAll('.cell');
+    vars.cells = vars.sudokuGrid.querySelectorAll('.cell');
 
     mouseDown();
     mouseOver();

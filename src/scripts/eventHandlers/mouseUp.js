@@ -1,10 +1,10 @@
-import { sudokuElements, mouseState } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 
 
 export function mouseUp() {
-    sudokuElements.cells.forEach(cell => {
+    vars.cells.forEach(cell => {
         cell.addEventListener('mouseup', () => {
-            mouseState.isMouseDown = false; 
+            vars.isMouseDown = false; 
         });
     });
 };

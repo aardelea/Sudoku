@@ -1,8 +1,8 @@
-import { sudokuElements } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 
 
 export function deselectAllCells() {
-    sudokuElements.cells.forEach(cell => {
+    vars.cells.forEach(cell => {
         cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
     });
 };

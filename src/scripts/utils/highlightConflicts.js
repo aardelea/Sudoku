@@ -1,11 +1,11 @@
-import { sudokuElements } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 
 
 let conflictingCells = new Set();
 
 
 export function highlightConflicts() {
-    sudokuElements.cells.forEach(cell => cell.classList.remove('conflict-highlighted'));
+    vars.cells.forEach(cell => cell.classList.remove('conflict-highlighted'));
     conflictingCells.clear();
   
     for (let digit = 1; digit <= 9; digit++) {
@@ -13,9 +13,9 @@ export function highlightConflicts() {
             const rowCells = [], colCells = [], boxCells = [];
 
             for (let j = 0; j < 9; j++) {
-                const rowCell = sudokuElements.cells[i * 9 + j];
-                const colCell = sudokuElements.cells[j * 9 + i];
-                const boxCell = sudokuElements.cells[Math.floor(i / 3) * 27 + (i % 3) * 3 + Math.floor(j / 3) * 9 + j % 3];
+                const rowCell = vars.cells[i * 9 + j];
+                const colCell = vars.cells[j * 9 + i];
+                const boxCell = vars.cells[Math.floor(i / 3) * 27 + (i % 3) * 3 + Math.floor(j / 3) * 9 + j % 3];
 
                 if (rowCell.textContent === String(digit)) rowCells.push(rowCell);
                 if (colCell.textContent === String(digit)) colCells.push(colCell);

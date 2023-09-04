@@ -1,8 +1,8 @@
-import { sudokuElements } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 
 
 export function clickHighlighting() {
-    sudokuElements.cells.forEach(cell => {
+    vars.cells.forEach(cell => {
         cell.addEventListener('click', () => {
             const row = cell.dataset.row;
             const col = cell.dataset.col;
@@ -11,7 +11,7 @@ export function clickHighlighting() {
             const endRow = startRow + 2;
             const endCol = startCol + 2;
 
-            sudokuElements.cells.forEach(otherCell => {
+            vars.cells.forEach(otherCell => {
                 const otherRow = parseInt(otherCell.dataset.row, 10);
                 const otherCol = parseInt(otherCell.dataset.col, 10);
         

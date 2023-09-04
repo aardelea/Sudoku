@@ -1,12 +1,12 @@
-import { sudokuElements, mouseState, pressedKeys, mostRecentActiveCell } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
 
 
 export function mouseDown() {
     document.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('cell')) {
-            mouseState.isMouseDown = true;
-            if (!pressedKeys.ctrlOrShiftPressed) {
+            vars.isMouseDown = true;
+            if (!vars.ctrlOrShiftPressed) {
                 deselectAllCells();
             };
             e.target.classList.add('clicked');
@@ -17,9 +17,9 @@ export function mouseDown() {
 
 
 export function updateMostRecentActiveCell() {
-    sudokuElements.cells.forEach(cell => {
+    vars.cells.forEach(cell => {
         cell.addEventListener('mousedown', () => {
-            mostRecentActiveCell.cell = cell;
+            vars.cell = cell;
         });
     });
 };

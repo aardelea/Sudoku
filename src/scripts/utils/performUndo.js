@@ -1,11 +1,11 @@
-import { history } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 
 
-export function performUndo() {
-    if (history.digits.length > 0) {
-        history.digits = history.digits.filter(entry => {
-            if (entry.actionID === history.digits[history.digits.length - 1].actionID) {
+export function performUndo(event) {
+    if (vars.digits.length > 0) {
+        vars.digits = vars.digits.filter(entry => {
+            if (entry.actionID === vars.digits[vars.digits.length - 1].actionID) {
                 entry.cell.textContent = "";
                 highlightConflicts();
                 return false;
@@ -13,4 +13,5 @@ export function performUndo() {
             return true;
         });
     };
+    event.preventDefault();
 };

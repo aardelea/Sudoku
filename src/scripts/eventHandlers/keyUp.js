@@ -1,8 +1,8 @@
-import { pressedKeys } from '/src/scripts/config.js';
+import { vars } from '/src/scripts/config.js';
 
 
 export function keyUp() {
     document.addEventListener('keyup', (e) => {
-        pressedKeys.ctrlOrShiftPressed = e.ctrlKey || e.shiftKey;
+        vars.ctrlOrShiftPressed = e.ctrlKey || e.shiftKey;
     });
 };
