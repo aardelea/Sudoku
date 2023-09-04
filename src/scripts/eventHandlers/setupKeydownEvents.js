@@ -2,6 +2,7 @@ import { sudokuElements, pressedKeys, mostRecentActiveCell, history } from '/src
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { moveActiveCell } from '/src/scripts/utils/moveActiveCell.js';
 import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/setupMouseDownEvents.js';
+import { performUndo } from '/src/scripts/utils/performUndo.js';
 
 
 let actionID = 0;
@@ -40,6 +41,11 @@ export function setupKeydownEvents() {
                     highlightConflicts('', cell);
                 };
             });
+        };
+
+        if (e.ctrlKey && e.key === 'z') {
+            performUndo();
+            e.preventDefault();
         };
 
     });
