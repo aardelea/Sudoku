@@ -6,6 +6,6 @@ export const vars = {
     undoButton: document.getElementById('undo-button'),
     ctrlOrShiftPressed: false,
     cell: null,
-    digits: [],
+    digitsHistory: [],
     actionID: 0,
 };
