@@ -8,7 +8,7 @@ export function numericKeypress(event) {
         if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
             cell.textContent = event.key;
             cell.classList.add('user-digit');
-            vars.digitsHistory.push({ cell: cell, digit: event.key, actionID: vars.actionID });
+            vars.undoHistory.push({ cell: cell, digit: event.key, actionID: vars.actionID });
             highlightConflicts();
         };
     });
