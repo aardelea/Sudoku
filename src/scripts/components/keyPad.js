@@ -1,5 +1,5 @@
 import { vars } from '/src/scripts/config.js';
-import { updateCellFromKeypad } from '/src/scripts/utils/updateCellFromKeypad.js';
+import { updateCell } from '/src/scripts/utils/updateCell.js';
 
 
 export function keyPad() {
@@ -7,7 +7,7 @@ export function keyPad() {
         button.addEventListener('click', (event) => {
             const digit = event.target.textContent;
             if (/[0-9]/.test(digit)) {
-                updateCellFromKeypad(digit);
+                updateCell(digit);
             };
         });
     });

@@ -2,8 +2,9 @@ import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 
 
-export function updateCellFromKeypad(digit) {
+export function updateCell(digit, event=null) {
     vars.actionID++;
+
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
             cell.textContent = digit;
@@ -12,5 +13,7 @@ export function updateCellFromKeypad(digit) {
             highlightConflicts();
         }
     });
+
     vars.redoHistory = [];
+    if (event) event.preventDefault();
 };
