@@ -6,6 +6,7 @@ import { clickDouble } from '/src/scripts/eventHandlers/clickDouble.js';
 import { clickEditMode } from '/src/scripts/eventHandlers/clickEditMode.js';
 import { clickDeselectAllCells } from '/src/scripts/eventHandlers/clickDeselectAllCells.js';
 import { keyDown } from '/src/scripts/eventHandlers/keyDown.js';
+import { keyPad } from '/src/scripts/components/keyPad.js';
 import { keyUp } from '/src/scripts/eventHandlers/keyUp.js';
 import { vars } from '/src/scripts/config.js';
 
@@ -22,6 +23,7 @@ export function manageEvents() {
     keyDown();
     keyUp();
     clickDeselectAllCells();
-    clickEditMode()
+    clickEditMode();
+    keyPad();
 
 };
