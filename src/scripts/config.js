@@ -4,8 +4,10 @@ export const vars = {
     cells: document.querySelector('.sudoku-grid').querySelectorAll('.cell'),
     resetButton: document.getElementById('reset-button'),
     undoButton: document.getElementById('undo-button'),
+    redoButton: document.getElementById('redo-button'),
     ctrlOrShiftPressed: false,
     cell: null,
     undoHistory: [],
+    redoHistory: [],
     actionID: 0,
 };

@@ -13,4 +13,5 @@ export function numericKeypress(event) {
         };
     });
     event.preventDefault();
+    vars.redoHistory = [];
 };
