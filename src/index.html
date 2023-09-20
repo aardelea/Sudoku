@@ -2,47 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Sudoku Grid</title>
+    <title>Landing Page</title>
 </head>
-<body>
-    <div class="grid-container">
-        <div class="sudoku-grid">
-        </div>
-        <div class="mode-keypad-container">
-            <div class="keypad-container">
-                <div class="keypad">
-                    <div class="keypad-row">
-                        <button class="keypad-button other-button" id="reset-button">Reset</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button class="keypad-button">1</button>
-                        <button class="keypad-button">2</button>
-                        <button class="keypad-button">3</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button class="keypad-button">4</button>
-                        <button class="keypad-button">5</button>
-                        <button class="keypad-button">6</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button class="keypad-button">7</button>
-                        <button class="keypad-button">8</button>
-                        <button class="keypad-button">9</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button class="keypad-button keypad-0">0</button>
-                        <button class="keypad-button keypad-delete">Delete</button>
-                    </div>
-                    <div class="keypad-row">
-                        <button class="keypad-button other-button" id="undo-button">Undo</button>
-                        <button class="keypad-button other-button" id="redo-button">Redo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="module" src="scripts/main.js"></script>
+<body class="landing-page">
+    <button class="landing-button" id="create-account">Create Account</button>
+    <button class="landing-button" id="log-in">Log In</button>
+    <script type="module" src="scripts/index.js"></script>
 </body>
 </html>

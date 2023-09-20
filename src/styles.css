@@ -152,3 +152,17 @@ body {
 .user-digit::selection {
     background: transparent;
 }
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.landing-button {
+    margin: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+}
