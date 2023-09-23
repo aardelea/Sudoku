@@ -1,6 +1,8 @@
-import { manageLandingButtons } from './components/manageLandingButtons.js';
+import { logInButton } from '/src/scripts/components/logInButton.js';
+import { createAccountButton } from '/src/scripts/components/createAccountButton.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    manageLandingButtons();
+    logInButton();
+    createAccountButton();
 });
