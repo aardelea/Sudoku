@@ -1,5 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
+import { removeSharedEdges } from '/src/scripts/utils/removeSharedEdges.js';
 
 
 export function mouseDown() {
@@ -11,6 +12,7 @@ export function mouseDown() {
             };
             e.target.classList.add('clicked');
             e.target.focus();
+            removeSharedEdges();
         };
     });
 };

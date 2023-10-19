@@ -1,4 +1,5 @@
 import { vars } from '/src/scripts/config.js';
+import { removeSharedEdges } from '/src/scripts/utils/removeSharedEdges.js';
 
 
 export function mouseOver() {
@@ -6,6 +7,7 @@ export function mouseOver() {
         cell.addEventListener('mouseover', () => {
             if (vars.isMouseDown) {
                 cell.classList.add('clicked');
+                removeSharedEdges();
             };
         });
     });
