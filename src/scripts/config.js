@@ -6,6 +6,8 @@ export const vars = {
     undoButton: document.getElementById('undo-button'),
     redoButton: document.getElementById('redo-button'),
     keypadButtons: document.querySelectorAll('.keypad-button'),
+    digitsCentreButton: document.querySelector('.centre-button'),
+    digitsNormalButton: document.querySelector('.normal-button'),
     ctrlOrShiftPressed: false,
     cell: null,
     undoHistory: [],
