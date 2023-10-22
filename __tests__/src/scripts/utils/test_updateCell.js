@@ -1,5 +1,6 @@
 import { updateCell } from '/src/scripts/utils/updateCell.js';
 
+
 jest.mock('/src/scripts/config.js', () => ({
     vars: {
         actionID: 0,
@@ -8,10 +9,10 @@ jest.mock('/src/scripts/config.js', () => ({
         cells: []
     }
 }));
-
 jest.mock('/src/scripts/utils/highlightConflicts.js', () => ({
     highlightConflicts: jest.fn()
 }));
+
 
 describe('updateCell function', () => {
 
