@@ -2,7 +2,7 @@ import { vars } from '/src/scripts/config.js';
 
 
 export function manageButtonStates() {
-    vars.digitsNormalButton.classList.add('other-button-pressed');
+    toggleButtonState(vars.digitsNormalButton, 'other-button-pressed');
 
     vars.digitsNormalButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'other-button-pressed');
