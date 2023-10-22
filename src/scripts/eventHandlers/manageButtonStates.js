@@ -24,7 +24,7 @@ export function manageButtonStates() {
 };
 
 
-function toggleButtonState(button, newClass) {
+export function toggleButtonState(button, newClass) {
     button.classList.remove('other-button', 'other-button-pressed');
     button.classList.add(newClass);
 };
