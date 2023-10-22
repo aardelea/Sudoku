@@ -1,5 +1,5 @@
 import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/mouseDown.js';
-import { performUndo } from '/src/scripts/utils/performUndo.js';
+import { performUndo } from '/src/scripts/components/undoButton.js';
 import { updateCell } from '/src/scripts/utils/updateCell.js';
 import { arrowKeys } from '/src/scripts/utils/arrowKeys.js';
 import { vars } from '/src/scripts/config.js';
