@@ -17,6 +17,7 @@ import { deleteButton } from '/src/scripts/components/deleteButton.js';
 import { undoButton } from '/src/scripts/components/undoButton.js';
 import { redoButton } from '/src/scripts/components/redoButton.js';
 
+import { manageButtonStates } from '/src/scripts/eventHandlers/manageButtonStates.js';
 import { digitsCentreButton } from '/src/scripts/components/digitsCentreButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
 
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     undoButton();
     redoButton();
 
+    manageButtonStates()
     digitsNormalButton();
     digitsCentreButton();
 });

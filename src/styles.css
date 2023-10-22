@@ -151,6 +151,17 @@ body {
 .keypad-button:hover {
     background-color: rgb(232, 124, 241);
 }
+.other-button-pressed {
+    color: #333;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+.other-button,.other-button-pressed {
+    width: 100px; 
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .keypad-button.other-button {
     width: 50%;
     height: 50px;

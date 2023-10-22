@@ -8,6 +8,7 @@ export const vars = {
     keypadButtons: document.querySelectorAll('.keypad-button'),
     digitsCentreButton: document.querySelector('.centre-button'),
     digitsNormalButton: document.querySelector('.normal-button'),
+    digitsCornerButton: document.querySelector('.corner-button'),
     ctrlOrShiftPressed: false,
     cell: null,
     undoHistory: [],
