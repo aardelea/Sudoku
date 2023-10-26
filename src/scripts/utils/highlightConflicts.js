@@ -17,9 +17,9 @@ export function highlightConflicts() {
                 const colCell = vars.cells[j * 9 + i];
                 const boxCell = vars.cells[Math.floor(i / 3) * 27 + (i % 3) * 3 + Math.floor(j / 3) * 9 + j % 3];
 
-                if (rowCell.textContent === String(digit)) rowCells.push(rowCell);
-                if (colCell.textContent === String(digit)) colCells.push(colCell);
-                if (boxCell.textContent === String(digit)) boxCells.push(boxCell);
+                if (rowCell.textContent === String(digit) && !rowCell.classList.contains('center-text')) rowCells.push(rowCell);
+                if (colCell.textContent === String(digit) && !colCell.classList.contains('center-text')) colCells.push(colCell);
+                if (boxCell.textContent === String(digit) && !boxCell.classList.contains('center-text')) boxCells.push(boxCell);
             };
 
             [rowCells, colCells, boxCells].forEach(cells => {
