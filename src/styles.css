@@ -104,6 +104,13 @@ body {
     background-color: rgb(217,156,156);
 }
 
+.small-text {
+    font-size: 1.25em;
+}
+.center-text {
+    text-align: center;
+}
+
 
 .keypad {
     display: flex;

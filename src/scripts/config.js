@@ -14,4 +14,5 @@ export const vars = {
     undoHistory: [],
     redoHistory: [],
     actionID: 0,
+    isCentreText: false,
 };
