@@ -7,15 +7,20 @@ export function updateCell(digit, event=null) {
 
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
-            cell.textContent = digit;
-            cell.classList.add('user-digit');
-
             if (vars.isCentreText) {
+                if (cell.textContent.includes(digit)) {
+                    cell.textContent = cell.textContent.replace(digit, '');
+                } else {
+                    cell.textContent += digit;
+                }
+                cell.textContent = Array.from(cell.textContent).sort().join('');
                 cell.classList.add('center-text');
             } else {
+                cell.textContent = digit;
                 cell.classList.remove('center-text');
             }
 
+            cell.classList.add('user-digit');
             vars.undoHistory.push({ cell: cell, digit: digit, actionID: vars.actionID });
             highlightConflicts();
         }
