@@ -2,6 +2,7 @@ import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/mouseDown
 import { performUndo } from '/src/scripts/components/undoButton.js';
 import { updateCell } from '/src/scripts/utils/updateCell.js';
 import { arrowKeys } from '/src/scripts/utils/arrowKeys.js';
+import { deleteKey } from '/src/scripts/utils/deleteKey.js';
 import { vars } from '/src/scripts/config.js';
 
 
@@ -16,7 +17,7 @@ export function keyDown() {
             updateCell(event.key, event)
         } else if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)){
             arrowKeys(event=event);
-        } else if (event.code === 'Delete') {
+        } else if (event.code === 'Delete' || event.code === 'Backspace') {
             deleteKey()
         } else if (event.ctrlKey && event.key === 'z') {
             performUndo(event=event);
