@@ -11,9 +11,9 @@ export function updateCell(digit, event=null) {
             cell.classList.add('user-digit');
 
             if (vars.isCentreText) {
-                cell.classList.add('small-text', 'center-text');
+                cell.classList.add('center-text');
             } else {
-                cell.classList.remove('small-text', 'center-text');
+                cell.classList.remove('center-text');
             }
 
             vars.undoHistory.push({ cell: cell, digit: digit, actionID: vars.actionID });

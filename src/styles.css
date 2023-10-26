@@ -104,11 +104,9 @@ body {
     background-color: rgb(217,156,156);
 }
 
-.small-text {
-    font-size: 1.25em;
-}
 .center-text {
     text-align: center;
+    font-size: 1.25em;
 }
 
 
@@ -142,11 +140,9 @@ body {
 .keypad-button.keypad-0 {
     margin-right: 5px;
 }
-.keypad-button.small-text {
-    font-size: 1rem;
-}
 .keypad-button.center-text {
     text-align: center;
+    font-size: 1rem;
 }
 .keypad-button.keypad-delete {
     padding: 15px 75px;

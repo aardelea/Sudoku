@@ -6,7 +6,7 @@ export function digitsCentreButton() {
         vars.isCentreText = true;
         vars.keypadButtons.forEach(function(button) {
             if (button.textContent >= "0" && button.textContent <= "9") {
-                button.classList.add('small-text', 'center-text');
+                button.classList.add('center-text');
             };
         });
     });
