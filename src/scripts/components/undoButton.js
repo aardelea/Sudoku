@@ -4,24 +4,27 @@ import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 
 export function performUndo(event) {
     if (vars.undoHistory.length > 0) {
+        vars.actionID++;
         const lastActionID = vars.undoHistory[vars.undoHistory.length - 1].actionID;
-        const entriesToRedo = [];
+        const entriesToRedo = vars.undoHistory.filter(entry => entry.actionID === lastActionID);
 
-        vars.redoHistory.push(...entriesToRedo);
-        
-        vars.undoHistory = vars.undoHistory.filter(entry => {
-            if (entry.actionID === lastActionID) {
-                entry.cell.textContent = entry.prevDigit;
-                highlightConflicts();
-                return false;
-            };
-            return true;
+        const entriesToRedoModified = entriesToRedo.map(entry => ({
+            ...entry,
+            prevDigit: entry.cell.textContent,
+            actionID: vars.actionID
+        }));
+
+        vars.redoHistory.push(...entriesToRedoModified);
+
+        entriesToRedo.forEach(entry => {
+            entry.cell.textContent = entry.prevDigit;
+            highlightConflicts();
         });
 
-        vars.redoHistory.push(...entriesToRedo.reverse());
-    };
+        vars.undoHistory = vars.undoHistory.filter(entry => entry.actionID !== lastActionID);
+    }
     event.preventDefault();
-};
+}
 
 
 export function undoButton() {
