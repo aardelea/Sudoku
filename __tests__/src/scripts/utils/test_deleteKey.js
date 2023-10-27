@@ -4,7 +4,8 @@ import * as highlightConflictsModule from '/src/scripts/utils/highlightConflicts
 
 jest.mock('/src/scripts/config.js', () => ({
     vars: {
-        cells: []
+        cells: [],
+        undoHistory: []
     }
 }));
 jest.mock('/src/scripts/utils/highlightConflicts.js');

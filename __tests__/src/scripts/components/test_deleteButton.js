@@ -1,5 +1,6 @@
 import { deleteButton } from '/src/scripts/components/deleteButton.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
+import { vars } from '/src/scripts/config.js';
 
 
 jest.mock('/src/scripts/config.js', () => ({
@@ -14,6 +15,7 @@ describe('deleteButton function', () => {
 	let deleteBtn;
 
 	beforeEach(() => {
+		vars.undoHistory = [];
 		document.body.innerHTML = `
 			<div class="keypad-delete"></div>
 			<div class="cell clicked user-digit">1</div>

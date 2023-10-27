@@ -4,11 +4,12 @@ import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 
 export function updateCell(digit, event=null) {
     vars.actionID++;
+    let entriesToUpdate = [];
 
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
             let prevContent = cell.textContent;
-            
+
             if (vars.isCentreText) {
                 if (cell.textContent.includes(digit)) {
                     cell.textContent = cell.textContent.replace(digit, '');
@@ -23,11 +24,13 @@ export function updateCell(digit, event=null) {
             }
 
             cell.classList.add('user-digit');
-            vars.undoHistory.push({ cell: cell, prevDigit: prevContent, newDigit: cell.textContent, actionID: vars.actionID });
+            entriesToUpdate.push({ cell: cell, prevDigit: prevContent, newDigit: cell.textContent, actionID: vars.actionID });
             highlightConflicts();
         }
     });
 
+    vars.undoHistory.push(...entriesToUpdate);
+
     vars.redoHistory = [];
     if (event) event.preventDefault();
-};
+}
