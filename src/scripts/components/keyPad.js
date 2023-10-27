@@ -5,6 +5,7 @@ import { updateCell } from '/src/scripts/utils/updateCell.js';
 export function keyPad() {
     vars.keypadButtons.forEach(button => {
         button.addEventListener('click', (event) => {
+            vars.keypadButtonClicked = true;
             const digit = event.target.textContent;
             if (/[0-9]/.test(digit)) {
                 updateCell(digit);

@@ -15,4 +15,5 @@ export const vars = {
     redoHistory: [],
     actionID: 0,
     isCentreText: false,
+    keypadButtonClicked: false,
 };
