@@ -109,7 +109,6 @@ body {
     font-size: 1.25em;
 }
 
-
 .keypad {
     display: flex;
     flex-direction: column;
@@ -121,6 +120,9 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5px;
+}
+.keypad-row:last-child {
+    justify-content: flex-start;
 }
 .keypad-button {
     width: 69px;
@@ -181,6 +183,12 @@ body {
 .keypad-button.other-button:hover{
     background-color: rgb(232, 124, 241);
 }
+.keypad-button#undo-button, .keypad-button#redo-button {
+    width: 69px;
+    height: 50px;
+    font-size: 1.5rem;
+}
+
 .keypad-container {
     display: flex;
     flex-direction: column;
