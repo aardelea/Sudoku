@@ -18,6 +18,9 @@ export function performUndo(event) {
 
         entriesToRedo.forEach(entry => {
             entry.cell.textContent = entry.prevDigit;
+            if (entry.prevDigit !== '') {
+                entry.cell.classList.add('user-digit');
+            }
             highlightConflicts();
         });
 
