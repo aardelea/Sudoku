@@ -11,21 +11,6 @@ export function clickHighlighting() {
             const endRow = startRow + 2;
             const endCol = startCol + 2;
 
-            vars.cells.forEach(otherCell => {
-                const otherRow = parseInt(otherCell.dataset.row, 10);
-                const otherCol = parseInt(otherCell.dataset.col, 10);
-        
-                if (otherRow === row || otherCol === col ||
-                    (otherRow >= startRow && otherRow <= endRow && otherCol >= startCol && otherCol <= endCol)
-                ) {
-                    otherCell.classList.add('highlighted-row');
-                    otherCell.classList.add('highlighted-col');
-                };
-            });
-
-            cell.classList.add('clicked');
-            cell.classList.remove('highlighted-col');
-            cell.classList.remove('highlighted-row');
         });
     });
 };

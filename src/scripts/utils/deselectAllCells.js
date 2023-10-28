@@ -5,7 +5,7 @@ export function deselectAllCells() {
     let activeCells = Array.from(vars.cells).filter(cell => cell.classList.contains('clicked'));
 
     vars.cells.forEach(cell => {
-        cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
+        cell.classList.remove('clicked');
     });
 
     if (vars.buttonClicked) {

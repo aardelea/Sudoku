@@ -26,13 +26,4 @@ describe('deselectAllCells function', () => {
         expect(clickedCells.length).toBe(0);
     });
 
-    it('should remove "highlighted-row" class from all cells', () => {
-        const highlightedRowCells = document.querySelectorAll('.highlighted-row');
-        expect(highlightedRowCells.length).toBe(0);
-    });
-
-    it('should remove "highlighted-col" class from all cells', () => {
-        const highlightedColCells = document.querySelectorAll('.highlighted-col');
-        expect(highlightedColCells.length).toBe(0);
-    });
 });

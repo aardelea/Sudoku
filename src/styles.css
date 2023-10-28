@@ -90,13 +90,6 @@ body {
     border-bottom-width: 1px;
 }
 
-
-.cell.highlighted-col {
-    background-color: rgb(226,235,243);
-}
-.cell.highlighted-row {
-    background-color: rgb(226,235,243);
-}
 .cell:focus {
     outline: none;
 }
