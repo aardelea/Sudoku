@@ -1,5 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
+import { removeSharedEdges } from '/src/scripts/utils/removeSharedEdges.js';
 
 
 export function moveActiveCell(activeCell, direction, keepPrevious) {
@@ -22,4 +23,6 @@ export function moveActiveCell(activeCell, direction, keepPrevious) {
     newActiveCell.classList.add('clicked');
     newActiveCell.focus();
     vars.cell = newActiveCell;
+
+    removeSharedEdges();
 };
