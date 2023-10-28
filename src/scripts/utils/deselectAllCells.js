@@ -8,8 +8,8 @@ export function deselectAllCells() {
         cell.classList.remove('clicked', 'highlighted-row', 'highlighted-col');
     });
 
-    if (vars.keypadButtonClicked && lastActiveCell) {
+    if (vars.buttonClicked && lastActiveCell) {
         lastActiveCell.classList.add('clicked');
-        vars.keypadButtonClicked = false;
+        vars.buttonClicked = false;
     };
 };
