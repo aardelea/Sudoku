@@ -30,6 +30,7 @@ export function updateCell(digit, event=null) {
             } else {
                 cell.textContent = digit;
                 cell.classList.remove('center-text');
+                cell.style.fontSize = '';
             }
 
             cell.classList.add('user-digit');
