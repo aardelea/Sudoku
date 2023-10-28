@@ -115,6 +115,8 @@ body {
 .cell .corner-text {
     position: absolute;
     font-size: var(--corner-text-size);
+    z-index: 2;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .cell .corner-text:nth-child(1) {
     top: 0;
