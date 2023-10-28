@@ -94,10 +94,10 @@ body {
     outline: none;
 }
 .cell.conflict-highlighted {
-    background-color: rgb(217,156,156);
+    background-color: rgb(217,156,156)
 }
 .conflict-highlighted-pmark {
-    color: red;
+    color: rgb(179,58,58)
 }
 
 .center-text {
@@ -205,7 +205,7 @@ body {
 }
 
 .user-digit {
-    color: rgb(29, 106, 229);
+    color: rgb(29,106,229)
 }
 .user-digit::selection {
     background: transparent;
