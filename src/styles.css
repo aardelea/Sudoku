@@ -109,9 +109,12 @@ body {
     align-items: center;
     font-size: 1.20em;
 }
+:root {
+    --corner-text-size: 1.15em;
+}
 .cell .corner-text {
     position: absolute;
-    font-size: 1.15em;
+    font-size: var(--corner-text-size);
 }
 .cell .corner-text:nth-child(1) {
     top: 0;

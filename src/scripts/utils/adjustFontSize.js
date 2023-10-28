@@ -1,4 +1,6 @@
 export function adjustFontSize(cell, numOfDigits) {
+    if (!cell.classList.contains('center-text')) return;
+    
     switch (numOfDigits) {
         case 1:
         case 2:

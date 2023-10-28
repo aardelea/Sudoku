@@ -13,5 +13,9 @@ export function handleTextUpdate(cell, digit, textType) {
 
     cell.innerHTML = currentDigits.map(d => `<span class="${textType}">${d}</span>`).join('');
     cell.classList.add(textType);
-    adjustFontSize(cell, currentDigits.length);
+    if (textType === 'center-text') {
+        adjustFontSize(cell, currentDigits.length);
+    } else if (textType === 'corner-text') {
+        cell.style.fontSize = getComputedStyle(document.documentElement).getPropertyValue('--corner-text-size').trim();
+    }
 };
