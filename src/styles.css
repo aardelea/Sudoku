@@ -38,6 +38,8 @@ body {
     user-select: none;
     cursor: pointer;
     caret-color: transparent;
+    width: 65px;
+    height: 65px;
 }
 .cell::before {
     content: "";

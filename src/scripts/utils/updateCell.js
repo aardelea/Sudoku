@@ -1,5 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
+import { adjustFontSize } from '/src/scripts/utils/adjustFontSize.js';
 
 
 export function updateCell(digit, event=null) {
@@ -25,6 +26,7 @@ export function updateCell(digit, event=null) {
                 cell.innerHTML = currentDigits.map(d => `<span class="center-text">${d}</span>`).join('');
             
                 cell.classList.add('center-text');
+                adjustFontSize(cell, currentDigits.length);
             } else {
                 cell.textContent = digit;
                 cell.classList.remove('center-text');
