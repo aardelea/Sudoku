@@ -107,13 +107,52 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.20em;
+}
+.cell .corner-text {
+    position: absolute;
     font-size: 1.15em;
 }
-.corner-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.15em;
+.cell .corner-text:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+.cell .corner-text:nth-child(2) {
+    top: 0;
+    right: 0;
+}
+.cell .corner-text:nth-child(3) {
+    bottom: 0;
+    right: 0;
+}
+.cell .corner-text:nth-child(4) {
+    bottom: 0;
+    left: 0;
+}
+.cell .corner-text:nth-child(5) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cell .corner-text:nth-child(6) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.cell .corner-text:nth-child(7) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cell .corner-text:nth-child(8) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.cell .corner-text:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .keypad {
     display: flex;
