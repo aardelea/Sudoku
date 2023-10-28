@@ -11,12 +11,19 @@ export function updateCell(digit, event=null) {
             let prevContent = cell.textContent;
 
             if (vars.isCentreText) {
-                if (cell.textContent.includes(digit)) {
-                    cell.textContent = cell.textContent.replace(digit, '');
+                const currentDigits = Array.from(cell.querySelectorAll('.center-text')).map(span => span.textContent);
+                
+                if (currentDigits.includes(digit)) {
+                    const index = currentDigits.indexOf(digit);
+                    currentDigits.splice(index, 1);
                 } else {
-                    cell.textContent += digit;
+                    currentDigits.push(digit);
                 }
-                cell.textContent = Array.from(cell.textContent).sort().join('');
+                
+                currentDigits.sort();
+            
+                cell.innerHTML = currentDigits.map(d => `<span class="center-text">${d}</span>`).join('');
+            
                 cell.classList.add('center-text');
             } else {
                 cell.textContent = digit;
