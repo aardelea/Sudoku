@@ -94,10 +94,12 @@ body {
     outline: none;
 }
 .cell.conflict-highlighted {
-    background-color: rgb(217,156,156)
+    background-color: rgb(217,156,156);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .conflict-highlighted-pmark {
-    color: rgb(179,58,58)
+    color: rgb(179,58,58);
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .center-text {
