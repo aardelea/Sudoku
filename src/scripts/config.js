@@ -15,5 +15,6 @@ export const vars = {
     redoHistory: [],
     actionID: 0,
     isCentreText: false,
+    isCornerText: false,
     buttonClicked: false,
 };

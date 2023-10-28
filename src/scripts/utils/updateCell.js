@@ -1,6 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
-import { adjustFontSize } from '/src/scripts/utils/adjustFontSize.js';
+import { handleTextUpdate } from '/src/scripts/utils/handleTextUpdate.js';
 
 
 export function updateCell(digit, event=null) {
@@ -12,24 +12,13 @@ export function updateCell(digit, event=null) {
             let prevContent = cell.textContent;
 
             if (vars.isCentreText) {
-                const currentDigits = Array.from(cell.querySelectorAll('.center-text')).map(span => span.textContent);
-                
-                if (currentDigits.includes(digit)) {
-                    const index = currentDigits.indexOf(digit);
-                    currentDigits.splice(index, 1);
-                } else {
-                    currentDigits.push(digit);
-                }
-                
-                currentDigits.sort();
-            
-                cell.innerHTML = currentDigits.map(d => `<span class="center-text">${d}</span>`).join('');
-            
-                cell.classList.add('center-text');
-                adjustFontSize(cell, currentDigits.length);
+                handleTextUpdate(cell, digit, 'center-text');
+            } else if (vars.isCornerText) {
+                handleTextUpdate(cell, digit, 'corner-text');
             } else {
                 cell.textContent = digit;
                 cell.classList.remove('center-text');
+                cell.classList.remove('corner-text');
                 cell.style.fontSize = '';
             }
 

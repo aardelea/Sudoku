@@ -19,6 +19,7 @@ import { redoButton } from '/src/scripts/components/redoButton.js';
 import { manageButtonStates } from '/src/scripts/eventHandlers/manageButtonStates.js';
 import { digitsCentreButton } from '/src/scripts/components/digitsCentreButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
+import { digitsCornerButton } from '/src/scripts/components/digitsCornerButton.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,4 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
     manageButtonStates()
     digitsNormalButton();
     digitsCentreButton();
+    digitsCornerButton();
 });

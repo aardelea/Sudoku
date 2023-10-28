@@ -103,14 +103,18 @@ body {
     color: rgb(179,58,58);
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
-
 .center-text {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.15em;
 }
-
+.corner-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15em;
+}
 .keypad {
     display: flex;
     flex-direction: column;
@@ -147,6 +151,10 @@ body {
 .keypad-button.center-text {
     text-align: center;
     font-size: 1rem;
+}
+.keypad-button.corner-text {
+    text-align: center;
+    font-size: 0.75em;
 }
 .keypad-button.keypad-delete {
     padding: 15px 75px;
