@@ -103,9 +103,10 @@ body {
 }
 
 .center-text {
-    text-align: center;
-    font-size: 1.25em;
-    display: inline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.15em;
 }
 
 .keypad {
