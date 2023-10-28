@@ -3,7 +3,6 @@ import { manageGrid } from './components/manageGrid.js';
 import { mouseDown } from '/src/scripts/eventHandlers/mouseDown.js';
 import { mouseOver } from '/src/scripts/eventHandlers/mouseOver.js';
 import { mouseUp } from '/src/scripts/eventHandlers/mouseUp.js';
-import { clickHighlighting } from '/src/scripts/eventHandlers/clickHighlighting.js';
 import { clickDouble } from '/src/scripts/eventHandlers/clickDouble.js';
 import { clickEditMode } from '/src/scripts/eventHandlers/clickEditMode.js';
 import { clickDeselectAllCells } from '/src/scripts/eventHandlers/clickDeselectAllCells.js';
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mouseDown();
     mouseOver();
     mouseUp();
-    clickHighlighting();
     clickDouble();
     keyDown();
     keyUp();
