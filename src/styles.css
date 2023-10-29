@@ -6,7 +6,6 @@ body {
     margin: 0;
     background-color: rgb(255,255,255);
 }
-
 .grid-container {
     display: flex;
     align-items: center;
@@ -25,7 +24,6 @@ body {
     position: relative;
     flex: 1;
 }
-
 .cell {
     display: flex;
     justify-content: center;
@@ -56,19 +54,15 @@ body {
 .cell.clicked::before {
     border-color: rgb(76,164,255);
 }
-
 .cell[data-row="3"], .cell[data-row="6"], .cell[data-row="9"] {
     border-bottom: 4px  rgb(3,3,3);
 }
-
 .cell[data-row="4"], .cell[data-row="7"] {
     border-top: 4px solid rgb(3,3,3);
 }
-
 .cell[data-col="3"], .cell[data-col="6"] {
     border-right: 4px solid rgb(3,3,3);
 }
-
 .cell[data-col="4"], .cell[data-col="7"] {
     border-left: none;
 }
@@ -91,7 +85,6 @@ body {
     border-bottom-color: transparent;
     border-bottom-width: 1px;
 }
-
 .cell:focus {
     outline: none;
 }
@@ -242,7 +235,6 @@ body {
     height: 50px;
     font-size: 1.5rem;
 }
-
 .keypad-container {
     display: flex;
     flex-direction: column;
@@ -260,14 +252,12 @@ body {
 .keypad-spacer {
     flex-grow: 1;
 }
-
 .user-digit {
     color: rgb(29,106,229)
 }
 .user-digit::selection {
     background: transparent;
 }
-
 .landing-page, .register-page {
     display: flex;
     flex-direction: column;
@@ -275,7 +265,6 @@ body {
     align-items: center;
     height: 100vh;
 }
-
 .landing-button {
     margin: 10px;
     width: 15%;
@@ -295,7 +284,6 @@ body {
 .landing-button:hover{
     background-color: rgb(232, 124, 241);
 }
-
 .input-container {
     display: flex;
     flex-direction: column;
