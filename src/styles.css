@@ -1,6 +1,20 @@
 :root {
+    --font: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --font-button-size: 1.50rem;
+    --font-keypad-digit-size: 2.00rem;
+    --font-cell-digit-size: 3.00rem;
     --corner-text-size: 1.10em;
     --center-text-size: 1.20em;
+    --colour-white: rgb(255,255,255);
+    --colour-black: rgb(0,0,0);
+    --colour-grey: rgb(238,238,238);
+    --colour-grey-stronger: rgb(206,206,206);
+    --colour-user-click-highlighting: rgb(76,164,255);
+    --colour-user-digit: rgb(29,106,229);
+    --colour-conflict: rgb(217,156,156);
+    --colour-pencilmark-conflict: rgb(179,58,58);
+    --colour-keypad-button-background: rgb(106,27,154);
+    --colour-keypad-button-hover: rgb(232,124,241);
 }
 body {
     display: flex;
@@ -8,7 +22,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: rgb(255,255,255);
+    background-color: var(--colour-white);
 }
 .grid-container {
     display: flex;
@@ -19,23 +33,21 @@ body {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 1px;
-    background-color: rgb(3, 3, 3);
+    background-color: var(--colour-black);
     border-width: 4px;
     border-style: solid;
-    border-color: rgb(3, 3, 3);
+    border-color: var(--colour-black);
     width: 608px;
     height: 608px;
-    position: relative;
-    flex: 1;
 }
 .cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    font-family: Tahoma;
-    color: rgb(3,3,3);
-    background-color: rgb(255,255,255);
+    font-size: var(--font-cell-digit-size);
+    font-family: var(--font);
+    color: var(--colour-black);
+    background-color: var(--colour-white);
     position: relative;
     user-select: none;
     cursor: pointer;
@@ -56,22 +68,16 @@ body {
     z-index: 1;
 }
 .cell.clicked::before {
-    border-color: rgb(76,164,255);
+    border-color: var(--colour-user-click-highlighting);
 }
 .cell[data-row="3"], .cell[data-row="6"], .cell[data-row="9"] {
-    border-bottom: 4px  rgb(3,3,3);
+    border-bottom: 4px  var(--colour-black);;
 }
 .cell[data-row="4"], .cell[data-row="7"] {
-    border-top: 4px solid rgb(3,3,3);
+    border-top: 4px solid var(--colour-black);;
 }
 .cell[data-col="3"], .cell[data-col="6"] {
-    border-right: 4px solid rgb(3,3,3);
-}
-.cell[data-col="4"], .cell[data-col="7"] {
-    border-left: none;
-}
-.cell[data-col="9"] {
-    border-right: none;
+    border-right: 4px solid var(--colour-black);;
 }
 .cell.right-shared::before {
     border-right-color: transparent;
@@ -93,12 +99,12 @@ body {
     outline: none;
 }
 .cell.conflict-highlighted {
-    background-color: rgb(217,156,156);
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    background-color: var(--colour-conflict);
+    text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
 }
 .conflict-highlighted-pmark {
-    color: rgb(179,58,58);
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    color: var(--colour-pencilmark-conflict);
+    text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
 }
 .center-text {
     display: flex;
@@ -110,7 +116,7 @@ body {
     position: absolute;
     font-size: var(--corner-text-size);
     z-index: 2;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
 }
 .cell .corner-text:nth-child(1) {
     top: 0;
@@ -161,7 +167,6 @@ body {
 .keypad-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 5px;
 }
 .keypad-button {
@@ -169,14 +174,12 @@ body {
     height: 69px;
     margin-right: 5px;
     cursor: pointer;
-    font-size: 2rem;
-    font-weight: 500;
-    font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    color: rgb(255, 255, 255);
+    font-size: var(--font-keypad-digit-size);
+    font-family: var(--font);
+    color: var(--colour-white);
     border: none;
-    background-color: rgb(106,27,154);
+    background-color: var(--colour-keypad-button-background);
     border-radius: 15px;
-    align-items: center;
     justify-content: center;
 }
 .keypad-button.center-text {
@@ -192,11 +195,11 @@ body {
     display: flex;
 }
 .keypad-button:hover {
-    background-color: rgb(232, 124, 241);
+    background-color: var(--colour-keypad-button-hover);
 }
 .other-button-pressed {
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255);
+    font-size: var(--font-button-size);
+    color: var(--colour-white);
     width: 100px; 
     height: 50px;
     overflow: hidden;
@@ -205,29 +208,29 @@ body {
 .keypad-button.other-button {
     width: 50%;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: var(--font-button-size);
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: rgb(106,27,154);
-    background-color: rgb(238,238,238);
-    border: 2px solid rgb(206,206,206);
+    color: var(--colour-keypad-button-background);
+    background-color: var(--colour-grey);
+    border: 2px solid var(--colour-grey-stronger);
 }
 .keypad-button.other-button:hover{
-    background-color: rgb(232, 124, 241);
+    background-color: var(--colour-keypad-button-hover);
 }
 .keypad-button#undo-button, .keypad-button#redo-button {
     width: 69px;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: var(--font-button-size);
 }
 .keypad-block {
     display: inline-flex;
 }
 .user-digit {
-    color: rgb(29,106,229)
+    color: var(--colour-user-digit);
 }
 .user-digit::selection {
     background: transparent;
@@ -242,17 +245,17 @@ body {
     margin: 10px;
     width: 15%;
     height: 69px;
-    font-size: 2rem;
+    font-size: var(--font-keypad-digit-size);
     font-weight: 500;
-    font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    color: rgb(255, 255, 255);
+    font-family: var(--font);
+    color: var(--colour-white);
     justify-content: center;
     border: none;
-    background-color: rgb(106,27,154);
+    background-color: var(--colour-keypad-button-background);
     border-radius: 15px;
 }
 .landing-button:hover{
-    background-color: rgb(232, 124, 241);
+    background-color: var(--colour-keypad-button-hover);
 }
 .input-container {
     display: flex;
@@ -262,7 +265,7 @@ body {
     margin-top: 10px;
     width: 100%;
     height: 40px;
-    font-size: 16px;
+    font-size: var(--font-keypad-digit-size);
 }
 .reset-row {
     display: grid;
