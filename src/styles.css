@@ -96,14 +96,15 @@ body {
     color: rgb(179,58,58);
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+:root {
+    --corner-text-size: 1.10em;
+    --center-text-size: 1.20em;
+}
 .center-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.20em;
-}
-:root {
-    --corner-text-size: 1.15em;
+    font-size: var(--center-text-size);
 }
 .cell .corner-text {
     position: absolute;
@@ -156,16 +157,12 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    font-size: 1.5rem;
 }
 .keypad-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5px;
-}
-.keypad-row:last-child {
-    justify-content: flex-start;
 }
 .keypad-button {
     width: 69px;
@@ -182,23 +179,17 @@ body {
     align-items: center;
     justify-content: center;
 }
-.keypad-button.keypad-0 {
-    margin-right: 5px;
-}
 .keypad-button.center-text {
     text-align: center;
-    font-size: 1rem;
+    font-size: var(--center-text-size);
 }
-.keypad-button.corner-text {
+.keypad .keypad-button.corner-text {
     text-align: center;
-    font-size: 0.75em;
+    font-size: var(--corner-text-size);
 }
 .keypad-button.keypad-delete {
     padding: 15px 75px;
-    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .keypad-button:hover {
     background-color: rgb(232, 124, 241);
@@ -207,8 +198,6 @@ body {
     color: #333;
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
-  }
-.other-button,.other-button-pressed {
     width: 100px; 
     height: 50px;
     overflow: hidden;
@@ -235,22 +224,8 @@ body {
     height: 50px;
     font-size: 1.5rem;
 }
-.keypad-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 30px;
-}
-.mode-keypad-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .keypad-block {
     display: inline-flex;
-}
-.keypad-spacer {
-    flex-grow: 1;
 }
 .user-digit {
     color: rgb(29,106,229)
