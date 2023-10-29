@@ -13,7 +13,7 @@ export function keyDown() {
     document.addEventListener('keydown', (event) => {
         vars.ctrlOrShiftPressed = event.ctrlKey || event.shiftKey;
         
-        if (/^[1-9]$/.test(event.key)) {
+        if (/^[0-9]$/.test(event.key)) {
             updateCell(event.key, event)
         } else if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)){
             arrowKeys(event=event);
