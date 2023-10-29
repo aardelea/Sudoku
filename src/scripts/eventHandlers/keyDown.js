@@ -13,6 +13,10 @@ export function keyDown() {
 
     document.addEventListener('keydown', (event) => {
         vars.ctrlOrShiftPressed = event.ctrlKey || event.shiftKey;
+
+        if (event.key === 'Alt') {
+            event.preventDefault();
+        }
         
         if (/^[0-9]$/.test(event.key)) {
             updateCell(event.key, event)
@@ -24,8 +28,12 @@ export function keyDown() {
             performUndo(event=event);
         } else if (event.ctrlKey && event.key === 'y') {
             performRedo(event=event);
+        } else if (event.shiftKey || event.altKey) {
+            vars.digitsCornerButton.click();
+        } else if (event.ctrlKey) {
+            vars.digitsCentreButton.click();
         };
-
+        
     });
 
 };
