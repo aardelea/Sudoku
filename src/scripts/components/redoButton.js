@@ -11,13 +11,14 @@ export function performRedo(event) {
         const entriesToUndoModified = entriesToUndo.map(entry => ({
             ...entry,
             prevDigit: entry.cell.textContent,
+            prevContent: entry.cell.innerHTML,
             actionID: vars.actionID
         }));
 
         vars.undoHistory.push(...entriesToUndoModified);
 
         entriesToUndo.forEach(entry => {
-            entry.cell.textContent = entry.newDigit;
+            entry.cell.innerHTML = entry.prevContent;
             highlightConflicts();
         });
 
