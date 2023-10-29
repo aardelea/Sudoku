@@ -11,6 +11,7 @@ export function deleteKey() {
             entriesToDelete.push({
                 cell: cell,
                 prevDigit: cell.textContent,
+                prevContent: cell.innerHTML,
                 actionID: vars.actionID
             });
             
@@ -22,4 +23,4 @@ export function deleteKey() {
 
     vars.undoHistory.push(...entriesToDelete);
 
-}
+};

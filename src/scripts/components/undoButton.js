@@ -11,13 +11,14 @@ export function performUndo(event) {
         const entriesToRedoModified = entriesToRedo.map(entry => ({
             ...entry,
             prevDigit: entry.cell.textContent,
+            prevContent: entry.cell.innerHTML,
             actionID: vars.actionID
         }));
 
         vars.redoHistory.push(...entriesToRedoModified);
 
         entriesToRedo.forEach(entry => {
-            entry.cell.textContent = entry.prevDigit;
+            entry.cell.innerHTML = entry.prevContent;
             if (entry.prevDigit !== '') {
                 entry.cell.classList.add('user-digit');
             }

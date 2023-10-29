@@ -9,7 +9,7 @@ export function updateCell(digit, event=null) {
 
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
-            let prevContent = cell.textContent;
+            let prevContent = cell.innerHTML;
 
             if (vars.isCentreText) {
                 handleTextUpdate(cell, digit, 'center-text');
@@ -23,7 +23,13 @@ export function updateCell(digit, event=null) {
             }
 
             cell.classList.add('user-digit');
-            entriesToUpdate.push({ cell: cell, prevDigit: prevContent, newDigit: cell.textContent, actionID: vars.actionID });
+            entriesToUpdate.push({ 
+                cell: cell,
+                prevDigit: prevContent.textContent,
+                prevContent: prevContent,
+                newDigit: cell.textContent,
+                actionID: vars.actionID
+            });
             highlightConflicts();
         }
     });
