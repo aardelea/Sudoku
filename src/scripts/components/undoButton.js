@@ -1,5 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
+import { adjustFontSize } from '/src/scripts/utils/adjustFontSize.js';
 
 
 export function performUndo(event) {
@@ -23,6 +24,7 @@ export function performUndo(event) {
                 entry.cell.classList.add('user-digit');
             }
             highlightConflicts();
+            adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });
 
         vars.undoHistory = vars.undoHistory.filter(entry => entry.actionID !== lastActionID);
