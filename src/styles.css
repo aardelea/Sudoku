@@ -1,3 +1,7 @@
+:root {
+    --corner-text-size: 1.10em;
+    --center-text-size: 1.20em;
+}
 body {
     display: flex;
     justify-content: center;
@@ -96,10 +100,6 @@ body {
     color: rgb(179,58,58);
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
-:root {
-    --corner-text-size: 1.10em;
-    --center-text-size: 1.20em;
-}
 .center-text {
     display: flex;
     justify-content: center;
@@ -195,7 +195,6 @@ body {
     background-color: rgb(232, 124, 241);
 }
 .other-button-pressed {
-    color: #333;
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
     width: 100px; 
@@ -237,7 +236,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 .landing-button {
@@ -248,13 +246,10 @@ body {
     font-weight: 500;
     font-family: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
     color: rgb(255, 255, 255);
-    align-items: center;
     justify-content: center;
     border: none;
     background-color: rgb(106,27,154);
     border-radius: 15px;
-    align-items: center;
-    justify-content: center;
 }
 .landing-button:hover{
     background-color: rgb(232, 124, 241);
