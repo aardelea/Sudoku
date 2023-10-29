@@ -191,6 +191,21 @@ body {
     text-align: center;
     font-size: var(--corner-text-size);
 }
+.keypad-button.corner-text:nth-child(1),
+.keypad-button.corner-text:nth-child(4),
+.keypad-button.corner-text:nth-child(7) {
+    text-align: left;
+}
+.keypad-button.corner-text:nth-child(3),
+.keypad-button.corner-text:nth-child(6),
+.keypad-button.corner-text:nth-child(9) {
+    text-align: right;
+}
+.keypad-button.corner-text:nth-child(2),
+.keypad-button.corner-text:nth-child(5),
+.keypad-button.corner-text:nth-child(8) {
+    text-align: center;
+}
 .keypad-button.keypad-delete {
     padding: 15px 75px;
     display: flex;
