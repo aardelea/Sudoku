@@ -1,14 +1,13 @@
 export function adjustFontSize(cell, numOfDigits) {
-    if (!cell.classList.contains('center-text')) return;
+    const centerTextElements = cell.querySelectorAll('.center-text');
+    if (!centerTextElements.length) return;
 
-    const originalSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--corner-text-size').trim());
+    const originalSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--centre-text-size').trim());
     
     let newSize;
     switch (numOfDigits) {
         case 1:
         case 2:
-            newSize = originalSize * 0.90;
-            break;
         case 3:
         case 4:
             newSize = originalSize * 0.80;
@@ -24,5 +23,7 @@ export function adjustFontSize(cell, numOfDigits) {
             break;
     };
 
-    cell.style.fontSize = `${newSize}rem`;
+    centerTextElements.forEach(element => {
+        element.style.fontSize = `${newSize}rem`;
+    });
 };
