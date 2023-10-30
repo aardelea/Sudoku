@@ -119,43 +119,43 @@ body {
     z-index: 2;
     text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
 }
-.cell .corner-text:nth-child(1) {
+.cell .corner-text.position-1 {
     top: 0;
     left: 0;
 }
-.cell .corner-text:nth-child(2) {
+.cell .corner-text.position-2 {
     top: 0;
     right: 0;
 }
-.cell .corner-text:nth-child(3) {
+.cell .corner-text.position-3 {
     bottom: 0;
     right: 0;
 }
-.cell .corner-text:nth-child(4) {
+.cell .corner-text.position-4 {
     bottom: 0;
     left: 0;
 }
-.cell .corner-text:nth-child(5) {
+.cell .corner-text.position-5 {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
 }
-.cell .corner-text:nth-child(6) {
+.cell .corner-text.position-6 {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
 }
-.cell .corner-text:nth-child(7) {
+.cell .corner-text.position-7 {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
-.cell .corner-text:nth-child(8) {
+.cell .corner-text.position-8 {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 }
-.cell .corner-text:nth-child(9) {
+.cell .corner-text.position-9 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

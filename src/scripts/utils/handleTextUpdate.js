@@ -20,9 +20,12 @@ export function handleTextUpdate(cell, digit, textType) {
     Array.from(cell.querySelectorAll(`.${textType}`)).forEach(span => span.remove());
 
     const fragment = document.createDocumentFragment();
-    currentDigits.forEach(d => {
+    currentDigits.forEach((d, index) => {
         const span = document.createElement('span');
         span.className = textType;
+        if (textType === 'corner-text') {
+            span.classList.add(`position-${index + 1}`);
+        }
         span.textContent = d;
         fragment.appendChild(span);
     });
