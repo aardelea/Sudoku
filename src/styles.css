@@ -207,7 +207,11 @@ body {
     text-align: center;
 }
 .keypad-button.keypad-delete {
-    padding: 15px 75px;
+    padding: 15px 71px;
+    display: flex;
+}
+.keypad-button.keypad-0{
+    padding: 15px 30px;
     display: flex;
 }
 .keypad-button:hover {
