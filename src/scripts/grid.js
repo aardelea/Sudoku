@@ -20,6 +20,7 @@ import { manageButtonStates } from '/src/scripts/eventHandlers/manageButtonState
 import { digitsCentreButton } from '/src/scripts/components/digitsCentreButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
 import { digitsCornerButton } from '/src/scripts/components/digitsCornerButton.js';
+import { digitsColourButton } from '/src/scripts/components/digitsColourButton.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,4 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
     digitsNormalButton();
     digitsCentreButton();
     digitsCornerButton();
+    digitsColourButton();
 });

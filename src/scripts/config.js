@@ -9,6 +9,7 @@ export const vars = {
     digitsCentreButton: document.querySelector('.centre-button'),
     digitsNormalButton: document.querySelector('.normal-button'),
     digitsCornerButton: document.querySelector('.corner-button'),
+    digitsColourButton: document.querySelector('.colour-button'),
     ctrlOrShiftPressed: false,
     cell: null,
     undoHistory: [],
@@ -16,5 +17,6 @@ export const vars = {
     actionID: 0,
     isCentreText: false,
     isCornerText: false,
+    isColourText: false,
     buttonClicked: false,
 };

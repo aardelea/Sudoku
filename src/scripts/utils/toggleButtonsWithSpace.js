@@ -6,6 +6,8 @@ export function toggleButtonsWithSpace() {
         vars.digitsCornerButton.click();
     } else if (vars.digitsCornerButton.classList.contains('other-button-pressed')) {
         vars.digitsCentreButton.click();
+    } else if (vars.digitsCentreButton.classList.contains('other-button-pressed')) {
+        vars.digitsColourButton.click();
     } else {
         vars.digitsNormalButton.click();
     };
