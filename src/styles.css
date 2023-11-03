@@ -18,6 +18,7 @@
     --cursor: pointer;
     --button-height: 69px;
     --button-width: 69px;
+    --other-button-width: 105px;
 }
 body {
     display: flex;
@@ -222,11 +223,11 @@ body {
 .other-button-pressed {
     font-size: var(--font-button-size);
     color: var(--colour-white);
-    width: 50%; 
+    width: var(--other-button-width); 
     height: var(--button-height);
 }
 .keypad-button.other-button {
-    width: 50%;
+    width: var(--other-button-width); 
     height: var(--button-height);;
     font-size: var(--font-button-size);
     text-align: center;
