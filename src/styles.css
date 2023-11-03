@@ -189,7 +189,7 @@ body {
     text-align: center;
     font-size: var(--centre-text-size);
 }
-.keypad .keypad-button.corner-text {
+.keypad-button.corner-text {
     text-align: center;
     font-size: var(--corner-text-size);
 }
