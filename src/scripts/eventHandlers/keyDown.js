@@ -4,6 +4,7 @@ import { performRedo } from '/src/scripts/components/redoButton.js';
 import { updateCell } from '/src/scripts/utils/updateCell.js';
 import { arrowKeys } from '/src/scripts/utils/arrowKeys.js';
 import { deleteKey } from '/src/scripts/utils/deleteKey.js';
+import { toggleButtonsWithSpace } from '/src/scripts/utils/toggleButtonsWithSpace.js';
 import { vars } from '/src/scripts/config.js';
 
 
@@ -38,6 +39,11 @@ export function keyDown() {
                 return;
             }
         }
+
+        if (event.code === 'Space') {
+            event.preventDefault();
+            toggleButtonsWithSpace();
+        };
         
         if (/^[0-9]$/.test(event.key)) {
             updateCell(event.key, event)
@@ -53,7 +59,8 @@ export function keyDown() {
             vars.digitsCornerButton.click();
         } else if (event.ctrlKey) {
             vars.digitsCentreButton.click();
-        };
+        }
+        ;
         
     });
 
