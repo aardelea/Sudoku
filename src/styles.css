@@ -137,39 +137,39 @@ body {
     text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
 }
 .cell .corner-text.position-1 {
-    top: 0;
-    left: 0;
+    top: calc(0% + 2px);
+    left: calc(0% + 2px);
 }
 .cell .corner-text.position-2 {
-    top: 0;
-    right: 0;
+    top: calc(0% + 2px);
+    right: calc(0% + 2px);
 }
 .cell .corner-text.position-3 {
-    bottom: 0;
-    right: 0;
+    bottom: calc(0% + 2px);
+    right: calc(0% + 2px);
 }
 .cell .corner-text.position-4 {
-    bottom: 0;
-    left: 0;
+    bottom: calc(0% + 2px);
+    left: calc(0% + 2px);
 }
 .cell .corner-text.position-5 {
-    top: 0;
+    top: calc(0% + 2px);
     left: 50%;
     transform: translateX(-50%);
 }
 .cell .corner-text.position-6 {
     top: 50%;
-    right: 0;
+    right: calc(0% + 2px);
     transform: translateY(-50%);
 }
 .cell .corner-text.position-7 {
-    bottom: 0;
+    bottom: calc(0% + 2px);
     left: 50%;
     transform: translateX(-50%);
 }
 .cell .corner-text.position-8 {
     top: 50%;
-    left: 0;
+    left: calc(0% + 2px);
     transform: translateY(-50%);
 }
 .cell .corner-text.position-9 {
