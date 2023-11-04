@@ -29,6 +29,10 @@
     --colour-digit-7: rgb(249,137,135);
     --colour-digit-8: rgb(253,243,140);
     --colour-digit-9: rgb(139,194,249);
+    --colour-block-size-height: 60%;
+    --colour-block-size-width: 60%;
+    --colour-block-transparency: 100%;
+    --colour-block-intensity: 100%;
 }
 body {
     display: flex;
@@ -221,92 +225,102 @@ body {
 }
 .keypad-row:nth-child(2) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
-      var(--colour-digit-1) 100%,
-      transparent 100%
+      var(--colour-digit-1) var(--colour-block-intensity),
+      transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-1);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(2) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
-        var(--colour-digit-2) 100%,
-        transparent 100%
+        var(--colour-digit-2) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-2);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(2) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
-        var(--colour-digit-3) 100%,
-        transparent 100%
+        var(--colour-digit-3) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-3);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(3) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
-        var(--colour-digit-4) 100%,
-        transparent 100%
+        var(--colour-digit-4) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-4);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(3) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
-        var(--colour-digit-5) 100%,
-        transparent 100%
+        var(--colour-digit-5) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-5);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(3) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
-        var(--colour-digit-6) 100%,
-        transparent 100%
+        var(--colour-digit-6) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-6);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(4) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
-        var(--colour-digit-7) 100%,
-        transparent 100%
+        var(--colour-digit-7) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-7);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(4) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
-        var(--colour-digit-8) 100%,
-        transparent 100%
+        var(--colour-digit-8) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-8);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(4) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
-        var(--colour-digit-9) 100%,
-        transparent 100%
+        var(--colour-digit-9) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-9);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-row:nth-child(5) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
-        var(--colour-digit-0) 100%,
-        transparent 100%
+        var(--colour-digit-0) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
     );
+    color: var(--colour-digit-0);
     background-position: center;
-    background-size: 65% 65%;
+    background-size: var(--colour-block-size-height) var(--colour-block-size-width);
     background-repeat: no-repeat;
 }
 .keypad-button.keypad-delete {
