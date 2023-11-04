@@ -6,5 +6,12 @@ export function digitsColourButton() {
         vars.isCornerText = false;
         vars.isCentreText = false;
         vars.isColourText = true;
+        vars.keypadButtons.forEach(function(button) {
+            if (button.textContent >= "0" && button.textContent <= "9") {
+                button.classList.remove('corner-text');
+                button.classList.remove('center-text');
+                button.classList.add('colour-text');
+            };
+        });
     });
 };
