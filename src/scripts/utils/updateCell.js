@@ -1,7 +1,8 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
-import { handleTextUpdate } from '/src/scripts/utils/handleTextUpdate.js';
-import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
+import { updateCellText } from '/src/scripts/utils/updateCellText.js';
+import { updateCellColor } from '/src/scripts/utils/updateCellColor.js';
+import { addToUndoHistory } from '/src/scripts/utils/addToUndoHistory.js';
 
 
 export function updateCell(digit, event=null) {
@@ -15,35 +16,14 @@ export function updateCell(digit, event=null) {
             let prevColor = prevColorClass ? prevColorClass.split('-')[1] : null;
 
             if (vars.isColourText) {
-                removeColoursFromCell(cell);
-                cell.classList.add(`colour-${digit}`);
-                cell.classList.add('colour-text');
-    
+                updateCellColor(cell, digit);
             } else if (!cell.classList.contains('fixed')) {
-    
-                if (vars.isCentreText) {
-                    handleTextUpdate(cell, digit, 'center-text');
-                } else if (vars.isCornerText) {
-                    handleTextUpdate(cell, digit, 'corner-text');
-                } else {
-                    cell.textContent = digit;
-                    cell.classList.remove('center-text');
-                    cell.classList.remove('corner-text');
-                    cell.style.fontSize = '';
-                };
-    
+                updateCellText(cell, digit);
                 cell.classList.add('user-digit');
                 highlightConflicts();
             };
 
-            entriesToUpdate.push({ 
-                cell: cell,
-                prevDigit: prevContent.textContent,
-                prevContent: prevContent,
-                newDigit: cell.textContent,
-                prevColor: prevColor,
-                actionID: vars.actionID
-            });
+            addToUndoHistory(cell, prevContent, prevColor, digit);
         };
     });
 
