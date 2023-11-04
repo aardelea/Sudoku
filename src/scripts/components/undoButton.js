@@ -10,12 +10,19 @@ export function performUndo(event) {
         const lastActionID = vars.undoHistory[vars.undoHistory.length - 1].actionID;
         const entriesToRedo = vars.undoHistory.filter(entry => entry.actionID === lastActionID);
 
-        const entriesToRedoModified = entriesToRedo.map(entry => ({
-            ...entry,
-            prevDigit: entry.cell.textContent,
-            prevContent: entry.cell.innerHTML,
-            actionID: vars.actionID
-        }));
+        const entriesToRedoModified = entriesToRedo.map(entry => {
+            const currentContent = entry.cell.innerHTML;
+            const currentColorClass = Array.from(entry.cell.classList).find(cls => cls.startsWith('colour-'));
+            const currentColor = currentColorClass ? currentColorClass.split('-')[1] : null;
+
+            return {
+                ...entry,
+                newDigit: entry.cell.textContent,
+                newContent: currentContent,
+                newColor: currentColor,
+                actionID: vars.actionID
+            };
+        });
 
         vars.redoHistory.push(...entriesToRedoModified);
 
