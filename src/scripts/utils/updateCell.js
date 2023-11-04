@@ -1,6 +1,7 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { handleTextUpdate } from '/src/scripts/utils/handleTextUpdate.js';
+import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
 
 
 export function updateCell(digit, event=null) {
@@ -9,6 +10,7 @@ export function updateCell(digit, event=null) {
 
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked') && vars.isColourText) {
+            removeColoursFromCell(cell);
             cell.classList.add(`colour-${digit}`);
         } else if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
             let prevContent = cell.innerHTML;

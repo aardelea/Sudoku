@@ -1,5 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { removeExistingConflictHighlights } from '/src/scripts/utils/removeExistingConflictHighlights.js';
+import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
 
 
 export function resetButton() {
@@ -12,10 +13,7 @@ export function resetButton() {
                 cell.classList.remove('center-text');
             };
 
-            cell.classList.remove('colour-text');
-            for (let digit = 0; digit <= 10; digit++) {
-                cell.classList.remove(`colour-${digit}`);
-            }
+            removeColoursFromCell(cell);
         });
     });
 };
