@@ -8,7 +8,16 @@ export function updateCell(digit, event=null) {
     let entriesToUpdate = [];
 
     vars.cells.forEach(cell => {
-        if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
+        if (cell.classList.contains('clicked') && vars.isColourText) {
+            const colorVariableName = `--colour-digit-${digit}`;
+            const colorValue = getComputedStyle(document.documentElement).getPropertyValue(colorVariableName);
+            cell.style.backgroundColor = colorValue;
+            cell.style.color = colorValue;
+            cell.style.backgroundImage = `linear-gradient(${colorValue} var(--colour-block-intensity), transparent var(--colour-block-transparency))`;
+            cell.style.backgroundPosition = 'center';
+            cell.style.backgroundSize = `var(--colour-block-size-height) var(--colour-block-size-width)`;
+            cell.style.backgroundRepeat = 'no-repeat';
+        } else if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
             let prevContent = cell.innerHTML;
 
             if (vars.isCentreText) {
