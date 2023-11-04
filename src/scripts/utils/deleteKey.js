@@ -1,5 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
+import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
 
 
 export function deleteKey() {
@@ -7,6 +8,10 @@ export function deleteKey() {
     const entriesToDelete = [];
     
     vars.cells.forEach(cell => {
+        if (cell.classList.contains('clicked') && cell.classList.contains('colour-text')) {
+            removeColoursFromCell(cell);
+        };
+
         if (cell.classList.contains('clicked') && cell.classList.contains('user-digit')) {
             entriesToDelete.push({
                 cell: cell,

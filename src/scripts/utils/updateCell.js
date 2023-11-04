@@ -12,6 +12,7 @@ export function updateCell(digit, event=null) {
         if (cell.classList.contains('clicked') && vars.isColourText) {
             removeColoursFromCell(cell);
             cell.classList.add(`colour-${digit}`);
+            cell.classList.add('colour-text');
         } else if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
             let prevContent = cell.innerHTML;
 
