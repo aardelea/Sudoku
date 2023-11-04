@@ -1,6 +1,7 @@
 import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { adjustFontSize } from '/src/scripts/utils/adjustFontSize.js';
+import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
 
 
 export function performUndo(event) {
@@ -23,6 +24,13 @@ export function performUndo(event) {
             if (entry.prevDigit !== '') {
                 entry.cell.classList.add('user-digit');
             }
+
+            removeColoursFromCell(entry.cell);
+            if (entry.prevColor) {
+                entry.cell.classList.add(`colour-${entry.prevColor}`);
+                entry.cell.classList.add('colour-text');
+            }
+
             highlightConflicts();
             adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });

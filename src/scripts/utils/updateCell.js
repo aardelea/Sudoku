@@ -9,34 +9,42 @@ export function updateCell(digit, event=null) {
     let entriesToUpdate = [];
 
     vars.cells.forEach(cell => {
-        if (cell.classList.contains('clicked') && vars.isColourText) {
-            removeColoursFromCell(cell);
-            cell.classList.add(`colour-${digit}`);
-            cell.classList.add('colour-text');
-        } else if (cell.classList.contains('clicked') && !cell.classList.contains('fixed')) {
+        if (cell.classList.contains('clicked')) {
             let prevContent = cell.innerHTML;
+            let prevColorClass = Array.from(cell.classList).find(cls => cls.startsWith('colour-'));
+            let prevColor = prevColorClass ? prevColorClass.split('-')[1] : null;
 
-            if (vars.isCentreText) {
-                handleTextUpdate(cell, digit, 'center-text');
-            } else if (vars.isCornerText) {
-                handleTextUpdate(cell, digit, 'corner-text');
-            } else {
-                cell.textContent = digit;
-                cell.classList.remove('center-text');
-                cell.classList.remove('corner-text');
-                cell.style.fontSize = '';
-            }
+            if (vars.isColourText) {
+                removeColoursFromCell(cell);
+                cell.classList.add(`colour-${digit}`);
+                cell.classList.add('colour-text');
+    
+            } else if (!cell.classList.contains('fixed')) {
+    
+                if (vars.isCentreText) {
+                    handleTextUpdate(cell, digit, 'center-text');
+                } else if (vars.isCornerText) {
+                    handleTextUpdate(cell, digit, 'corner-text');
+                } else {
+                    cell.textContent = digit;
+                    cell.classList.remove('center-text');
+                    cell.classList.remove('corner-text');
+                    cell.style.fontSize = '';
+                };
+    
+                cell.classList.add('user-digit');
+                highlightConflicts();
+            };
 
-            cell.classList.add('user-digit');
             entriesToUpdate.push({ 
                 cell: cell,
                 prevDigit: prevContent.textContent,
                 prevContent: prevContent,
                 newDigit: cell.textContent,
+                prevColor: prevColor,
                 actionID: vars.actionID
             });
-            highlightConflicts();
-        }
+        };
     });
 
     vars.undoHistory.push(...entriesToUpdate);
