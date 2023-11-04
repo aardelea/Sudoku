@@ -21,7 +21,7 @@ export function performUndo(event) {
 
         entriesToRedo.forEach(entry => {
             entry.cell.innerHTML = entry.prevContent;
-            if (entry.prevDigit !== '') {
+            if (entry.prevDigit !== '' && !entry.cell.classList.contains('colour-text')) {
                 entry.cell.classList.add('user-digit');
             }
 
