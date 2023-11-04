@@ -11,15 +11,13 @@ export function performRedo(event) {
         const entriesToUndo = vars.redoHistory.filter(entry => entry.actionID === lastActionID);
 
         const entriesToUndoModified = entriesToUndo.map(entry => {
-            const currentContent = entry.cell.innerHTML;
-            const currentColorClass = Array.from(entry.cell.classList).find(cls => cls.startsWith('colour-'));
-            const currentColor = currentColorClass ? currentColorClass.split('-')[1] : null;
-            
+            const colorClass = Array.from(entry.cell.classList).find(cls => cls.startsWith('colour-'));
+
             return {
                 ...entry,
                 prevDigit: entry.cell.textContent,
-                prevContent: currentContent,
-                prevColor: currentColor,
+                prevContent: entry.cell.innerHTML,
+                prevColor: colorClass ? colorClass.split('-')[1] : null,
                 actionID: vars.actionID
             };
         });
@@ -27,14 +25,18 @@ export function performRedo(event) {
         vars.undoHistory.push(...entriesToUndoModified);
 
         entriesToUndo.forEach(entry => {
-            entry.cell.innerHTML = entry.prevContent;
+            entry.cell.innerHTML = entry.newContent;
 
             removeColoursFromCell(entry.cell);
             if (entry.newColor) {
                 entry.cell.classList.add(`colour-${entry.newColor}`);
                 entry.cell.classList.add('colour-text');
+            } else {
+                if (entry.newDigit !== '') {
+                    entry.cell.classList.add('user-digit');
+                }
             }
-            
+
             highlightConflicts();
             adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });
