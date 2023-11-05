@@ -1,23 +1,24 @@
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     margin: 0;
     background-color: var(--colour-white);
+    flex-direction: column;
 }
 .main-menu {
-    top: 320px;
-    left: 0;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    padding-top: 25px;
+    flex-direction: row;
     padding-left: 50px;
     margin-right: 100px;
+    justify-content: center;
 }
 .menu-row {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    gap: 10px;
 }
 .menu-button {
     width: var(--main-menu-button-width);
