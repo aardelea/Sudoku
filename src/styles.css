@@ -18,7 +18,7 @@
     --cursor: pointer;
     --button-height: 69px;
     --button-width: 69px;
-    --other-button-width: 105px;
+    --menu-button-width: 105px;
     --colour-digit-0: rgb(255,255,255);
     --colour-digit-1: rgb(230,230,230);
     --colour-digit-2: rgb(176,176,176);
@@ -415,14 +415,14 @@ body {
 .keypad-button:hover {
     background-color: var(--colour-keypad-button-hover);
 }
-.other-button-pressed {
+.menu-button-pressed {
     font-size: var(--font-button-size);
     color: var(--colour-white);
-    width: var(--other-button-width); 
+    width: var(--menu-button-width); 
     height: var(--button-height);
 }
-.keypad-button.other-button {
-    width: var(--other-button-width); 
+.keypad-button.menu-button {
+    width: var(--menu-button-width); 
     height: var(--button-height);;
     font-size: var(--font-button-size);
     text-align: center;
@@ -433,7 +433,7 @@ body {
     background-color: var(--colour-grey);
     border: 2px solid var(--colour-grey-stronger);
 }
-.keypad-button.other-button:hover{
+.keypad-button.menu-button:hover{
     background-color: var(--colour-keypad-button-hover);
 }
 .keypad-button#undo-button, .keypad-button#redo-button {
@@ -487,7 +487,7 @@ body {
     grid-template-columns: 2fr 1fr;
 }
 .menu-button {
-    width: var(--other-button-width); 
+    width: var(--menu-button-width); 
     height: var(--button-height);;
     font-size: var(--font-button-size);
     text-align: center;
@@ -503,9 +503,9 @@ body {
 .menu-button:hover {
     background-color: var(--colour-keypad-button-hover);
 }
-.other-button-pressed {
+.menu-button-pressed {
     font-size: var(--font-button-size);
     color: var(--colour-white);
-    width: var(--other-button-width); 
+    width: var(--menu-button-width); 
     height: var(--button-height);
 }
