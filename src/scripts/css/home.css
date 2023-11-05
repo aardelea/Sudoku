@@ -1,9 +1,13 @@
 .home-content {
     flex-grow: 1;
-    padding: 20px; 
+    padding: 10px; 
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .section {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .section-title {
     font-size: var(--font-keypad-digit-size);
