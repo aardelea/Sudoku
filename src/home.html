@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scripts/css/root.css">
     <link rel="stylesheet" href="scripts/css/menu.css">
+    <link rel="stylesheet" href="scripts/css/home.css">
     <title>My Puzzles</title>
 </head>
 <body>
+    <div class="sudoku-grid">
+    </div>
     <div class="main-menu">
         <div class="menu-row">
             <button class="menu-button home-button">Home</button>
@@ -22,9 +25,81 @@
             <button class="menu-button setter-mode-button">Setter Mode</button>
         </div>
     </div>
-    <div class="grid-container">
-        <div class="sudoku-grid">
-        </div>
+    <div class="home-content">
+        <section class="section latest-puzzles">
+            <div class="section-content">
+                <table class="home-table">
+                    <thead>
+                        <tr>
+                            <th colspan="4">Latest Puzzles</th>
+                        </tr>
+                        <tr>
+                            <th>Puzzle name</th>
+                            <th>Creator</th>
+                            <th>Added Date</th>
+                            <th>Times Solved</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Logic Twist</td>
+                            <td>Root</td>
+                            <td>2023-11-03</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Lost wishes 3d</td>
+                            <td>Int</td>
+                            <td>2023-10-04</td>
+                            <td>58</td>
+                        </tr>
+                        <tr>
+                            <td>Renban Lines</td>
+                            <td>The Rock</td>
+                            <td>2023-09-04</td>
+                            <td>420</td>
+                        </tr>
+                        <tr>
+                            <td>Do It Faster</td>
+                            <td>Bill Murphy</td>
+                            <td>2023-05-20</td>
+                            <td>1521</td>
+                        </tr>
+                        <tr>
+                            <td>Pressed</td>
+                            <td>Claire Wright</td>
+                            <td>2023-03-15</td>
+                            <td>5102</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="section latest-stats">
+            <div class="section-content">
+                <table class="home-table">
+                    <tbody>
+                        <th colspan="2">Latest Stats</th>
+                        <tr>
+                            <td>Total puzzles</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Total registered users</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Total puzzle solves</td>
+                            <td>500</td>
+                        </tr>
+                        <tr>
+                            <td>New puzzles in last 30 days</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </div>
     <script type="module" src="scripts/menu.js"></script>
 </body>
