@@ -482,10 +482,6 @@ body {
     height: 40px;
     font-size: var(--font-keypad-digit-size);
 }
-.reset-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
 .menu-button {
     width: var(--menu-button-width); 
     height: var(--button-height);;
