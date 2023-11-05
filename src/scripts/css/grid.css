@@ -6,11 +6,6 @@ body {
     margin: 0;
     background-color: var(--colour-white);
 }
-.grid-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 .sudoku-grid {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -21,6 +16,7 @@ body {
     border-color: var(--colour-black);
     width: 608px;
     height: 608px;
+    flex-grow: 1;
 }
 .cell {
     display: flex;

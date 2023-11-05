@@ -6,6 +6,19 @@ body {
     margin: 0;
     background-color: var(--colour-white);
 }
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    margin-right: 100px;
+}
 .menu-button {
     width: var(--main-menu-button-width);
     height: var(--main-menu-button-height);
