@@ -1,7 +1,7 @@
 import { vars } from '/src/scripts/config.js';
 
 
-export function manageButtonStates() {
+export function manageKeypadButtonStates() {
     toggleButtonState(vars.digitsNormalButton, 'menu-button-pressed');
 
     vars.digitsNormalButton.addEventListener('click', function() {
