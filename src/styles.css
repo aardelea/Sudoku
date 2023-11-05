@@ -450,38 +450,6 @@ body {
 .user-digit::selection {
     background: transparent;
 }
-.landing-page, .register-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-.landing-button {
-    margin: 10px;
-    width: 15%;
-    height: var(--button-width);
-    font-size: var(--font-keypad-digit-size);
-    font-weight: 500;
-    font-family: var(--font);
-    color: var(--colour-white);
-    justify-content: center;
-    border: none;
-    background-color: var(--colour-keypad-button-background);
-    border-radius: var(--buttons-round-borders);
-}
-.landing-button:hover{
-    background-color: var(--colour-keypad-button-hover);
-}
-.input-container {
-    display: flex;
-    flex-direction: column;
-}
-#username, #password {
-    margin-top: 10px;
-    width: 100%;
-    height: 40px;
-    font-size: var(--font-keypad-digit-size);
-}
 .menu-button {
     width: var(--menu-button-width); 
     height: var(--button-height);;
