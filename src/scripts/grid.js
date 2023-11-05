@@ -11,8 +11,8 @@ import { keyUp } from '/src/scripts/eventHandlers/keyUp.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    vars.cells = vars.sudokuGrid.querySelectorAll('.cell');
     manageGrid();
+    vars.cells = vars.sudokuGrid.querySelectorAll('.cell');
     mouseDown();
     mouseOver();
     mouseUp();
