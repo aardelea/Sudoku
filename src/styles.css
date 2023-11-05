@@ -441,7 +441,7 @@ body {
     height: var(--button-height);
     font-size: var(--font-button-size);
 }
-.keypad-block {
+.kkeypad-row {
     display: inline-flex;
 }
 .user-digit {
