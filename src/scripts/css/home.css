@@ -10,7 +10,7 @@
     margin-bottom: 5px;
 }
 .home-table {
-    width: 70%;
+    width: auto;
     border-collapse: collapse;
     text-align: left;
     margin-top: 20px;
@@ -19,10 +19,12 @@
 .home-table td {
     padding: 8px;
     border: 1px solid #ddd;
+    white-space: nowrap;
 }
 .home-table th {
     background-color: var(--colour-grey);
     color: var(--colour-keypad-button-background);
+    text-align: center;
 }
 .home-table tr:nth-child(even) {
     background-color: #f9f9f9;
