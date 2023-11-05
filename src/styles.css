@@ -436,7 +436,7 @@ body {
 .keypad-button.menu-button:hover{
     background-color: var(--colour-keypad-button-hover);
 }
-.keypad-button#undo-button, .keypad-button#redo-button {
+.keypad-button.undo-button, .keypad-button.redo-button {
     width: var(--button-width);
     height: var(--button-height);
     font-size: var(--font-button-size);
