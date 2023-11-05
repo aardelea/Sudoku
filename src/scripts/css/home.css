@@ -18,16 +18,13 @@
 .home-table th,
 .home-table td {
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--colour-grey-stronger);
     white-space: nowrap;
 }
 .home-table th {
     background-color: var(--colour-grey);
     color: var(--colour-keypad-button-background);
     text-align: center;
-}
-.home-table tr:nth-child(even) {
-    background-color: #f9f9f9;
 }
 .home-table tr:hover {
     background-color: var(--colour-keypad-button-hover);
