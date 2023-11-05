@@ -5,7 +5,7 @@ import { deleteButton } from '/src/scripts/components/deleteButton.js';
 import { undoButton } from '/src/scripts/components/undoButton.js';
 import { redoButton } from '/src/scripts/components/redoButton.js';
 
-import { manageButtonStates } from '/src/scripts/eventHandlers/manageButtonStates.js';
+import { manageKeypadButtonStates } from '/src/scripts/eventHandlers/manageKeypadButtonStates.js';
 import { digitsCentreButton } from '/src/scripts/components/digitsCentreButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
 import { digitsCornerButton } from '/src/scripts/components/digitsCornerButton.js';
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteButton();
     undoButton();
     redoButton();
-    manageButtonStates()
+    manageKeypadButtonStates()
     digitsNormalButton();
     digitsCentreButton();
     digitsCornerButton();
