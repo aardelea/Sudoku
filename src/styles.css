@@ -485,3 +485,24 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
+.menu-button {
+    width: var(--other-button-width); 
+    height: var(--button-height);;
+    font-size: var(--font-button-size);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--colour-keypad-button-background);
+    background-color: var(--colour-grey);
+    border: 2px solid var(--colour-grey-stronger);
+}
+.menu-button:hover {
+    background-color: var(--colour-keypad-button-hover);
+}
+.other-button-pressed {
+    font-size: var(--font-button-size);
+    color: var(--colour-white);
+    width: var(--other-button-width); 
+    height: var(--button-height);
+}
