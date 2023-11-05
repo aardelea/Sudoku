@@ -1,5 +1,7 @@
 import { manageGrid } from './components/manageGrid.js';
 
+import { homeButton } from '/src/scripts/components/homeButton.js';
+
 import { mouseDown } from '/src/scripts/eventHandlers/mouseDown.js';
 import { mouseOver } from '/src/scripts/eventHandlers/mouseOver.js';
 import { mouseUp } from '/src/scripts/eventHandlers/mouseUp.js';
@@ -24,6 +26,8 @@ import { digitsColourButton } from '/src/scripts/components/digitsColourButton.j
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    homeButton();
+
     manageGrid();
 
     vars.cells = vars.sudokuGrid.querySelectorAll('.cell');

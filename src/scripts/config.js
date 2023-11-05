@@ -10,6 +10,7 @@ export const vars = {
     digitsNormalButton: document.querySelector('.normal-button'),
     digitsCornerButton: document.querySelector('.corner-button'),
     digitsColourButton: document.querySelector('.colour-button'),
+    homeButton: document.querySelector('.home-button'),
     ctrlOrShiftPressed: false,
     cell: null,
     undoHistory: [],

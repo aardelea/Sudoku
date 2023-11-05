@@ -6,18 +6,19 @@ body {
     margin: 0;
     background-color: var(--colour-white);
 }
-.grid-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 0 20px;
-}
 .main-menu {
+    position: absolute;
+    top: 320px;
+    left: 0;
     display: flex;
     flex-direction: column;
     padding-left: 50px;
     margin-right: 100px;
+}
+.menu-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 .menu-button {
     width: var(--main-menu-button-width);

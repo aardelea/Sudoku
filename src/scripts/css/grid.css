@@ -6,6 +6,13 @@ body {
     margin: 0;
     background-color: var(--colour-white);
 }
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
 .sudoku-grid {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
