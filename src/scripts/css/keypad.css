@@ -46,11 +46,6 @@
     flex-direction: column;
     margin-left: 30px;
 }
-.menu-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
 .keypad-button {
     width: var(--button-width);
     height: var(--button-height);
