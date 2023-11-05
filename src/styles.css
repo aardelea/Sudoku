@@ -33,6 +33,7 @@
     --colour-block-size-width: 60%;
     --colour-block-transparency: 100%;
     --colour-block-intensity: 100%;
+    --buttons-round-borders: 15px;
 }
 body {
     display: flex;
@@ -197,7 +198,7 @@ body {
     color: var(--colour-white);
     border: none;
     background-color: var(--colour-keypad-button-background);
-    border-radius: 15px;
+    border-radius: var(--buttons-round-borders);
     justify-content: center;
 }
 .keypad-button.center-text {
@@ -466,7 +467,7 @@ body {
     justify-content: center;
     border: none;
     background-color: var(--colour-keypad-button-background);
-    border-radius: 15px;
+    border-radius: var(--buttons-round-borders);
 }
 .landing-button:hover{
     background-color: var(--colour-keypad-button-hover);
@@ -492,10 +493,12 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: bold;
     color: var(--colour-keypad-button-background);
     background-color: var(--colour-grey);
     border: 2px solid var(--colour-grey-stronger);
+    border-radius: var(--buttons-round-borders);
 }
 .menu-button:hover {
     background-color: var(--colour-keypad-button-hover);
