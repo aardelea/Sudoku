@@ -183,7 +183,7 @@ body {
     flex-direction: column;
     margin-left: 30px;
 }
-.keypad-row {
+.menu-row {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
@@ -232,7 +232,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(2) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(2) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
       var(--colour-digit-1) var(--colour-block-intensity),
       transparent var(--colour-block-transparency)
@@ -250,7 +250,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(2) .keypad-button.colour-text:nth-child(2) {
+.menu-row:nth-child(2) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
         var(--colour-digit-2) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -268,7 +268,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(2) .keypad-button.colour-text:nth-child(3) {
+.menu-row:nth-child(2) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
         var(--colour-digit-3) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -286,7 +286,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(3) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
         var(--colour-digit-4) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -304,7 +304,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(3) .keypad-button.colour-text:nth-child(2) {
+.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
         var(--colour-digit-5) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -322,7 +322,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(3) .keypad-button.colour-text:nth-child(3) {
+.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
         var(--colour-digit-6) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -340,7 +340,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(4) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
         var(--colour-digit-7) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -358,7 +358,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(4) .keypad-button.colour-text:nth-child(2) {
+.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
         var(--colour-digit-8) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -376,7 +376,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(4) .keypad-button.colour-text:nth-child(3) {
+.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
         var(--colour-digit-9) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -394,7 +394,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-.keypad-row:nth-child(5) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(5) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
         var(--colour-digit-0) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
