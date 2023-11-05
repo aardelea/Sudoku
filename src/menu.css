@@ -1,0 +1,68 @@
+:root {
+    --font: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --font-button-size: 1.50rem;
+    --font-keypad-digit-size: 2.00rem;
+    --font-cell-digit-size: 3.00rem;
+    --corner-text-size: 1.10rem;
+    --centre-text-size: 1.25rem;
+    --colour-white: rgb(255,255,255);
+    --colour-black: rgb(0,0,0);
+    --colour-grey: rgb(238,238,238);
+    --colour-grey-stronger: rgb(206,206,206);
+    --colour-user-click-highlighting: rgb(76,164,255);
+    --colour-user-digit: rgb(29,106,229);
+    --colour-conflict: rgb(217,156,156);
+    --colour-pencilmark-conflict: rgb(179,58,58);
+    --colour-keypad-button-background: rgb(106,27,154);
+    --colour-keypad-button-hover: rgb(232,124,241);
+    --cursor: pointer;
+    --button-height: 69px;
+    --button-width: 69px;
+    --menu-button-width: 105px;
+    --colour-digit-0: rgb(255,255,255);
+    --colour-digit-1: rgb(230,230,230);
+    --colour-digit-2: rgb(176,176,176);
+    --colour-digit-3: rgb(102,102,102);
+    --colour-digit-4: rgb(209,239,166);
+    --colour-digit-5: rgb(241,176,247);
+    --colour-digit-6: rgb(239,192,132);
+    --colour-digit-7: rgb(249,137,135);
+    --colour-digit-8: rgb(253,243,140);
+    --colour-digit-9: rgb(139,194,249);
+    --colour-block-size-height: 60%;
+    --colour-block-size-width: 60%;
+    --colour-block-transparency: 100%;
+    --colour-block-intensity: 100%;
+    --buttons-round-borders: 15px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--colour-white);
+}
+.menu-button {
+    width: var(--menu-button-width); 
+    height: var(--button-height);;
+    font-size: var(--font-button-size);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--colour-keypad-button-background);
+    background-color: var(--colour-grey);
+    border: 2px solid var(--colour-grey-stronger);
+    border-radius: var(--buttons-round-borders);
+}
+.menu-button:hover {
+    background-color: var(--colour-keypad-button-hover);
+}
+.menu-button-pressed {
+    font-size: var(--font-button-size);
+    color: var(--colour-white);
+    width: var(--menu-button-width); 
+    height: var(--button-height);
+}

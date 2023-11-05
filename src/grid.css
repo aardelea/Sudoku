@@ -1,0 +1,260 @@
+:root {
+    --font: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    --font-button-size: 1.50rem;
+    --font-keypad-digit-size: 2.00rem;
+    --font-cell-digit-size: 3.00rem;
+    --corner-text-size: 1.10rem;
+    --centre-text-size: 1.25rem;
+    --colour-white: rgb(255,255,255);
+    --colour-black: rgb(0,0,0);
+    --colour-grey: rgb(238,238,238);
+    --colour-grey-stronger: rgb(206,206,206);
+    --colour-user-click-highlighting: rgb(76,164,255);
+    --colour-user-digit: rgb(29,106,229);
+    --colour-conflict: rgb(217,156,156);
+    --colour-pencilmark-conflict: rgb(179,58,58);
+    --colour-keypad-button-background: rgb(106,27,154);
+    --colour-keypad-button-hover: rgb(232,124,241);
+    --cursor: pointer;
+    --button-height: 69px;
+    --button-width: 69px;
+    --menu-button-width: 105px;
+    --colour-digit-0: rgb(255,255,255);
+    --colour-digit-1: rgb(230,230,230);
+    --colour-digit-2: rgb(176,176,176);
+    --colour-digit-3: rgb(102,102,102);
+    --colour-digit-4: rgb(209,239,166);
+    --colour-digit-5: rgb(241,176,247);
+    --colour-digit-6: rgb(239,192,132);
+    --colour-digit-7: rgb(249,137,135);
+    --colour-digit-8: rgb(253,243,140);
+    --colour-digit-9: rgb(139,194,249);
+    --colour-block-size-height: 60%;
+    --colour-block-size-width: 60%;
+    --colour-block-transparency: 100%;
+    --colour-block-intensity: 100%;
+    --buttons-round-borders: 15px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--colour-white);
+}
+.grid-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    background-color: var(--colour-black);
+    border-width: 4px;
+    border-style: solid;
+    border-color: var(--colour-black);
+    width: 608px;
+    height: 608px;
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-cell-digit-size);
+    font-family: var(--font);
+    color: var(--colour-black);
+    background-color: var(--colour-white);
+    position: relative;
+    user-select: none;
+    cursor: var(--cursor);
+    caret-color: transparent;
+    width: 65px;
+    height: 65px;
+}
+.cell::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 8px solid transparent;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 1;
+}
+.cell.clicked::before {
+    border-color: var(--colour-user-click-highlighting);
+}
+.cell[data-row="3"], .cell[data-row="6"], .cell[data-row="9"] {
+    border-bottom: 4px  var(--colour-black);;
+}
+.cell[data-row="4"], .cell[data-row="7"] {
+    border-top: 4px solid var(--colour-black);;
+}
+.cell[data-col="3"], .cell[data-col="6"] {
+    border-right: 4px solid var(--colour-black);;
+}
+.cell.right-shared::before {
+    border-right-color: transparent;
+    border-right-width: 1px;
+}
+.cell.left-shared::before {
+    border-left-color: transparent;
+    border-left-width: 1px;
+}
+.cell.top-shared::before {
+    border-top-color: transparent;
+    border-top-width: 1px;
+}
+.cell.bottom-shared::before {
+    border-bottom-color: transparent;
+    border-bottom-width: 1px;
+}
+.cell:focus {
+    outline: none;
+}
+.cell.conflict-highlighted {
+    background-color: var(--colour-conflict);
+    text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
+}
+.conflict-highlighted-pmark {
+    color: var(--colour-pencilmark-conflict);
+    text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
+}
+.cell .corner-text {
+    position: absolute;
+    font-size: var(--corner-text-size);
+    z-index: 2;
+    text-shadow: -1px 0 var(--colour-white), 0 1px var(--colour-white), 1px 0 var(--colour-white), 0 -1px var(--colour-white);
+}
+.cell .corner-text.position-1 {
+    top: calc(0% + 2px);
+    left: calc(0% + 2px);
+}
+.cell .corner-text.position-2 {
+    top: calc(0% + 2px);
+    right: calc(0% + 2px);
+}
+.cell .corner-text.position-3 {
+    bottom: calc(0% + 2px);
+    right: calc(0% + 2px);
+}
+.cell .corner-text.position-4 {
+    bottom: calc(0% + 2px);
+    left: calc(0% + 2px);
+}
+.cell .corner-text.position-5 {
+    top: calc(0% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cell .corner-text.position-6 {
+    top: 50%;
+    right: calc(0% + 2px);
+    transform: translateY(-50%);
+}
+.cell .corner-text.position-7 {
+    bottom: calc(0% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cell .corner-text.position-8 {
+    top: 50%;
+    left: calc(0% + 2px);
+    transform: translateY(-50%);
+}
+.cell .corner-text.position-9 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.user-digit {
+    color: var(--colour-user-digit);
+}
+.user-digit::selection {
+    background: transparent;
+}
+.colour-0 {
+    background-image: linear-gradient(
+        var(--colour-digit-0) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-1 {
+    background-image: linear-gradient(
+      var(--colour-digit-1) var(--colour-block-intensity),
+      transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-2 {
+    background-image: linear-gradient(
+      var(--colour-digit-2) var(--colour-block-intensity),
+      transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-3 {
+    background-image: linear-gradient(
+        var(--colour-digit-3) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-4 {
+    background-image: linear-gradient(
+        var(--colour-digit-4) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-5 {
+    background-image: linear-gradient(
+        var(--colour-digit-5) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-6 {
+    background-image: linear-gradient(
+        var(--colour-digit-6) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-7 {
+    background-image: linear-gradient(
+        var(--colour-digit-7) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-8 {
+    background-image: linear-gradient(
+        var(--colour-digit-8) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.colour-9 {
+    background-image: linear-gradient(
+        var(--colour-digit-9) var(--colour-block-intensity),
+        transparent var(--colour-block-transparency)
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+}
