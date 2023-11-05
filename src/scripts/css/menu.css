@@ -7,7 +7,6 @@ body {
     background-color: var(--colour-white);
 }
 .main-menu {
-    position: absolute;
     top: 320px;
     left: 0;
     display: flex;

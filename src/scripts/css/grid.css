@@ -23,7 +23,6 @@ body {
     border-color: var(--colour-black);
     width: 608px;
     height: 608px;
-    flex-grow: 1;
 }
 .cell {
     display: flex;
