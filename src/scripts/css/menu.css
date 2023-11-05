@@ -7,8 +7,8 @@ body {
     background-color: var(--colour-white);
 }
 .menu-button {
-    width: var(--menu-button-width); 
-    height: var(--button-height);;
+    width: var(--main-menu-button-width);
+    height: var(--main-menu-button-height);
     font-size: var(--font-button-size);
     text-align: center;
     display: flex;
