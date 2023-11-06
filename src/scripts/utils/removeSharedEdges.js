@@ -1,7 +1,8 @@
 export function removeSharedEdges() {
-    const selectedCells = Array.from(document.querySelectorAll('.cell.clicked'));
-    selectedCells.forEach(cell => cell.classList.remove('right-shared', 'left-shared', 'top-shared', 'bottom-shared'));
+    const allCells = Array.from(document.querySelectorAll('.cell'));
+    allCells.forEach(cell => cell.classList.remove('right-shared', 'left-shared', 'top-shared', 'bottom-shared'));
 
+    const selectedCells = Array.from(document.querySelectorAll('.cell.clicked'));
     const organizeCells = (attr) => {
         const group = {};
         selectedCells.forEach(cell => {
