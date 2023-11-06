@@ -18,3 +18,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.footer {
+    text-align: center;
+    font-size: 15px;
+    color: var(--colour-black);
+    margin-top: 15px;
+}
