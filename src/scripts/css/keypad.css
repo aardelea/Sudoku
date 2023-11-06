@@ -19,7 +19,7 @@
     color: var(--colour-white);
     border: none;
     background-color: var(--colour-keypad-button-background);
-    border-radius: var(--buttons-round-borders);
+    border-radius: var(--border-radius-round-corners);
     justify-content: center;
 }
 .keypad-button.center-text {

@@ -23,3 +23,30 @@ body {
     font-size: 15px;
     color: var(--colour-black);
 }
+.stats-table {
+    width: 450px;
+    margin-bottom: 10px;
+}
+.stats-table table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.stats-table td {
+    padding: 4px;
+    text-align: left;
+}
+.sudoku-title-author {
+    background-color: var(--colour-sudoku-name-background);
+    color: var(--colour-white);
+    text-align: center;
+    font-size: var(--font-button-size);
+    font-weight: bold;
+    border-radius: var(--border-radius-round-corners);
+}
+.scrollable-cell {
+    max-height: 120px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: var(--colour-sudoku-instructions-background);
+    border-radius: var(--border-radius-round-corners);
+}

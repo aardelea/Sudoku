@@ -15,6 +15,8 @@
     --colour-pencilmark-conflict: rgb(179,58,58);
     --colour-keypad-button-background: rgb(106,27,154);
     --colour-keypad-button-hover: rgb(232,124,241);
+    --colour-sudoku-instructions-background: rgb(165,224,142);
+    --colour-sudoku-name-background: rgb(131,0,63);
     --cursor: pointer;
     --button-height: 69px;
     --button-width: 69px;
@@ -35,5 +37,5 @@
     --colour-block-size-width: 60%;
     --colour-block-transparency: 100%;
     --colour-block-intensity: 100%;
-    --buttons-round-borders: 15px;
+    --border-radius-round-corners: 15px;
 }

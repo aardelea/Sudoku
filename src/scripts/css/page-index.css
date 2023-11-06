@@ -23,7 +23,7 @@ body {
     justify-content: center;
     border: none;
     background-color: var(--colour-keypad-button-background);
-    border-radius: var(--buttons-round-borders);
+    border-radius: var(--border-radius-round-corners);
 }
 .landing-button:hover{
     background-color: var(--colour-keypad-button-hover);
