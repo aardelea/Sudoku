@@ -1,10 +1,10 @@
 :root {
     --font: Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    --font-button-size: 1.50rem;
-    --font-keypad-digit-size: 2.00rem;
-    --font-cell-digit-size: 3.00rem;
-    --corner-text-size: 1.10rem;
-    --centre-text-size: 1.25rem;
+    --font-button-size: 24px;
+    --font-keypad-digit-size: 32px;
+    --font-cell-digit-size: 48px;
+    --corner-text-size: 18px;
+    --centre-text-size: 20px;
     --colour-white: rgb(255,255,255);
     --colour-black: rgb(0,0,0);
     --colour-grey: rgb(238,238,238);
