@@ -1,9 +1,9 @@
-import { generateStartingGrid } from '/src/scripts/components/generateStartingGrid.js';
+import { generateEmptyStartingGrid } from '/src/scripts/components/generateEmptyStartingGrid.js';
 
 
 export function manageGrid() {
     const sudokuGrid = document.querySelector('.sudoku-grid');
-    const startingGrid = generateStartingGrid();
+    const startingGrid = generateEmptyStartingGrid();
     let uniqueID = 0;
 
     for (let row = 0; row < 9; row++) {
