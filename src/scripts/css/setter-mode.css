@@ -4,6 +4,7 @@ body {
     margin: 0;
     background-color: var(--colour-white);
     flex-direction: column;
+    height: 100%;
 }
 .grid-container {
     display: flex;
@@ -59,24 +60,55 @@ body {
     width: 100%;
     height: 100%; 
     overflow: auto;
+    padding: 0;
     background-color: var(--colour-black-opacity);
-    border-radius: var(--border-radius-round-corners);
 }
 .modal-content {
     background-color: var(--colour-grey);
-    margin: 20% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid var(--colour-black);
-    width: 30%;
+    width: 25%;
     color: var(--colour-keypad-button-background);
     font-weight: bold;
-  }
+    position: relative;
+    box-sizing: border-box;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: var(--border-radius-round-corners);
+}
 .close {
     color: var(--colour-keypad-button-background);
     float: right;
-    font-size: var(--font-button-size);
+    font-size: var(--font-cell-digit-size);
     font-weight: bold;
+    position: absolute;
+    top: 1px;
+    right: 10px;
 }
 .close:hover, .close:focus {
     cursor: pointer;
+}
+#editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#editForm label {
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+}
+#editForm label, #editForm input, #editForm textarea {
+    align-self: flex-start;
+}
+#editForm input, #editForm textarea {
+    width: 95%;
+    border-radius: var(--border-radius-round-corners);
+    padding: 10px;
+}
+#saveBtn {
+    display: block;
+    margin: 20px auto;
 }

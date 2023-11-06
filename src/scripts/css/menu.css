@@ -26,6 +26,7 @@
     background-color: var(--colour-grey);
     border: 2px solid var(--colour-grey-stronger);
     border-radius: var(--border-radius-round-corners);
+    cursor: pointer;
 }
 .menu-button:hover {
     background-color: var(--colour-keypad-button-hover);
