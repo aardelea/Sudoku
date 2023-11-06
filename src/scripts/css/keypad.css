@@ -151,7 +151,7 @@
 .keypad-button:hover {
     background-color: var(--colour-keypad-button-hover);
 }
-.menu-button-pressed {
+.keypad-button-pressed {
     font-size: var(--font-button-size);
     color: var(--colour-white);
     width: var(--menu-button-width); 

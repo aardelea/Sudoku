@@ -2,10 +2,10 @@ import { vars } from '/src/scripts/config.js';
 
 
 export function manageKeypadButtonStates() {
-    toggleButtonState(vars.digitsNormalButton, 'menu-button-pressed');
+    toggleButtonState(vars.digitsNormalButton, 'keypad-button-pressed');
 
     vars.digitsNormalButton.addEventListener('click', function() {
-        toggleButtonState(vars.digitsNormalButton, 'menu-button-pressed');
+        toggleButtonState(vars.digitsNormalButton, 'keypad-button-pressed');
         toggleButtonState(vars.digitsCornerButton, 'menu-button');
         toggleButtonState(vars.digitsCenterButton, 'menu-button');
         toggleButtonState(vars.digitsColourButton, 'menu-button');
@@ -13,7 +13,7 @@ export function manageKeypadButtonStates() {
 
     vars.digitsCornerButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button');
-        toggleButtonState(vars.digitsCornerButton, 'menu-button-pressed');
+        toggleButtonState(vars.digitsCornerButton, 'keypad-button-pressed');
         toggleButtonState(vars.digitsCenterButton, 'menu-button');
         toggleButtonState(vars.digitsColourButton, 'menu-button');
     });
@@ -21,7 +21,7 @@ export function manageKeypadButtonStates() {
     vars.digitsCenterButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button');
         toggleButtonState(vars.digitsCornerButton, 'menu-button');
-        toggleButtonState(vars.digitsCenterButton, 'menu-button-pressed');
+        toggleButtonState(vars.digitsCenterButton, 'keypad-button-pressed');
         toggleButtonState(vars.digitsColourButton, 'menu-button');
     });
 
@@ -29,12 +29,12 @@ export function manageKeypadButtonStates() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button');
         toggleButtonState(vars.digitsCornerButton, 'menu-button');
         toggleButtonState(vars.digitsCenterButton, 'menu-button');
-        toggleButtonState(vars.digitsColourButton, 'menu-button-pressed');
+        toggleButtonState(vars.digitsColourButton, 'keypad-button-pressed');
     });
 };
 
 
 export function toggleButtonState(button, newClass) {
-    button.classList.remove('menu-button', 'menu-button-pressed');
+    button.classList.remove('menu-button', 'keypad-button-pressed');
     button.classList.add(newClass);
 };
