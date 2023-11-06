@@ -1,9 +1,5 @@
 body {
-    display: flex;
     min-height: 100vh;
-    margin: 0;
-    background-color: var(--colour-white);
-    flex-direction: column;
 }
 .main-menu {
     box-sizing: border-box;
