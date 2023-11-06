@@ -3,7 +3,7 @@ import { handleTextUpdate } from '/src/scripts/utils/handleTextUpdate.js';
 
 
 export function updateCellText(cell, digit) {
-    if (vars.isCentreText) {
+    if (vars.isCenterText) {
         handleTextUpdate(cell, digit, 'center-text');
     } else if (vars.isCornerText) {
         handleTextUpdate(cell, digit, 'corner-text');

@@ -7,28 +7,28 @@ export function manageKeypadButtonStates() {
     vars.digitsNormalButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button-pressed');
         toggleButtonState(vars.digitsCornerButton, 'menu-button');
-        toggleButtonState(vars.digitsCentreButton, 'menu-button');
+        toggleButtonState(vars.digitsCenterButton, 'menu-button');
         toggleButtonState(vars.digitsColourButton, 'menu-button');
     });
 
     vars.digitsCornerButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button');
         toggleButtonState(vars.digitsCornerButton, 'menu-button-pressed');
-        toggleButtonState(vars.digitsCentreButton, 'menu-button');
+        toggleButtonState(vars.digitsCenterButton, 'menu-button');
         toggleButtonState(vars.digitsColourButton, 'menu-button');
     });
 
-    vars.digitsCentreButton.addEventListener('click', function() {
+    vars.digitsCenterButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button');
         toggleButtonState(vars.digitsCornerButton, 'menu-button');
-        toggleButtonState(vars.digitsCentreButton, 'menu-button-pressed');
+        toggleButtonState(vars.digitsCenterButton, 'menu-button-pressed');
         toggleButtonState(vars.digitsColourButton, 'menu-button');
     });
 
     vars.digitsColourButton.addEventListener('click', function() {
         toggleButtonState(vars.digitsNormalButton, 'menu-button');
         toggleButtonState(vars.digitsCornerButton, 'menu-button');
-        toggleButtonState(vars.digitsCentreButton, 'menu-button');
+        toggleButtonState(vars.digitsCenterButton, 'menu-button');
         toggleButtonState(vars.digitsColourButton, 'menu-button-pressed');
     });
 };

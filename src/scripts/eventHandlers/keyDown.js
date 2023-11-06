@@ -58,7 +58,7 @@ export function keyDown() {
         } else if (event.shiftKey || event.altKey) {
             vars.digitsCornerButton.click();
         } else if (event.ctrlKey) {
-            vars.digitsCentreButton.click();
+            vars.digitsCenterButton.click();
         }
         ;
         

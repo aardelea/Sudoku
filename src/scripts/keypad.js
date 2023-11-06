@@ -6,7 +6,7 @@ import { undoButton } from '/src/scripts/components/undoButton.js';
 import { redoButton } from '/src/scripts/components/redoButton.js';
 
 import { manageKeypadButtonStates } from '/src/scripts/eventHandlers/manageKeypadButtonStates.js';
-import { digitsCentreButton } from '/src/scripts/components/digitsCentreButton.js';
+import { digitsCenterButton } from '/src/scripts/components/digitsCenterButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
 import { digitsCornerButton } from '/src/scripts/components/digitsCornerButton.js';
 import { digitsColourButton } from '/src/scripts/components/digitsColourButton.js';
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     redoButton();
     manageKeypadButtonStates()
     digitsNormalButton();
-    digitsCentreButton();
+    digitsCenterButton();
     digitsCornerButton();
     digitsColourButton();
 });
