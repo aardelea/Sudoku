@@ -24,6 +24,6 @@ export function adjustFontSize(cell, numOfDigits) {
     };
 
     centerTextElements.forEach(element => {
-        element.style.fontSize = `${newSize}rem`;
+        element.style.fontSize = `${newSize}px`;
     });
 };
