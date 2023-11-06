@@ -1,5 +1,5 @@
 export function logInButton() {
     document.getElementById('log-in').addEventListener('click', () => {
-        window.location.href = '/src/sudoku.html';
+        window.location.href = '/src/home.html';
     });
 };

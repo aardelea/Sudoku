@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scripts/css/root.css">
+    <link rel="stylesheet" href="scripts/css/setter-mode.css">
     <link rel="stylesheet" href="scripts/css/menu.css">
+    <link rel="stylesheet" href="scripts/css/grid.css">
+    <link rel="stylesheet" href="scripts/css/keypad.css">
     <title>Setter Mode</title>
 </head>
 <body>
@@ -16,10 +19,85 @@
             <button class="menu-button setter-mode-button menu-button-pressed">Setter Mode</button>
         </div>
     </div>
-    <div class="grid-container">
-        <div class="sudoku-grid">
+    <div class="content-container">
+        <div class="grid-container">
+
+            <div class="sudoku-grid">
+            </div>
+
+            <div class="keypad">
+                <div class="menu-row">
+                    <div class="stats-table">
+                        <table>
+                            <tbody>
+                                <tr><td>
+                                    <div class="sudoku-title-author">
+                                        Amazing Easy Sudoku <br>
+                                        by Auto Generator Inc
+                                    </div>
+                                </td></tr>
+                                <tr><td>
+                                    <div class="scrollable-cell">
+                                        Normal sudoku rules apply.
+                                    </div>
+                                </td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="menu-row">
+                    <button class="keypad-button menu-button reset-button">Reset</button>
+                    <div></div>
+                </div>
+
+                <div class="menu-row">
+                    <div class="keypad-row">
+                        <button class="keypad-button">1</button>
+                        <button class="keypad-button">2</button>
+                        <button class="keypad-button">3</button>
+                    </div>
+                    <button class="keypad-button menu-button normal-button">Normal</button>
+                </div>
+                <div class="menu-row">
+                    <div class="keypad-row">
+                        <button class="keypad-button">4</button>
+                        <button class="keypad-button">5</button>
+                        <button class="keypad-button">6</button>
+                    </div>
+                    <button class="keypad-button menu-button corner-button">Corner</button>
+                </div>
+                <div class="menu-row">
+                    <div class="keypad-row">
+                        <button class="keypad-button">7</button>
+                        <button class="keypad-button">8</button>
+                        <button class="keypad-button">9</button>
+                    </div>
+                    <button class="keypad-button menu-button center-button">Center</button>
+                </div>
+                <div class="menu-row">
+                    <div class="keypad-row">
+                        <button class="keypad-button keypad-0">0</button>
+                        <button class="keypad-button keypad-delete">Delete</button>
+                    </div>
+                    <button class="keypad-button menu-button colour-button">Colours</button>
+                </div>
+                <div class="menu-row">
+                    <div class="keypad-row">
+                        <button class="keypad-button menu-button undo-button">Undo</button>
+                        <button class="keypad-button menu-button redo-button">Redo</button>
+                    </div>
+                </div>
+
+                <div class="menu-row">
+                    <footer class="footer">
+                    </footer>
+                </div>
+            </div>
         </div>
     </div>
     <script type="module" src="scripts/menu.js"></script>
+    <script type="module" src="scripts/grid.js"></script>
+    <script type="module" src="scripts/keypad.js"></script>
 </body>
 </html>
