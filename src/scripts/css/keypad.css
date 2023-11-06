@@ -1,9 +1,4 @@
-.center-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--centre-text-size);
-}
+
 .keypad {
     display: flex;
     flex-direction: column;
@@ -24,7 +19,7 @@
 }
 .keypad-button.center-text {
     text-align: center;
-    font-size: var(--centre-text-size);
+    font-size: var(--center-text-size);
 }
 .keypad-button.corner-text {
     text-align: center;

@@ -2,7 +2,7 @@ export function adjustFontSize(cell, numOfDigits) {
     const centerTextElements = cell.querySelectorAll('.center-text');
     if (!centerTextElements.length) return;
 
-    const originalSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--centre-text-size').trim());
+    const originalSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--center-text-size').trim());
     
     let newSize;
     switch (numOfDigits) {

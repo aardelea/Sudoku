@@ -208,3 +208,9 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--center-text-size);
+}
