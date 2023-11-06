@@ -26,6 +26,6 @@ export const vars = {
     footerText: 'Created by Alex ©2023. All rights reserved.',
     puzzleStartingPositionButton: document.querySelector('.puzzle-starting-position-button'),
     puzzleSetSolutionButton: document.querySelector('.puzzle-set-solution-button'),
-    puzzleStartingPosition: false,
-    puzzleSetSolution: true,
+    puzzleStartingPosition: true,
+    puzzleSetSolution: false,
 };
