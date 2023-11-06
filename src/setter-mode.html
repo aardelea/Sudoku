@@ -111,6 +111,26 @@
             </div>
         </div>
     </div>
+
+    <div id="editModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="editForm">
+                <label for="puzzleTitle">Puzzle Title:</label>
+                <input type="text" id="puzzleTitle" name="puzzleTitle"><br><br>
+            
+                <label for="puzzleAuthor">Author:</label>
+                <input type="text" id="puzzleAuthor" name="puzzleAuthor"><br><br>
+            
+                <label for="puzzleRules">Rules:</label>
+                <textarea id="puzzleRules" name="puzzleRules"></textarea><br><br>
+            
+                <input type="button" id="saveBtn" value="Save">
+            </form>
+        </div>
+    </div>
     <script type="module" src="scripts/menu.js"></script>
     <script type="module" src="scripts/setterMode.js"></script>
     <script type="module" src="scripts/grid.js"></script>

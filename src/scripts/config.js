@@ -29,6 +29,7 @@ export const vars = {
     puzzleRules: 'Normal sudoku rules apply.',
     puzzleStartingPositionButton: document.querySelector('.puzzle-starting-position-button'),
     puzzleSetSolutionButton: document.querySelector('.puzzle-set-solution-button'),
+    puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
     puzzleStartingPosition: true,
     puzzleSetSolution: false,
 };
