@@ -24,5 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     digitsColourButton();
     window.onload = function() {
         document.querySelector('.footer').textContent = vars.footerText;
+        document.querySelector('.sudoku-title').textContent = vars.puzzleTitle;
+        document.querySelector('.sudoku-author').textContent = "by " + vars.puzzleAuthor;
+        document.querySelector('.puzzle-rules').textContent = vars.puzzleRules;
     };
 });

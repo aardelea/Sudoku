@@ -35,7 +35,7 @@ body {
     padding: 4px;
     text-align: left;
 }
-.sudoku-title-author {
+.sudoku-title, .sudoku-author {
     background-color: var(--colour-sudoku-name-background);
     color: var(--colour-white);
     text-align: center;
