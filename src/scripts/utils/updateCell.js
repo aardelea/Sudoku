@@ -23,6 +23,10 @@ export function updateCell(digit, event=null) {
                 highlightConflicts();
             };
 
+            if(vars.puzzleStartingPosition){
+                cell.classList.add('fixed');
+            };
+
             addToUndoHistory(cell, prevContent, prevColor, digit);
         };
     });

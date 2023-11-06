@@ -7,10 +7,10 @@ export function resetButton() {
     vars.resetButton.addEventListener('click', () => {
         removeExistingConflictHighlights();
         vars.cells.forEach(cell => {
-            if (!cell.classList.contains('fixed')) {
+
+            if (!cell.classList.contains('fixed') || vars.puzzleStartingPosition) {
                 cell.textContent = '';
-                cell.classList.remove('corner-text');
-                cell.classList.remove('center-text');
+                cell.classList.remove('corner-text', 'center-text', 'user-digit', 'fixed');
             };
 
             removeColoursFromCell(cell);
