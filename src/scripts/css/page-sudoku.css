@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--colour-white);
+    flex-direction: column;
+}
+.grid-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+.content-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
