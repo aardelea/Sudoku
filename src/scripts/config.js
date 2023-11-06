@@ -23,4 +23,5 @@ export const vars = {
     isCornerText: false,
     isColourText: false,
     buttonClicked: false,
+    footerText: 'Created by Alex ©2023. All rights reserved.',
 };

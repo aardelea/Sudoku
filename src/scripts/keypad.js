@@ -1,10 +1,9 @@
+import { vars } from '/src/scripts/config.js';
 import { keyPad } from '/src/scripts/components/keyPad.js';
-
 import { resetButton } from '/src/scripts/components/resetButton.js';
 import { deleteButton } from '/src/scripts/components/deleteButton.js';
 import { undoButton } from '/src/scripts/components/undoButton.js';
 import { redoButton } from '/src/scripts/components/redoButton.js';
-
 import { manageKeypadButtonStates } from '/src/scripts/eventHandlers/manageKeypadButtonStates.js';
 import { digitsCenterButton } from '/src/scripts/components/digitsCenterButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
@@ -23,4 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     digitsCenterButton();
     digitsCornerButton();
     digitsColourButton();
+    window.onload = function() {
+        document.querySelector('.footer').textContent = vars.footerText;
+    };
 });
