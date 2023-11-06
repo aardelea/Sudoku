@@ -45,7 +45,7 @@
 .keypad-button.corner-text:nth-child(8) {
     text-align: center;
 }
-.menu-row:nth-child(2) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
       var(--colour-digit-1) var(--colour-block-intensity),
       transparent var(--colour-block-transparency)
@@ -55,7 +55,7 @@
     color: var(--colour-digit-1);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(2) .keypad-button.colour-text:nth-child(2) {
+.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
         var(--colour-digit-2) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -65,7 +65,7 @@
     color: var(--colour-digit-2);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(2) .keypad-button.colour-text:nth-child(3) {
+.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
         var(--colour-digit-3) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -75,7 +75,7 @@
     color: var(--colour-digit-3);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
         var(--colour-digit-4) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -85,7 +85,7 @@
     color: var(--colour-digit-4);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(2) {
+.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
         var(--colour-digit-5) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -95,7 +95,7 @@
     color: var(--colour-digit-5);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(3) .keypad-button.colour-text:nth-child(3) {
+.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
         var(--colour-digit-6) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -105,7 +105,7 @@
     color: var(--colour-digit-6);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(5) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
         var(--colour-digit-7) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -115,7 +115,7 @@
     color: var(--colour-digit-7);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(2) {
+.menu-row:nth-child(5) .keypad-button.colour-text:nth-child(2) {
     background-image: linear-gradient(
         var(--colour-digit-8) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -125,7 +125,7 @@
     color: var(--colour-digit-8);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(4) .keypad-button.colour-text:nth-child(3) {
+.menu-row:nth-child(5) .keypad-button.colour-text:nth-child(3) {
     background-image: linear-gradient(
         var(--colour-digit-9) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
@@ -135,7 +135,7 @@
     color: var(--colour-digit-9);
     background-size: var(--colour-block-size-height) var(--colour-block-size-width);
 }
-.menu-row:nth-child(5) .keypad-button.colour-text:nth-child(1) {
+.menu-row:nth-child(6) .keypad-button.colour-text:nth-child(1) {
     background-image: linear-gradient(
         var(--colour-digit-0) var(--colour-block-intensity),
         transparent var(--colour-block-transparency)
