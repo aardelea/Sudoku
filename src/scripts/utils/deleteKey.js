@@ -12,18 +12,23 @@ export function deleteKey() {
             removeColoursFromCell(cell);
         };
 
-        if (cell.classList.contains('clicked') && (cell.classList.contains('user-digit') || (cell.classList.contains('fixed') && vars.puzzleStartingPosition))) {
-            entriesToDelete.push({
-                cell: cell,
-                prevDigit: cell.textContent,
-                prevContent: cell.innerHTML,
-                actionID: vars.actionID
-            });
-            
-            cell.textContent = '';
-            cell.classList.remove('user-digit');
-            highlightConflicts('', cell);
-        }
+        if (cell.classList.contains('clicked')) {
+            if (cell.classList.contains('user-digit') || vars.puzzleStartingPosition) {
+                const xMarkers = cell.querySelectorAll('.x-marker');
+                xMarkers.forEach(xMarker => cell.removeChild(xMarker));
+
+                entriesToDelete.push({
+                    cell: cell,
+                    prevDigit: cell.textContent,
+                    prevContent: cell.innerHTML,
+                    actionID: vars.actionID
+                });
+
+                cell.textContent = '';
+                cell.classList.remove('user-digit');
+                highlightConflicts('', cell);
+            };
+        };
     });
 
     vars.undoHistory.push(...entriesToDelete);
