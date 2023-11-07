@@ -4,7 +4,7 @@ import { resetButton } from '/src/scripts/components/resetButton.js';
 import { deleteButton } from '/src/scripts/components/deleteButton.js';
 import { undoButton } from '/src/scripts/components/undoButton.js';
 import { redoButton } from '/src/scripts/components/redoButton.js';
-import { manageKeypadButtonStates } from '/src/scripts/eventHandlers/manageKeypadButtonStates.js';
+import { toggleButtonStateInGroup } from '/src/scripts/utils/toggleButtonStateInGroup.js';
 import { digitsCenterButton } from '/src/scripts/components/digitsCenterButton.js';
 import { digitsNormalButton } from '/src/scripts/components/digitsNormalButton.js';
 import { digitsCornerButton } from '/src/scripts/components/digitsCornerButton.js';
@@ -17,11 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     deleteButton();
     undoButton();
     redoButton();
-    manageKeypadButtonStates()
+
+    const keypadButtonsGroup = [vars.digitsNormalButton, vars.digitsCornerButton, vars.digitsCenterButton, vars.digitsColourButton];
+    keypadButtonsGroup.forEach(button => {
+        button.addEventListener('click', function() {
+            toggleButtonStateInGroup(button, keypadButtonsGroup);
+        });
+    });
+
     digitsNormalButton();
     digitsCenterButton();
     digitsCornerButton();
     digitsColourButton();
+
     window.onload = function() {
         document.querySelector('.footer').textContent = vars.footerText;
         document.querySelector('.sudoku-title').textContent = vars.puzzleTitle;
