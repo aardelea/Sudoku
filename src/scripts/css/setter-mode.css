@@ -56,6 +56,9 @@ body {
     display: inline-flex;
     align-items: center;
 }
+.button-container:hover .sub-section {
+    display: flex;
+}
 .sub-section {
     display: none;
     flex-direction: column;
@@ -63,9 +66,6 @@ body {
     left: 100%; 
     top: 0;
     z-index: 1;
-}
-.button-container:hover .sub-section {
-    display: flex;
 }
 .modal {
     display: none;
