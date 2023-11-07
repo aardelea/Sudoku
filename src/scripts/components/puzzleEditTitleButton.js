@@ -1,5 +1,4 @@
 import { vars } from '/src/scripts/config.js';
-import { updateUserDigitColour } from '/src/scripts/utils/updateUserDigitColour.js';
 
 
 export function puzzleEditTitleButton() {
