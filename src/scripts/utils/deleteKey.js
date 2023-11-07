@@ -14,7 +14,7 @@ export function deleteKey() {
 
         if (cell.classList.contains('clicked')) {
             if (cell.classList.contains('user-digit') || vars.puzzleStartingPosition) {
-                const xMarkers = cell.querySelectorAll('.x-marker');
+                const xMarkers = cell.querySelectorAll('.symbol-marker');
                 xMarkers.forEach(xMarker => cell.removeChild(xMarker));
 
                 entriesToDelete.push({
