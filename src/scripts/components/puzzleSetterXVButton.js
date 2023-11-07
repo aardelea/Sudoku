@@ -12,6 +12,7 @@ export function puzzleSetterXButton() {
     vars.puzzleSetterXButton.addEventListener('click', function() {
         vars.puzzleStartingPositionButton.click();
         vars.puzzleSetterXVButton.click();
+        vars.puzzleSetterPlaceX = true;
     });
 };
 
@@ -19,5 +20,6 @@ export function puzzleSetterVButton() {
     vars.puzzleSetterVButton.addEventListener('click', function() {
         vars.puzzleStartingPositionButton.click();
         vars.puzzleSetterXVButton.click();
+        vars.puzzleSetterPlaceX = false;
     });
 };
