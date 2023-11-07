@@ -5,14 +5,14 @@ import { addSymbolToBorder } from '/src/scripts/utils/addSymbolToBorder.js';
 
 export function manageAddingSymbolToBorder() {
     vars.sudokuGrid.addEventListener('click', function(event) {
-        if (!vars.puzzleSetterPlaceX) return;
+        if (!vars.puzzleSetterCurrentSymbol) return;
 
-        const isXMarker = event.target.classList.contains('x-marker');
-        const targetCell = isXMarker ? event.target.parentNode : event.target;
+        const isSymbolMarker = event.target.classList.contains('x-marker');
+        const targetCell = isSymbolMarker ? event.target.parentNode : event.target;
         
-        if (targetCell.classList.contains('cell') && vars.puzzleSetterPlaceX) {
+        if (targetCell.classList.contains('cell') && vars.puzzleSetterCurrentSymbol) {
         
-            if (isXMarker) {
+            if (isSymbolMarker) {
                 targetCell.removeChild(event.target);
             } else {
                 const borderInfo = checkIfInnerBorder(targetCell, event);

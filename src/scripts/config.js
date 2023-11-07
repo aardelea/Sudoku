@@ -33,8 +33,8 @@ export const vars = {
     puzzleSetterDigitsButton: document.querySelector('.puzzle-setter-digits-button'),
     puzzleSetterXVButton: document.querySelector('.puzzle-setter-x-v-button'),
     puzzleSetterXButton: document.querySelector('.puzzle-setter-x-button'),
-    puzzleSetterPlaceX: false,
     puzzleSetterVButton: document.querySelector('.puzzle-setter-v-button'),
+    puzzleSetterCurrentSymbol: null,
     puzzleStartingPosition: false,
     puzzleSetSolution: false,
     initializeButtonGroups: function() {

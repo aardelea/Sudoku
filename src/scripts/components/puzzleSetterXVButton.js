@@ -12,7 +12,7 @@ export function puzzleSetterXButton() {
     vars.puzzleSetterXButton.addEventListener('click', function() {
         vars.puzzleStartingPositionButton.click();
         vars.puzzleSetterXVButton.click();
-        vars.puzzleSetterPlaceX = true;
+        vars.puzzleSetterCurrentSymbol = "X";
     });
 };
 
@@ -20,6 +20,6 @@ export function puzzleSetterVButton() {
     vars.puzzleSetterVButton.addEventListener('click', function() {
         vars.puzzleStartingPositionButton.click();
         vars.puzzleSetterXVButton.click();
-        vars.puzzleSetterPlaceX = false;
+        vars.puzzleSetterCurrentSymbol = "V";
     });
 };
