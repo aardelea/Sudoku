@@ -1,8 +1,8 @@
+import { vars } from '/src/scripts/config.js';
 import { generateEmptyStartingGrid } from '/src/scripts/components/generateEmptyStartingGrid.js';
 
 
 export function manageGrid() {
-    const sudokuGrid = document.querySelector('.sudoku-grid');
     const startingGrid = generateEmptyStartingGrid();
     let uniqueID = 0;
 
@@ -19,7 +19,7 @@ export function manageGrid() {
                 cell.textContent = startingGrid[row][col];
                 cell.classList.add('fixed');
             };
-            sudokuGrid.appendChild(cell);
+            vars.sudokuGrid.appendChild(cell);
         };
     };
 };

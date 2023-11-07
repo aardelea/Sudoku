@@ -3,7 +3,7 @@ import { toggleButtonStateInGroup } from '/src/scripts/utils/toggleButtonStateIn
 import { puzzleStartingPositionButton } from '/src/scripts/components/puzzleStartingPositionButton.js';
 import { puzzleSetterDigitsButton } from '/src/scripts/components/puzzleSetterDigitsButton.js';
 import { puzzleSetterXVButton, puzzleSetterXButton, puzzleSetterVButton } from '/src/scripts/components/puzzleSetterXVButton.js';
-
+import { manageAddingSymbolToBorder } from '/src/scripts/eventHandlers/manageAddingSymbolToBorder.js';
 import { puzzleSetSolutionButton } from '/src/scripts/components/puzzleSetSolutionButton.js';
 import { puzzleEditTitleButton } from '/src/scripts/components/puzzleEditTitleButton.js';
 
@@ -37,3 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+manageAddingSymbolToBorder();

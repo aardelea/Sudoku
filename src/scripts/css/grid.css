@@ -217,3 +217,30 @@
     align-items: center;
     font-size: var(--center-text-size);
 }
+.cell .x-marker {
+    position: absolute;
+    font-size: 20px;
+    color: var(--colour-black);
+    z-index: 2;
+    background-color: var(--colour-white);
+}
+.cell .x-top {
+    top: 1px; 
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+.cell .x-bottom {
+    bottom: -1px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.cell .x-left {
+    left: -1px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.cell .x-right {
+    right: 1px;
+    top: 50%;
+    transform: translate(70%, -50%);
+}
