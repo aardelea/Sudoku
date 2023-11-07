@@ -7,7 +7,7 @@ export function manageAddingSymbolToBorder() {
     vars.sudokuGrid.addEventListener('click', function(event) {
         if (!vars.puzzleSetterCurrentSymbol) return;
 
-        const isSymbolMarker = event.target.classList.contains('x-marker');
+        const isSymbolMarker = event.target.classList.contains('symbol-marker');
         const targetCell = isSymbolMarker ? event.target.parentNode : event.target;
         
         if (targetCell.classList.contains('cell') && vars.puzzleSetterCurrentSymbol) {
