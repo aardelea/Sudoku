@@ -56,10 +56,13 @@ body {
     display: inline-flex;
     align-items: center;
 }
-.button-container:hover .sub-section {
+.button-container:hover > .sub-section {
     display: flex;
 }
-.sub-section {
+.x-v-container:hover > .x-v-sub-section {
+    display: flex;
+}
+.sub-section, .x-v-sub-section {
     display: none;
     flex-direction: column;
     position: absolute;
