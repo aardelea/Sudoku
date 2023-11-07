@@ -15,16 +15,16 @@ export function updateCell(digit, event=null) {
             let prevColorClass = Array.from(cell.classList).find(cls => cls.startsWith('colour-'));
             let prevColor = prevColorClass ? prevColorClass.split('-')[1] : null;
 
-            if (vars.isColourText) {
+            if(vars.puzzleStartingPosition){
+                updateCellText(cell, digit);
+                cell.classList.add('fixed');
+                highlightConflicts();
+            } else if (vars.isColourText) {
                 updateCellColor(cell, digit);
             } else if (!cell.classList.contains('fixed')) {
                 updateCellText(cell, digit);
                 cell.classList.add('user-digit');
                 highlightConflicts();
-            };
-
-            if(vars.puzzleStartingPosition){
-                cell.classList.add('fixed');
             };
 
             addToUndoHistory(cell, prevContent, prevColor, digit);
