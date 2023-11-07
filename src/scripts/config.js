@@ -30,6 +30,6 @@ export const vars = {
     puzzleStartingPositionButton: document.querySelector('.puzzle-starting-position-button'),
     puzzleSetSolutionButton: document.querySelector('.puzzle-set-solution-button'),
     puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
-    puzzleStartingPosition: true,
+    puzzleStartingPosition: false,
     puzzleSetSolution: false,
 };

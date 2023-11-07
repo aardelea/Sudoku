@@ -12,7 +12,7 @@ export function deleteKey() {
             removeColoursFromCell(cell);
         };
 
-        if (cell.classList.contains('clicked') && cell.classList.contains('user-digit')) {
+        if (cell.classList.contains('clicked') && (cell.classList.contains('user-digit') || (cell.classList.contains('fixed') && vars.puzzleStartingPosition))) {
             entriesToDelete.push({
                 cell: cell,
                 prevDigit: cell.textContent,
