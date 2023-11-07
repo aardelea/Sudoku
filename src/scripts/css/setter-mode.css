@@ -51,6 +51,22 @@ body {
     background-color: var(--colour-sudoku-instructions-background);
     border-radius: var(--border-radius-round-corners);
 }
+.button-container {
+    position: relative; 
+    display: inline-flex;
+    align-items: center;
+}
+.sub-section {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 100%; 
+    top: 0;
+    z-index: 1;
+}
+.button-container:hover .sub-section {
+    display: flex;
+}
 .modal {
     display: none;
     position: fixed;
