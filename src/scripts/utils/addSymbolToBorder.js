@@ -32,13 +32,18 @@ export function addSymbolToBorder(cell, direction, grid) {
         return;
     };
 
+    const cellContent = cell.querySelector('.fixed, .user-digit');
+
     if (cell.querySelector(`.symbol-${direction}`)) {
-        const existingSymbol = cell.querySelector(`.symbol-${direction}`);
-        cell.removeChild(existingSymbol);
+        cell.removeChild(cell.querySelector(`.symbol-${direction}`));
     } else {
         const symbolMarker = document.createElement('div');
         symbolMarker.classList.add('symbol-marker', `symbol-${direction}`);
         symbolMarker.textContent = vars.puzzleSetterCurrentSymbol;
-        cell.appendChild(symbolMarker);
+        if (cellContent) {
+            cell.insertBefore(symbolMarker, cellContent);
+        } else {
+            cell.appendChild(symbolMarker);
+        }
     };
 };
