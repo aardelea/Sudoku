@@ -16,4 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleButtonStateInGroup(button, vars.setterButtonsGroup);
         });
     });
+
+    vars.setterDigitsButtonsGroups.forEach(button => {
+        button.addEventListener('click', function() {
+            toggleButtonStateInGroup(button, vars.setterDigitsButtonsGroups);
+        });
+    });
 });
