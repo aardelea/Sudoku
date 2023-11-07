@@ -5,5 +5,6 @@ export function puzzleStartingPositionButton() {
     vars.puzzleStartingPositionButton.addEventListener('click', function() {
         vars.puzzleStartingPosition = true;
         vars.puzzleSetSolution = false;
+        vars.puzzleSetterDigitsButton.click();
     });
 };
