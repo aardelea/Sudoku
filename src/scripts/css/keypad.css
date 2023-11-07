@@ -151,15 +151,15 @@
 .keypad-button:hover {
     background-color: var(--colour-keypad-button-hover);
 }
-.keypad-button-pressed {
+.keypad-button.menu-button.button-pressed {
     font-size: var(--font-button-size);
     color: var(--colour-white);
+    background-color: var(--colour-keypad-button-background);
     width: var(--menu-button-width); 
-    height: var(--button-height);
 }
 .keypad-button.menu-button {
     width: var(--menu-button-width); 
-    height: var(--button-height);;
+    height: var(--button-height);
     font-size: var(--font-button-size);
     text-align: center;
     display: flex;
