@@ -5,6 +5,7 @@ import { unpressAllButtonsInGroup } from '/src/scripts/utils/unpressAllButtonsIn
 export function puzzleSetSolutionButton() {
     vars.puzzleSetSolutionButton.addEventListener('click', function() {
         vars.puzzleStartingPosition = false;
+        vars.puzzleSetterPlaceX = false;
         vars.puzzleSetSolution = true;
         unpressAllButtonsInGroup(vars.setterDigitsButtonsGroup);
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
