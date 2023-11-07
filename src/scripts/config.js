@@ -35,10 +35,11 @@ export const vars = {
     puzzleStartingPosition: false,
     puzzleSetSolution: false,
     initializeButtonGroups: function() {
-        this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleSetSolutionButton];
+        this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleSetSolutionButton, this.puzzleEditTitleButton];
         this.keypadButtonsGroup = [this.digitsNormalButton, this.digitsCornerButton, this.digitsCenterButton, this.digitsColourButton];
         this.setterDigitsButtonsGroups = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton];
     },
+    modal: document.getElementById("editModal"),
 };
 
 vars.initializeButtonGroups();

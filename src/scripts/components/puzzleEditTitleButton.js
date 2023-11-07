@@ -2,15 +2,14 @@ import { vars } from '/src/scripts/config.js';
 
 
 export function puzzleEditTitleButton() {
-    var modal = document.getElementById("editModal");
 
     vars.puzzleEditTitleButton.addEventListener('click', function() {
-        modal.style.display = "block";
+        vars.modal.style.display = "block";
     });
 
     var span = document.getElementsByClassName("close")[0];
     span.onclick = function() {
-        modal.style.display = "none";
+        exitModalEditMode();
     };
 
     var saveBtn = document.getElementById("saveBtn");
@@ -27,14 +26,18 @@ export function puzzleEditTitleButton() {
         document.querySelector('.sudoku-author').textContent = "by " + author;
         document.querySelector('.puzzle-rules').textContent = rules;
         
-        modal.style.display = "none";
+        exitModalEditMode();
     };
 
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == vars.modal) {
+            exitModalEditMode();
         };
     };
 };
 
 
+export function exitModalEditMode(){
+    vars.modal.style.display = "none";
+    vars.puzzleStartingPositionButton.click();
+}
