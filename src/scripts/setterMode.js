@@ -6,15 +6,14 @@ import { puzzleEditTitleButton } from '/src/scripts/components/puzzleEditTitleBu
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const setterButtonsGroup = [vars.puzzleStartingPositionButton, vars.puzzleSetSolutionButton];
-    setterButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, setterButtonsGroup);
-        });
-    });
-    
     puzzleStartingPositionButton();
     vars.puzzleStartingPositionButton.click();
     puzzleSetSolutionButton();
     puzzleEditTitleButton();
+
+    vars.setterButtonsGroup.forEach(button => {
+        button.addEventListener('click', function() {
+            toggleButtonStateInGroup(button, vars.setterButtonsGroup);
+        });
+    });
 });

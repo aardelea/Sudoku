@@ -18,17 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
     undoButton();
     redoButton();
 
-    const keypadButtonsGroup = [vars.digitsNormalButton, vars.digitsCornerButton, vars.digitsCenterButton, vars.digitsColourButton];
-    keypadButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, keypadButtonsGroup);
-        });
-    });
-
     digitsNormalButton();
     digitsCenterButton();
     digitsCornerButton();
     digitsColourButton();
+
+    vars.keypadButtonsGroup.forEach(button => {
+        button.addEventListener('click', function() {
+            toggleButtonStateInGroup(button, vars.keypadButtonsGroup);
+        });
+    });
 
     window.onload = function() {
         document.querySelector('.footer').textContent = vars.footerText;

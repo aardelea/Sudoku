@@ -32,4 +32,10 @@ export const vars = {
     puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
     puzzleStartingPosition: false,
     puzzleSetSolution: false,
+    initializeButtonGroups: function() {
+        this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleSetSolutionButton];
+        this.keypadButtonsGroup = [this.digitsNormalButton, this.digitsCornerButton, this.digitsCenterButton, this.digitsColourButton];
+    },
 };
+
+vars.initializeButtonGroups();
