@@ -9,5 +9,6 @@ export function puzzleSetSolutionButton() {
         vars.puzzleSetSolution = true;
         unpressAllButtonsInGroup(vars.setterDigitsButtonsGroup);
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
+        unpressAllButtonsInGroup(vars.setterKropkiButtonsGroup);
     });
 };

@@ -8,5 +8,6 @@ export function puzzleStartingPositionButton() {
         vars.puzzleSetSolution = false;
         vars.puzzleSetterDigitsButton.click();
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
+        unpressAllButtonsInGroup(vars.setterKropkiButtonsGroup);
     });
 };

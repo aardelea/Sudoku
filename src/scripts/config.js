@@ -34,14 +34,18 @@ export const vars = {
     puzzleSetterXVButton: document.querySelector('.puzzle-setter-x-v-button'),
     puzzleSetterXButton: document.querySelector('.puzzle-setter-x-button'),
     puzzleSetterVButton: document.querySelector('.puzzle-setter-v-button'),
+    puzzleSetterKropkiButton: document.querySelector('.puzzle-setter-kropki-button'),
+    puzzleSetterWhiteKropkiButton: document.querySelector('.puzzle-setter-white-kropki-button'),
+    puzzleSetterBlackKropkiButton: document.querySelector('.puzzle-setter-black-kropki-button'),
     puzzleSetterCurrentSymbol: null,
     puzzleStartingPosition: false,
     puzzleSetSolution: false,
     initializeButtonGroups: function() {
         this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleSetSolutionButton, this.puzzleEditTitleButton];
         this.keypadButtonsGroup = [this.digitsNormalButton, this.digitsCornerButton, this.digitsCenterButton, this.digitsColourButton];
-        this.setterDigitsButtonsGroup = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton];
+        this.setterDigitsButtonsGroup = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton, this.puzzleSetterKropkiButton];
         this.setterXVButtonsGroup = [this.puzzleSetterXButton, this.puzzleSetterVButton];
+        this.setterKropkiButtonsGroup = [this.puzzleSetterWhiteKropkiButton, this.puzzleSetterBlackKropkiButton];
     },
     modal: document.getElementById("editModal"),
 };

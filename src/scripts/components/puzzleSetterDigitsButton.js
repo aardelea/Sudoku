@@ -6,6 +6,7 @@ export function puzzleSetterDigitsButton() {
     vars.puzzleSetterDigitsButton.addEventListener('click', function() {
         vars.puzzleStartingPositionButton.click();
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
+        unpressAllButtonsInGroup(vars.setterKropkiButtonsGroup);
         vars.puzzleSetterCurrentSymbol = null;
     });
 };
