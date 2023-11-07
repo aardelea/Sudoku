@@ -219,7 +219,7 @@
 }
 .cell .symbol-marker {
     position: absolute;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--colour-black);
     z-index: 2;
     background-color: var(--colour-white);
