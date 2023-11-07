@@ -4,7 +4,6 @@ export function toggleButtonStateInGroup(buttonToActivate, buttonGroup) {
             button.classList.add('button-pressed');
         } else {
             button.classList.remove('button-pressed');
-            button.classList.add('menu-button');
         };
     });
 };  
