@@ -32,12 +32,15 @@ export const vars = {
     puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
     puzzleSetterDigitsButton: document.querySelector('.puzzle-setter-digits-button'),
     puzzleSetterXVButton: document.querySelector('.puzzle-setter-x-v-button'),
+    puzzleSetterXButton: document.querySelector('.puzzle-setter-x-button'),
+    puzzleSetterVButton: document.querySelector('.puzzle-setter-v-button'),
     puzzleStartingPosition: false,
     puzzleSetSolution: false,
     initializeButtonGroups: function() {
         this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleSetSolutionButton, this.puzzleEditTitleButton];
         this.keypadButtonsGroup = [this.digitsNormalButton, this.digitsCornerButton, this.digitsCenterButton, this.digitsColourButton];
-        this.setterDigitsButtonsGroups = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton];
+        this.setterDigitsButtonsGroup = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton];
+        this.setterXVButtonsGroup = [this.puzzleSetterXButton, this.puzzleSetterVButton];
     },
     modal: document.getElementById("editModal"),
 };

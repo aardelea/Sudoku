@@ -1,4 +1,5 @@
 import { vars } from '/src/scripts/config.js';
+import { unpressAllButtonsInGroup } from '/src/scripts/utils/unpressAllButtonsInGroup.js';
 
 
 export function puzzleStartingPositionButton() {
@@ -6,5 +7,6 @@ export function puzzleStartingPositionButton() {
         vars.puzzleStartingPosition = true;
         vars.puzzleSetSolution = false;
         vars.puzzleSetterDigitsButton.click();
+        unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
     });
 };
