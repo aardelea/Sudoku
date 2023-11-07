@@ -7,7 +7,7 @@ export const vars = {
     redoButton: document.querySelector('.redo-button'),
     keypadButtons: document.querySelectorAll('.keypad-button'),
     digitsCenterButton: document.querySelector('.center-button'),
-    digitsNormalButton: document.querySelector('.normal-button'),
+    digitsNormalButton: document.querySelector('.digits-normal-button'),
     digitsCornerButton: document.querySelector('.corner-button'),
     digitsColourButton: document.querySelector('.colour-button'),
     homeButton: document.querySelector('.home-button'),
