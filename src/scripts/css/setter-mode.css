@@ -59,10 +59,10 @@ body {
 .button-container:hover > .sub-section {
     display: flex;
 }
-.x-v-container:hover > .x-v-sub-section {
+.setter-container-2:hover > .setter-sub-section-2 {
     display: flex;
 }
-.sub-section, .x-v-sub-section {
+.sub-section, .setter-sub-section-2 {
     display: none;
     flex-direction: column;
     position: absolute;
