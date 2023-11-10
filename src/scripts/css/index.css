@@ -14,8 +14,8 @@ body {
 }
 .landing-button {
     margin: 10px;
-    width: 15%;
-    height: var(--button-width);
+    width: var(--login-button-width);
+    height: var(--login-button-height);
     font-size: var(--font-keypad-digit-size);
     font-weight: 500;
     font-family: var(--font);
