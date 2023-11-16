@@ -8,14 +8,16 @@ export function deleteKey() {
     const entriesToDelete = [];
     
     vars.cells.forEach(cell => {
-        if (cell.classList.contains('clicked') && cell.classList.contains('colour-text')) {
-            removeColoursFromCell(cell);
-        };
-
         if (cell.classList.contains('clicked')) {
-            if (cell.classList.contains('user-digit') || vars.puzzleStartingPosition) {
-                const xMarkers = cell.querySelectorAll('.symbol-marker');
-                xMarkers.forEach(xMarker => cell.removeChild(xMarker));
+            const xMarkers = cell.querySelectorAll('.symbol-marker');
+            const hasFixedDigitsOrSymbols = xMarkers.length > 0 || cell.classList.contains('fixed');
+            const hasUserDigits = cell.classList.contains('user-digit');
+            const hasColours = cell.classList.contains('colour-text');
+
+            if (vars.isColourText && hasColours) {
+                removeColoursFromCell(cell);
+            } else if (hasFixedDigitsOrSymbols && vars.puzzleStartingPosition) {
+                xMarkers.forEach(xMarker => cell.removeChild(xMarker)); 
 
                 entriesToDelete.push({
                     cell: cell,
@@ -25,8 +27,14 @@ export function deleteKey() {
                 });
 
                 cell.textContent = '';
+                cell.classList.remove('fixed');
+                highlightConflicts('', cell);
+            } else if (hasUserDigits && !vars.puzzleStartingPosition){
+                cell.textContent = '';
                 cell.classList.remove('user-digit');
                 highlightConflicts('', cell);
+            } else if (hasColours) {
+                removeColoursFromCell(cell);
             };
         };
     });
