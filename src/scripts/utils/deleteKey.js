@@ -30,8 +30,14 @@ export function deleteKey() {
                 cell.classList.remove('fixed');
                 highlightConflicts('', cell);
             } else if (hasUserDigits && !vars.puzzleStartingPosition){
+                const symbolsFragment = document.createDocumentFragment();
+                xMarkers.forEach(symbol => {
+                    symbolsFragment.appendChild(symbol.cloneNode(true));
+                    symbol.remove();
+                });
                 cell.textContent = '';
                 cell.classList.remove('user-digit');
+                cell.appendChild(symbolsFragment);
                 highlightConflicts('', cell);
             } else if (hasColours) {
                 removeColoursFromCell(cell);
