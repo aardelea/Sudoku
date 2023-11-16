@@ -11,7 +11,7 @@ export function highlightConflicts() {
     for (let digit = 1; digit <= 9; digit++) {
         for (let i = 0; i < 9; i++) {
             const { rowCells, colCells, boxCells, rowPencilMarks, colPencilMarks, boxPencilMarks } = gatherConflictingCells(digit, i);
-            
+
             [rowCells, colCells, boxCells].forEach(cells => {
                 if (cells.length > 1) {
                     cells.forEach(cell => {
