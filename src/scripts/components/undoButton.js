@@ -24,13 +24,7 @@ export function performUndo(event) {
 
         entriesToRedo.forEach(entry => {
             entry.cell.innerHTML = entry.prevContent;
-            if (entry.prevContent.textContent !== '' && !entry.cell.classList.contains('colour-text')) {
-                entry.cell.classList.add('user-digit');
-            }
-
-            removeColoursFromCell(entry.cell);
             highlightConflicts();
-            adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });
 
         vars.undoHistory = vars.undoHistory.filter(entry => entry.actionID !== lastActionID);

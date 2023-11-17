@@ -22,10 +22,7 @@ export function performRedo(event) {
 
         entriesToUndo.forEach(entry => {
             entry.cell.innerHTML = entry.newContent;
-
-            removeColoursFromCell(entry.cell);
             highlightConflicts();
-            adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });
 
         vars.redoHistory = vars.redoHistory.filter(entry => entry.actionID !== lastActionID);
