@@ -30,10 +30,6 @@ export function performRedo(event) {
             if (entry.newColor) {
                 entry.cell.classList.add(`colour-${entry.newColor}`);
                 entry.cell.classList.add('colour-text');
-            } else {
-                if (entry.newDigit !== '') {
-                    entry.cell.classList.add('user-digit');
-                }
             }
 
             highlightConflicts();

@@ -17,7 +17,6 @@ export function performUndo(event) {
 
             return {
                 ...entry,
-                newDigit: entry.cell.textContent,
                 newContent: currentContent,
                 newColor: currentColor,
                 actionID: vars.actionID
