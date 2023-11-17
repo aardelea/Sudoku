@@ -6,7 +6,6 @@ import { updateCellColor } from '/src/scripts/utils/updateCellColor.js';
 
 export function updateCell(digit, event=null) {
     vars.actionID++;
-    let entriesToUpdate = [];
 
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked')) {
@@ -31,8 +30,6 @@ export function updateCell(digit, event=null) {
             });
         };
     });
-
-    vars.undoHistory.push(...entriesToUpdate);
 
     vars.redoHistory = [];
     if (event) event.preventDefault();
