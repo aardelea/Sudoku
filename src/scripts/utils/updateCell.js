@@ -25,7 +25,7 @@ export function updateCell(digit, event=null) {
                 highlightConflicts();
             };
 
-            addToUndoHistory(cell, prevContent);
+            addToUndoHistory(cell, prevContent, vars.actionID);
         };
     });
 

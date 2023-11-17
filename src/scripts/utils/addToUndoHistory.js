@@ -1,10 +1,10 @@
 import { vars } from '/src/scripts/config.js';
 
 
-export function addToUndoHistory(cell, prevContent) {
+export function addToUndoHistory(cell, prevContent, actionID) {
     vars.undoHistory.push({
         cell: cell,
         prevContent: prevContent,
-        actionID: vars.actionID
+        actionID: actionID
     });
 };

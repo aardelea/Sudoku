@@ -31,6 +31,7 @@ export function deleteKey() {
                 cell.querySelectorAll('.corner-text').forEach(span => span.remove());
                 cell.classList.remove('fixed');
                 highlightConflicts('', cell);
+
             } else if (hasUserDigits && !vars.puzzleStartingPosition){
                 const symbolsFragment = document.createDocumentFragment();
                 xMarkers.forEach(symbol => {
