@@ -11,12 +11,9 @@ export function performRedo(event) {
         const entriesToUndo = vars.redoHistory.filter(entry => entry.actionID === lastActionID);
 
         const entriesToUndoModified = entriesToUndo.map(entry => {
-            const colorClass = Array.from(entry.cell.classList).find(cls => cls.startsWith('colour-'));
-
             return {
                 ...entry,
                 prevContent: entry.cell.innerHTML,
-                prevColor: colorClass ? colorClass.split('-')[1] : null,
                 actionID: vars.actionID
             };
         });
@@ -27,11 +24,6 @@ export function performRedo(event) {
             entry.cell.innerHTML = entry.newContent;
 
             removeColoursFromCell(entry.cell);
-            if (entry.newColor) {
-                entry.cell.classList.add(`colour-${entry.newColor}`);
-                entry.cell.classList.add('colour-text');
-            }
-
             highlightConflicts();
             adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });

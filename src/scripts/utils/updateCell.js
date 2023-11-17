@@ -12,8 +12,6 @@ export function updateCell(digit, event=null) {
     vars.cells.forEach(cell => {
         if (cell.classList.contains('clicked')) {
             let prevContent = cell.innerHTML;
-            let prevColorClass = Array.from(cell.classList).find(cls => cls.startsWith('colour-'));
-            let prevColor = prevColorClass ? prevColorClass.split('-')[1] : null;
 
             if (vars.isColourText) {
                 updateCellColor(cell, digit);
@@ -27,7 +25,7 @@ export function updateCell(digit, event=null) {
                 highlightConflicts();
             };
 
-            addToUndoHistory(cell, prevContent, prevColor);
+            addToUndoHistory(cell, prevContent);
         };
     });
 

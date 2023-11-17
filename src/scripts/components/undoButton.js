@@ -12,13 +12,10 @@ export function performUndo(event) {
 
         const entriesToRedoModified = entriesToRedo.map(entry => {
             const currentContent = entry.cell.innerHTML;
-            const currentColorClass = Array.from(entry.cell.classList).find(cls => cls.startsWith('colour-'));
-            const currentColor = currentColorClass ? currentColorClass.split('-')[1] : null;
 
             return {
                 ...entry,
                 newContent: currentContent,
-                newColor: currentColor,
                 actionID: vars.actionID
             };
         });
@@ -32,11 +29,6 @@ export function performUndo(event) {
             }
 
             removeColoursFromCell(entry.cell);
-            if (entry.prevColor) {
-                entry.cell.classList.add(`colour-${entry.prevColor}`);
-                entry.cell.classList.add('colour-text');
-            }
-
             highlightConflicts();
             adjustFontSize(entry.cell, Array.from(entry.cell.querySelectorAll('.center-text')).length);
         });
