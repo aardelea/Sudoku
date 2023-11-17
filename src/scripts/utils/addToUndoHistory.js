@@ -1,12 +1,11 @@
 import { vars } from '/src/scripts/config.js';
 
 
-export function addToUndoHistory(cell, prevContent, prevColor) {
+export function addToUndoHistory(cell, prevContent, prevColor, digit) {
     vars.undoHistory.push({
         cell: cell,
-        prevDigit: prevContent.textContent,
         prevContent: prevContent,
-        newDigit: cell.textContent,
+        newDigit: digit,
         prevColor: prevColor,
         actionID: vars.actionID
     });

@@ -15,7 +15,6 @@ export function performRedo(event) {
 
             return {
                 ...entry,
-                prevDigit: entry.cell.textContent,
                 prevContent: entry.cell.innerHTML,
                 prevColor: colorClass ? colorClass.split('-')[1] : null,
                 actionID: vars.actionID

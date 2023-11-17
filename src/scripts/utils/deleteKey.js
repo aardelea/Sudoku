@@ -21,7 +21,6 @@ export function deleteKey() {
 
                 entriesToDelete.push({
                     cell: cell,
-                    prevDigit: cell.querySelector('.digit-text').textContent,
                     prevContent: cell.innerHTML,
                     actionID: vars.actionID
                 });
