@@ -131,77 +131,42 @@
 .user-digit::selection {
     background: transparent;
 }
+.cell .digit-text {
+    z-index: 2;
+    pointer-events: none;
+}
+.cell .colour-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+}
 .colour-0 {
-    background-image: linear-gradient(
-        var(--colour-digit-0) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-0);
 }
 .colour-1 {
-    background-image: linear-gradient(
-      var(--colour-digit-1) var(--colour-block-intensity),
-      transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-1);
 }
 .colour-2 {
-    background-image: linear-gradient(
-      var(--colour-digit-2) var(--colour-block-intensity),
-      transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-2);
 }
 .colour-3 {
-    background-image: linear-gradient(
-        var(--colour-digit-3) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-3);
 }
 .colour-4 {
-    background-image: linear-gradient(
-        var(--colour-digit-4) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-4);
 }
 .colour-5 {
-    background-image: linear-gradient(
-        var(--colour-digit-5) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-5);
 }
 .colour-6 {
-    background-image: linear-gradient(
-        var(--colour-digit-6) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-6);
 }
 .colour-7 {
-    background-image: linear-gradient(
-        var(--colour-digit-7) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-7);
 }
 .colour-8 {
-    background-image: linear-gradient(
-        var(--colour-digit-8) var(--colour-block-intensity),
-        transparent var(--colour-block-transparency)
-    );
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--colour-digit-8);
 }
 .colour-9 {
     background-image: linear-gradient(
@@ -216,6 +181,7 @@
     justify-content: center;
     align-items: center;
     font-size: var(--center-text-size);
+    z-index: 1;
 }
 .cell .symbol-marker {
     position: absolute;

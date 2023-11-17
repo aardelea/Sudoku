@@ -1,6 +1,16 @@
-export function removeColoursFromCell(cell) {
-    cell.classList.remove('colour-text');
-    for (let digit = 0; digit <= 10; digit++) {
-        cell.classList.remove(`colour-${digit}`);
+import { adjustColorDivSizes } from '/src/scripts/utils/adjustColorDivSizes.js';
+
+
+export function removeColoursFromCell(cell, digit) {
+    if (digit !== undefined) {
+        cell.removeChild(cell.querySelector(`.colour-${digit}`));
+    } else {
+        for (let i = 0; i <= 9; i++) {
+            const colorDiv = cell.querySelector(`.colour-${i}`);
+            if (colorDiv) {
+                cell.removeChild(colorDiv);
+            };
+        };
     };
+    adjustColorDivSizes(cell);
 };

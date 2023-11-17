@@ -12,8 +12,8 @@ export function deleteKey() {
             const xMarkers = cell.querySelectorAll('.symbol-marker');
             const hasFixedDigitsOrSymbols = xMarkers.length > 0 || cell.classList.contains('fixed');
             const hasUserDigits = cell.classList.contains('user-digit');
-            const hasColours = cell.classList.contains('colour-text');
-
+            const hasColours = Array.from(cell.querySelectorAll('div')).some(div => div.classList.contains('colour-text'));
+            
             if (vars.isColourText && hasColours) {
                 removeColoursFromCell(cell);
             } else if (hasFixedDigitsOrSymbols && vars.puzzleStartingPosition) {
@@ -21,12 +21,15 @@ export function deleteKey() {
 
                 entriesToDelete.push({
                     cell: cell,
-                    prevDigit: cell.textContent,
+                    prevDigit: cell.querySelector('.digit-text').textContent,
                     prevContent: cell.innerHTML,
                     actionID: vars.actionID
                 });
 
-                cell.textContent = '';
+                cell.querySelector('.digit-text').textContent = '';
+                cell.style.fontSize = '';
+                cell.querySelectorAll('.center-text').forEach(span => span.remove());
+                cell.querySelectorAll('.corner-text').forEach(span => span.remove());
                 cell.classList.remove('fixed');
                 highlightConflicts('', cell);
             } else if (hasUserDigits && !vars.puzzleStartingPosition){
@@ -35,7 +38,10 @@ export function deleteKey() {
                     symbolsFragment.appendChild(symbol.cloneNode(true));
                     symbol.remove();
                 });
-                cell.textContent = '';
+                cell.querySelector('.digit-text').textContent = '';
+                cell.style.fontSize = '';
+                cell.querySelectorAll('.center-text').forEach(span => span.remove());
+                cell.querySelectorAll('.corner-text').forEach(span => span.remove());
                 cell.classList.remove('user-digit');
                 cell.appendChild(symbolsFragment);
                 highlightConflicts('', cell);

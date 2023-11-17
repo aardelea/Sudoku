@@ -4,9 +4,9 @@ import { adjustFontSize } from '/src/scripts/utils/adjustFontSize.js';
 export function handleTextUpdate(cell, digit, textType) {
     if (!cell.querySelector('.center-text') && !cell.querySelector('.corner-text')) {
         if (textType === 'center-text' || textType === 'corner-text') {
-            cell.innerHTML = '';
-        }
-    }
+            cell.querySelector('.digit-text').textContent = '';
+        };
+    };
 
     const currentDigits = Array.from(cell.querySelectorAll(`.${textType}`)).map(span => span.textContent);
     if (currentDigits.includes(digit)) {
@@ -20,13 +20,13 @@ export function handleTextUpdate(cell, digit, textType) {
     Array.from(cell.querySelectorAll(`.${textType}`)).forEach(span => span.remove());
 
     const fragment = document.createDocumentFragment();
-    currentDigits.forEach((d, index) => {
+    currentDigits.forEach((digit, index) => {
         const span = document.createElement('span');
         span.className = textType;
         if (textType === 'corner-text') {
             span.classList.add(`position-${index + 1}`);
         }
-        span.textContent = d;
+        span.textContent = digit;
         fragment.appendChild(span);
     });
     cell.appendChild(fragment);
@@ -37,5 +37,5 @@ export function handleTextUpdate(cell, digit, textType) {
         adjustFontSize(cell, currentDigits.length);
     } else if (textType === 'corner-text') {
         cell.style.fontSize = getComputedStyle(document.documentElement).getPropertyValue('--corner-text-size').trim();
-    }
+    };
 };

@@ -16,10 +16,11 @@ export function updateCellText(cell, digit) {
     } else if (vars.isCornerText) {
         handleTextUpdate(cell, digit, 'corner-text');
     } else {
-        cell.textContent = digit;
-        cell.classList.remove('center-text');
-        cell.classList.remove('corner-text');
+        cell.querySelector('.digit-text').textContent = digit;
         cell.style.fontSize = '';
+        cell.querySelectorAll('.center-text').forEach(span => span.remove());
+        cell.querySelectorAll('.corner-text').forEach(span => span.remove());
+        cell.classList.remove('center-text', 'corner-text');
     };
 
     cell.appendChild(symbolsFragment);
