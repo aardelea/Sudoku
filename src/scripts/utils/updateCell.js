@@ -31,6 +31,5 @@ export function updateCell(digit, event=null) {
         };
     });
 
-    vars.redoHistory = [];
     if (event) event.preventDefault();
 };
