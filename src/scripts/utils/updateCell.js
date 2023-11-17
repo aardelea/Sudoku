@@ -2,7 +2,6 @@ import { vars } from '/src/scripts/config.js';
 import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
 import { updateCellText } from '/src/scripts/utils/updateCellText.js';
 import { updateCellColor } from '/src/scripts/utils/updateCellColor.js';
-import { addToUndoHistory } from '/src/scripts/utils/addToUndoHistory.js';
 
 
 export function updateCell(digit, event=null) {
@@ -25,7 +24,11 @@ export function updateCell(digit, event=null) {
                 highlightConflicts();
             };
 
-            addToUndoHistory(cell, prevContent, vars.actionID);
+            vars.undoHistory.push({
+                cell: cell,
+                prevContent: prevContent,
+                actionID: vars.actionID
+            });
         };
     });
 
