@@ -1,6 +1,6 @@
 import { vars } from '/src/scripts/config.js';
 import { toggleButtonStateInGroup } from '/src/scripts/utils/toggleButtonStateInGroup.js';
-import { puzzleStartingPositionButton } from '/src/scripts/components/puzzleStartingPositionButton.js';
+import { puzzleSetterPositionButton } from '/src/scripts/components/puzzleSetterPositionButton.js';
 import { puzzleSetterDigitsButton } from '/src/scripts/components/puzzleSetterDigitsButton.js';
 import { puzzleSetterXVButton, puzzleSetterXButton, puzzleSetterVButton, puzzleSetterKropkiButton, puzzleSetterWhiteKropkiButton, puzzleSetterBlackKropkiButton } from '/src/scripts/components/puzzleSetterSymbolButton.js';
 import { manageAddingSymbolToBorder } from '/src/scripts/eventHandlers/manageAddingSymbolToBorder.js';
@@ -8,8 +8,8 @@ import { puzzleEditTitleButton } from '/src/scripts/components/puzzleEditTitleBu
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    puzzleStartingPositionButton();
-    vars.puzzleStartingPositionButton.click();
+    puzzleSetterPositionButton();
+    vars.puzzleSetterPositionButton.click();
     puzzleSetterDigitsButton();
     puzzleSetterXVButton();
     puzzleSetterXButton();

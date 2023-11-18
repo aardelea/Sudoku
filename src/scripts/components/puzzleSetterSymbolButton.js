@@ -3,7 +3,7 @@ import { vars } from '/src/scripts/config.js';
 
 export function puzzleSetterXVButton() {
     vars.puzzleSetterXVButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         vars.puzzleSetterXButton.click();
     });
 };
@@ -11,7 +11,7 @@ export function puzzleSetterXVButton() {
 
 export function puzzleSetterXButton() {
     vars.puzzleSetterXButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         vars.puzzleSetterXVButton.click();
         vars.puzzleSetterCurrentSymbol = "X";
     });
@@ -19,7 +19,7 @@ export function puzzleSetterXButton() {
 
 export function puzzleSetterVButton() {
     vars.puzzleSetterVButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         vars.puzzleSetterXVButton.click();
         vars.puzzleSetterCurrentSymbol = "V";
     });
@@ -27,14 +27,14 @@ export function puzzleSetterVButton() {
 
 export function puzzleSetterKropkiButton() {
     vars.puzzleSetterKropkiButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         vars.puzzleSetterWhiteKropkiButton.click();
     });
 };
 
 export function puzzleSetterWhiteKropkiButton() {
     vars.puzzleSetterWhiteKropkiButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         vars.puzzleSetterKropkiButton.click();
         vars.puzzleSetterCurrentSymbol = "○";
     });
@@ -42,7 +42,7 @@ export function puzzleSetterWhiteKropkiButton() {
 
 export function puzzleSetterBlackKropkiButton() {
     vars.puzzleSetterBlackKropkiButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         vars.puzzleSetterKropkiButton.click();
         vars.puzzleSetterCurrentSymbol = "●";
     });

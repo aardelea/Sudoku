@@ -39,5 +39,5 @@ export function puzzleEditTitleButton() {
 
 export function exitModalEditMode(){
     vars.modal.style.display = "none";
-    vars.puzzleStartingPositionButton.click();
+    vars.puzzleSetterPositionButton.click();
 }

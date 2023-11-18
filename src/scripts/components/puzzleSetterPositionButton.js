@@ -2,8 +2,8 @@ import { vars } from '/src/scripts/config.js';
 import { unpressAllButtonsInGroup } from '/src/scripts/utils/unpressAllButtonsInGroup.js';
 
 
-export function puzzleStartingPositionButton() {
-    vars.puzzleStartingPositionButton.addEventListener('click', function() {
+export function puzzleSetterPositionButton() {
+    vars.puzzleSetterPositionButton.addEventListener('click', function() {
         vars.puzzleStartingPosition = true;
         vars.puzzleSetterDigitsButton.click();
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);

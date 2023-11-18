@@ -4,7 +4,7 @@ import { unpressAllButtonsInGroup } from '/src/scripts/utils/unpressAllButtonsIn
 
 export function puzzleSetterDigitsButton() {
     vars.puzzleSetterDigitsButton.addEventListener('click', function() {
-        vars.puzzleStartingPositionButton.click();
+        vars.puzzleSetterPositionButton.click();
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
         unpressAllButtonsInGroup(vars.setterKropkiButtonsGroup);
         vars.puzzleSetterCurrentSymbol = null;
