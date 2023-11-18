@@ -11,15 +11,15 @@
     <title>Setter Mode</title>
 </head>
 <body>
-    <div class="main-menu">
-        <div class="menu-row">
-            <button class="menu-button home-button">Home</button>
-            <button class="menu-button my-puzzles-button">My Puzzles</button>
-            <button class="menu-button find-puzzles-button">Find Puzzles</button>
-            <button class="menu-button setter-mode-button button-pressed">Setter Mode</button>
-        </div>
+    <div id="container-menu">
+        <script>
+            fetch('item-menu.html').then(response => response.text()).then(data => {
+                document.getElementById('container-menu').innerHTML = data;
+                document.getElementById('container-menu').querySelector('.create-puzzle-button').classList.add('button-pressed');
+            })
+        </script>
     </div>
-    
+
     <div class="content-container">
         <div class="keypad">
             <div class="menu-row">
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <div class="grid-container">
+        <div class="container-sudoku-grid" id="container-sudoku-grid">
             <div class="sudoku-grid">
             </div>
 
@@ -156,6 +156,7 @@
             </form>
         </div>
     </div>
+    
     <script type="module" src="scripts/menu.js"></script>
     <script type="module" src="scripts/setterMode.js"></script>
     <script type="module" src="scripts/grid.js"></script>

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="scripts/css/root.css">
     <link rel="stylesheet" href="scripts/css/menu.css">
-    <title>Home</title>
+    <title>My Puzzles</title>
 </head>
+
 <body>
-    <div class="main-menu">
-        <div class="menu-row">
-            <button class="menu-button home-button">Home</button>
-            <button class="menu-button my-puzzles-button button-pressed">My Puzzles</button>
-            <button class="menu-button find-puzzles-button">Find Puzzles</button>
-            <button class="menu-button setter-mode-button">Setter Mode</button>
-        </div>
+    <div id="container-menu">
+        <script>
+            fetch('item-menu.html').then(response => response.text()).then(data => {
+                document.getElementById('container-menu').innerHTML = data;
+                document.getElementById('container-menu').querySelector('.my-puzzles-button').classList.add('button-pressed');
+            })
+        </script>
     </div>
-    <div class="grid-container">
-        <div class="sudoku-grid">
-        </div>
+
+    <div class="container-sudoku-grid" id="container-sudoku-grid">
+        <script>fetch('item-sudoku-grid.html').then(response => response.text()).then(data => { document.getElementById('container-sudoku-grid').innerHTML = data })</script>
     </div>
+
     <script type="module" src="scripts/menu.js"></script>
 </body>
+
 </html>

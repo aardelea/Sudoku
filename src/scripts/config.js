@@ -13,7 +13,7 @@ export const vars = {
     homeButton: document.querySelector('.home-button'),
     myPuzzlesButton: document.querySelector('.my-puzzles-button'),
     findPuzzlesButton: document.querySelector('.find-puzzles-button'),
-    setterModeButton: document.querySelector('.setter-mode-button'),
+    setterModeButton: document.querySelector('.create-puzzle-button'),
     ctrlOrShiftPressed: false,
     cell: null,
     undoHistory: [],

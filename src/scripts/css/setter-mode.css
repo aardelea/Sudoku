@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     height: 100%;
 }
-.grid-container {
+.container-sudoku-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
