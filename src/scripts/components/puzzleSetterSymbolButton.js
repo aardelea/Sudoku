@@ -47,3 +47,26 @@ export function puzzleSetterBlackKropkiButton() {
         vars.puzzleSetterCurrentSymbol = "●";
     });
 };
+
+export function puzzleSetterInequalityButton() {
+    vars.puzzleSetterInequalityButton.addEventListener('click', function() {
+        vars.puzzleSetterPositionButton.click();
+        vars.puzzleSetterInequalityHigherButton.click();
+    });
+};
+
+export function puzzleSetterInequalityHigherButton() {
+    vars.puzzleSetterInequalityHigherButton.addEventListener('click', function() {
+        vars.puzzleSetterPositionButton.click();
+        vars.puzzleSetterInequalityButton.click();
+        vars.puzzleSetterCurrentSymbol = ">";
+    });
+};
+
+export function puzzleSetterInequalityLowerButton() {
+    vars.puzzleSetterInequalityLowerButton.addEventListener('click', function() {
+        vars.puzzleSetterPositionButton.click();
+        vars.puzzleSetterInequalityButton.click();
+        vars.puzzleSetterCurrentSymbol = "<";
+    });
+};

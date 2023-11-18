@@ -24,9 +24,9 @@ export const vars = {
     isColourText: false,
     buttonClicked: false,
     footerText: 'Created by Alex ©2023. All rights reserved.',
-    puzzleTitle: 'Amazing Easy Sudoku',
-    puzzleAuthor: 'Auto Generator Inc.',
-    puzzleRules: 'Normal sudoku rules apply.',
+    puzzleTitle: 'Edit the puzzle title',
+    puzzleAuthor: 'Edit the Author.',
+    puzzleRules: 'Edit the rules.',
     puzzleSetterPositionButton: document.querySelector('.puzzle-setter-position-button'),
     puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
     puzzleSetterDigitsButton: document.querySelector('.puzzle-setter-digits-button'),
@@ -36,14 +36,18 @@ export const vars = {
     puzzleSetterKropkiButton: document.querySelector('.puzzle-setter-kropki-button'),
     puzzleSetterWhiteKropkiButton: document.querySelector('.puzzle-setter-white-kropki-button'),
     puzzleSetterBlackKropkiButton: document.querySelector('.puzzle-setter-black-kropki-button'),
+    puzzleSetterInequalityButton: document.querySelector('.puzzle-setter-inequality-button'),
+    puzzleSetterInequalityHigherButton: document.querySelector('.puzzle-setter-inequality-higher-button'),
+    puzzleSetterInequalityLowerButton: document.querySelector('.puzzle-setter-inequality-lower-button'),
     puzzleSetterCurrentSymbol: null,
     puzzleStartingPosition: false,
     initializeButtonGroups: function() {
         this.setterButtonsGroup = [this.puzzleSetterPositionButton, this.puzzleEditTitleButton];
         this.keypadButtonsGroup = [this.digitsNormalButton, this.digitsCornerButton, this.digitsCenterButton, this.digitsColourButton];
-        this.setterDigitsButtonsGroup = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton, this.puzzleSetterKropkiButton];
+        this.setterDigitsButtonsGroup = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton, this.puzzleSetterKropkiButton, this.puzzleSetterInequalityButton];
         this.setterXVButtonsGroup = [this.puzzleSetterXButton, this.puzzleSetterVButton];
         this.setterKropkiButtonsGroup = [this.puzzleSetterWhiteKropkiButton, this.puzzleSetterBlackKropkiButton];
+        this.setterInequalityButtonsGroup = [this.puzzleSetterInequalityHigherButton, this.puzzleSetterInequalityLowerButton];
     },
     modal: document.getElementById("editModal"),
 };

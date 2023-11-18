@@ -8,5 +8,6 @@ export function puzzleSetterPositionButton() {
         vars.puzzleSetterDigitsButton.click();
         unpressAllButtonsInGroup(vars.setterXVButtonsGroup);
         unpressAllButtonsInGroup(vars.setterKropkiButtonsGroup);
+        unpressAllButtonsInGroup(vars.setterInequalityButtonsGroup);
     });
 };
