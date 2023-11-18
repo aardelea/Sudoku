@@ -21,140 +21,22 @@
     </div>
 
     <div class="content-container">
-        <div class="keypad">
-            <div class="menu-row">
-                <div class="button-container">
-                    <button class="menu-button puzzle-setter-position-button button-pressed">Set puzzle</button>
-                    <div class="sub-section">
-                        <button class="menu-button puzzle-setter-digits-button button-pressed">Digits</button>
-                        
-                        <div class="button-container setter-container-2">
-                            <button class="menu-button puzzle-setter-x-v-button">X-V</button>
-                            <div class="setter-sub-section-2">
-                                <button class="menu-button puzzle-setter-x-button">X</button>
-                                <button class="menu-button puzzle-setter-v-button">V</button>
-                            </div>
-                        </div>
-
-                        <div class="button-container setter-container-2">
-                            <button class="menu-button puzzle-setter-kropki-button">Kropki ○●</button>
-                            <div class="setter-sub-section-2">
-                                <button class="menu-button puzzle-setter-white-kropki-button">○</button>
-                                <button class="menu-button puzzle-setter-black-kropki-button">●</button>
-                            </div>
-                        </div>
-
-                        <div class="button-container setter-container-2">
-                            <button class="menu-button puzzle-setter-inequality-button">Inequality < > </button>
-                            <div class="setter-sub-section-2">
-                                <button class="menu-button puzzle-setter-inequality-higher-button">></button>
-                                <button class="menu-button puzzle-setter-inequality-lower-button"><</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-row">
-                <button class="menu-button puzzle-edit-title-button">Edit title</button>
-            </div>
-            <div class="menu-row">
-                <button class="menu-button puzzle-save-button">Save</button>
-            </div>
+        <div id="container-create-puzzle">
+            <script>fetch('item-create-puzzle.html').then(response => response.text()).then(data => { document.getElementById('container-create-puzzle').innerHTML = data })</script>
         </div>
 
         <div class="container-sudoku-grid" id="container-sudoku-grid">
             <div class="sudoku-grid">
             </div>
 
-            <div class="keypad">
-                <div class="menu-row">
-                    <div class="stats-table">
-                        <table>
-                            <tbody>
-                                <tr><td>
-                                    <div class="sudoku-title">
-                                    </div>
-                                    <div class="sudoku-author">
-                                    </div>
-                                </td></tr>
-                                <tr><td>
-                                    <div class="puzzle-rules scrollable-cell">
-                                        Normal sudoku rules apply.
-                                    </div>
-                                </td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="menu-row">
-                    <button class="keypad-button menu-button reset-button">Reset</button>
-                    <div></div>
-                </div>
-
-                <div class="menu-row">
-                    <div class="keypad-row">
-                        <button class="keypad-button">1</button>
-                        <button class="keypad-button">2</button>
-                        <button class="keypad-button">3</button>
-                    </div>
-                    <button class="keypad-button menu-button digits-normal-button button-pressed">Normal</button>
-                </div>
-                <div class="menu-row">
-                    <div class="keypad-row">
-                        <button class="keypad-button">4</button>
-                        <button class="keypad-button">5</button>
-                        <button class="keypad-button">6</button>
-                    </div>
-                    <button class="keypad-button menu-button corner-button">Corner</button>
-                </div>
-                <div class="menu-row">
-                    <div class="keypad-row">
-                        <button class="keypad-button">7</button>
-                        <button class="keypad-button">8</button>
-                        <button class="keypad-button">9</button>
-                    </div>
-                    <button class="keypad-button menu-button center-button">Center</button>
-                </div>
-                <div class="menu-row">
-                    <div class="keypad-row">
-                        <button class="keypad-button keypad-0">0</button>
-                        <button class="keypad-button keypad-delete">Delete</button>
-                    </div>
-                    <button class="keypad-button menu-button colour-button">Colours</button>
-                </div>
-                <div class="menu-row">
-                    <div class="keypad-row">
-                        <button class="keypad-button menu-button undo-button">Undo</button>
-                        <button class="keypad-button menu-button redo-button">Redo</button>
-                    </div>
-                </div>
-
-                <div class="menu-row">
-                    <footer class="footer">
-                    </footer>
-                </div>
+            <div id="container-sudoku-keypad">
+                <script>fetch('item-sudoku-keypad.html').then(response => response.text()).then(data => { document.getElementById('container-sudoku-keypad').innerHTML = data })</script>
             </div>
         </div>
     </div>
 
-    <div id="editModal" class="modal">
-
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <form id="editForm">
-                <label for="puzzleTitle">Puzzle Title:</label>
-                <input type="text" id="puzzleTitle" name="puzzleTitle"><br><br>
-            
-                <label for="puzzleAuthor">Author:</label>
-                <input type="text" id="puzzleAuthor" name="puzzleAuthor"><br><br>
-            
-                <label for="puzzleRules">Rules:</label>
-                <textarea id="puzzleRules" name="puzzleRules"></textarea><br><br>
-            
-                <input type="button" class="menu-button" id="saveBtn" value="Save">
-            </form>
-        </div>
+    <div id="container-create-puzzle-modal">
+        <script>fetch('item-create-puzzle-modal.html').then(response => response.text()).then(data => { document.getElementById('container-create-puzzle-modal').innerHTML = data })</script>
     </div>
     
     <script type="module" src="scripts/menu.js"></script>
