@@ -28,7 +28,6 @@ export const vars = {
     puzzleAuthor: 'Auto Generator Inc.',
     puzzleRules: 'Normal sudoku rules apply.',
     puzzleStartingPositionButton: document.querySelector('.puzzle-starting-position-button'),
-    puzzleSetSolutionButton: document.querySelector('.puzzle-set-solution-button'),
     puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
     puzzleSetterDigitsButton: document.querySelector('.puzzle-setter-digits-button'),
     puzzleSetterXVButton: document.querySelector('.puzzle-setter-x-v-button'),
@@ -39,9 +38,8 @@ export const vars = {
     puzzleSetterBlackKropkiButton: document.querySelector('.puzzle-setter-black-kropki-button'),
     puzzleSetterCurrentSymbol: null,
     puzzleStartingPosition: false,
-    puzzleSetSolution: false,
     initializeButtonGroups: function() {
-        this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleSetSolutionButton, this.puzzleEditTitleButton];
+        this.setterButtonsGroup = [this.puzzleStartingPositionButton, this.puzzleEditTitleButton];
         this.keypadButtonsGroup = [this.digitsNormalButton, this.digitsCornerButton, this.digitsCenterButton, this.digitsColourButton];
         this.setterDigitsButtonsGroup = [this.puzzleSetterDigitsButton, this.puzzleSetterXVButton, this.puzzleSetterKropkiButton];
         this.setterXVButtonsGroup = [this.puzzleSetterXButton, this.puzzleSetterVButton];

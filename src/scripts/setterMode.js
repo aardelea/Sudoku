@@ -4,7 +4,6 @@ import { puzzleStartingPositionButton } from '/src/scripts/components/puzzleStar
 import { puzzleSetterDigitsButton } from '/src/scripts/components/puzzleSetterDigitsButton.js';
 import { puzzleSetterXVButton, puzzleSetterXButton, puzzleSetterVButton, puzzleSetterKropkiButton, puzzleSetterWhiteKropkiButton, puzzleSetterBlackKropkiButton } from '/src/scripts/components/puzzleSetterSymbolButton.js';
 import { manageAddingSymbolToBorder } from '/src/scripts/eventHandlers/manageAddingSymbolToBorder.js';
-import { puzzleSetSolutionButton } from '/src/scripts/components/puzzleSetSolutionButton.js';
 import { puzzleEditTitleButton } from '/src/scripts/components/puzzleEditTitleButton.js';
 
 
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     puzzleSetterWhiteKropkiButton();
     puzzleSetterBlackKropkiButton();
 
-    puzzleSetSolutionButton();
     puzzleEditTitleButton();
 
     vars.setterButtonsGroup.forEach(button => {
