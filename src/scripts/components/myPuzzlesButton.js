@@ -1,8 +1,8 @@
-import { vars } from '/src/scripts/config.js';
+import { vars } from '/scripts/config.js';
 
 
 export function myPuzzlesButton() {
     vars.myPuzzlesButton.addEventListener('click', function() {
-        window.location.href = '/src/my-puzzles.html';
+        window.location.href = '/my-puzzles.html';
     });
 };

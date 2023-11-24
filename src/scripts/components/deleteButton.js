@@ -1,4 +1,4 @@
-import { deleteKey } from '/src/scripts/utils/deleteKey.js';
+import { deleteKey } from '/scripts/utils/deleteKey.js';
 
 
 export function deleteButton() {

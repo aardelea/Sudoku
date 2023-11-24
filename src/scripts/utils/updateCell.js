@@ -1,7 +1,7 @@
-import { vars } from '/src/scripts/config.js';
-import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
-import { updateCellText } from '/src/scripts/utils/updateCellText.js';
-import { updateCellColor } from '/src/scripts/utils/updateCellColor.js';
+import { vars } from '/scripts/config.js';
+import { highlightConflicts } from '/scripts/utils/highlightConflicts.js';
+import { updateCellText } from '/scripts/utils/updateCellText.js';
+import { updateCellColor } from '/scripts/utils/updateCellColor.js';
 
 
 export function updateCell(digit, event=null) {

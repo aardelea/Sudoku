@@ -1,6 +1,6 @@
-import { vars } from '/src/scripts/config.js';
-import { deselectAllCells } from '/src/scripts/utils/deselectAllCells.js';
-import { removeSharedEdges } from '/src/scripts/utils/removeSharedEdges.js';
+import { vars } from '/scripts/config.js';
+import { deselectAllCells } from '/scripts/utils/deselectAllCells.js';
+import { removeSharedEdges } from '/scripts/utils/removeSharedEdges.js';
 
 
 export function mouseDown() {

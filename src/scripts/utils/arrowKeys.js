@@ -1,6 +1,6 @@
-import { vars } from '/src/scripts/config.js';
-import { moveActiveCell } from '/src/scripts/utils/moveActiveCell.js';
-import { removeSharedEdges } from '/src/scripts/utils/removeSharedEdges.js';
+import { vars } from '/scripts/config.js';
+import { moveActiveCell } from '/scripts/utils/moveActiveCell.js';
+import { removeSharedEdges } from '/scripts/utils/removeSharedEdges.js';
 
 
 export function arrowKeys(event) {

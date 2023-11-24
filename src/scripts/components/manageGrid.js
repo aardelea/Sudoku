@@ -1,5 +1,5 @@
-import { vars } from '/src/scripts/config.js';
-import { generateEmptyStartingGrid } from '/src/scripts/components/generateEmptyStartingGrid.js';
+import { vars } from '/scripts/config.js';
+import { generateEmptyStartingGrid } from '/scripts/components/generateEmptyStartingGrid.js';
 
 
 export function manageGrid() {

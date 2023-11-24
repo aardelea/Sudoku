@@ -1,4 +1,4 @@
-import { vars } from '/src/scripts/config.js';
+import { vars } from '/scripts/config.js';
 
 
 export function puzzleEditTitleButton() {

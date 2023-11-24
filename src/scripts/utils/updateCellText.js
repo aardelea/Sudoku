@@ -1,5 +1,5 @@
-import { vars } from '/src/scripts/config.js';
-import { handleTextUpdate } from '/src/scripts/utils/handleTextUpdate.js';
+import { vars } from '/scripts/config.js';
+import { handleTextUpdate } from '/scripts/utils/handleTextUpdate.js';
 
 
 export function updateCellText(cell, digit) {

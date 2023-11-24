@@ -1,6 +1,6 @@
-import { vars } from '/src/scripts/config.js';
-import { highlightConflicts } from '/src/scripts/utils/highlightConflicts.js';
-import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
+import { vars } from '/scripts/config.js';
+import { highlightConflicts } from '/scripts/utils/highlightConflicts.js';
+import { removeColoursFromCell } from '/scripts/utils/removeColoursFromCell.js';
 
 
 export function deleteKey() {

@@ -1,8 +1,8 @@
-import { vars } from '/src/scripts/config.js';
+import { vars } from '/scripts/config.js';
 
 
 export function homeButton() {
     vars.homeButton.addEventListener('click', function() {
-        window.location.href = '/src/home.html';
+        window.location.href = '/home.html';
     });
 };

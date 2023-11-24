@@ -1,4 +1,4 @@
-import { adjustColorDivSizes } from '/src/scripts/utils/adjustColorDivSizes.js';
+import { adjustColorDivSizes } from '/scripts/utils/adjustColorDivSizes.js';
 
 
 export function removeColoursFromCell(cell, digit) {

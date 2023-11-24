@@ -1,8 +1,8 @@
-import { vars } from '/src/scripts/config.js';
+import { vars } from '/scripts/config.js';
 
 
 export function setterModeButton() {
     vars.setterModeButton.addEventListener('click', function() {
-        window.location.href = '/src/setter-mode.html';
+        window.location.href = '/setter-mode.html';
     });
 };

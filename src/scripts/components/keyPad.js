@@ -1,5 +1,5 @@
-import { vars } from '/src/scripts/config.js';
-import { updateCell } from '/src/scripts/utils/updateCell.js';
+import { vars } from '/scripts/config.js';
+import { updateCell } from '/scripts/utils/updateCell.js';
 
 
 export function keyPad() {

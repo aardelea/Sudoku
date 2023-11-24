@@ -1,5 +1,5 @@
-import { removeColoursFromCell } from '/src/scripts/utils/removeColoursFromCell.js';
-import { adjustColorDivSizes } from '/src/scripts/utils/adjustColorDivSizes.js';
+import { removeColoursFromCell } from '/scripts/utils/removeColoursFromCell.js';
+import { adjustColorDivSizes } from '/scripts/utils/adjustColorDivSizes.js';
 
 
 export function updateCellColor(cell, digit) {

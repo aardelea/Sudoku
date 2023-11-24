@@ -1,7 +1,7 @@
-import { vars } from '/src/scripts/config.js';
-import { toggleButtonStateInGroup } from '/src/scripts/utils/toggleButtonStateInGroup.js';
-import { puzzleSetterPositionButton } from '/src/scripts/components/puzzleSetterPositionButton.js';
-import { puzzleSetterDigitsButton } from '/src/scripts/components/puzzleSetterDigitsButton.js';
+import { vars } from '/scripts/config.js';
+import { toggleButtonStateInGroup } from '/scripts/utils/toggleButtonStateInGroup.js';
+import { puzzleSetterPositionButton } from '/scripts/components/puzzleSetterPositionButton.js';
+import { puzzleSetterDigitsButton } from '/scripts/components/puzzleSetterDigitsButton.js';
 import { 
     puzzleSetterXVButton, 
     puzzleSetterXButton, 
@@ -12,9 +12,9 @@ import {
     puzzleSetterInequalityButton,
     puzzleSetterInequalityHigherButton,
     puzzleSetterInequalityLowerButton,
-} from '/src/scripts/components/puzzleSetterSymbolButton.js';
-import { manageAddingSymbolToBorder } from '/src/scripts/eventHandlers/manageAddingSymbolToBorder.js';
-import { puzzleEditTitleButton } from '/src/scripts/components/puzzleEditTitleButton.js';
+} from '/scripts/components/puzzleSetterSymbolButton.js';
+import { manageAddingSymbolToBorder } from '/scripts/eventHandlers/manageAddingSymbolToBorder.js';
+import { puzzleEditTitleButton } from '/scripts/components/puzzleEditTitleButton.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {

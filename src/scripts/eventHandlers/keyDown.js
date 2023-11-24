@@ -1,11 +1,11 @@
-import { updateMostRecentActiveCell } from '/src/scripts/eventHandlers/mouseDown.js';
-import { performUndo } from '/src/scripts/components/undoButton.js';
-import { performRedo } from '/src/scripts/components/redoButton.js';
-import { updateCell } from '/src/scripts/utils/updateCell.js';
-import { arrowKeys } from '/src/scripts/utils/arrowKeys.js';
-import { deleteKey } from '/src/scripts/utils/deleteKey.js';
-import { toggleButtonsWithSpace } from '/src/scripts/utils/toggleButtonsWithSpace.js';
-import { vars } from '/src/scripts/config.js';
+import { updateMostRecentActiveCell } from '/scripts/eventHandlers/mouseDown.js';
+import { performUndo } from '/scripts/components/undoButton.js';
+import { performRedo } from '/scripts/components/redoButton.js';
+import { updateCell } from '/scripts/utils/updateCell.js';
+import { arrowKeys } from '/scripts/utils/arrowKeys.js';
+import { deleteKey } from '/scripts/utils/deleteKey.js';
+import { toggleButtonsWithSpace } from '/scripts/utils/toggleButtonsWithSpace.js';
+import { vars } from '/scripts/config.js';
 
 
 export function keyDown() {

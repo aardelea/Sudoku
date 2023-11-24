@@ -1,5 +1,5 @@
-import { removeExistingConflictHighlights } from '/src/scripts/utils/removeExistingConflictHighlights.js';
-import { gatherConflictingCells } from '/src/scripts/utils/gatherConflictingCells.js';
+import { removeExistingConflictHighlights } from '/scripts/utils/removeExistingConflictHighlights.js';
+import { gatherConflictingCells } from '/scripts/utils/gatherConflictingCells.js';
 
 
 let conflictingCells = new Set();

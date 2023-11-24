@@ -1,4 +1,4 @@
-import { adjustFontSize } from '/src/scripts/utils/adjustFontSize.js';
+import { adjustFontSize } from '/scripts/utils/adjustFontSize.js';
 
 
 export function handleTextUpdate(cell, digit, textType) {
