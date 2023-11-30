@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sudoku-dev-103905-authRole",
+      "UnauthRoleArn": "arn:aws:iam::629128950328:role/amplify-sudoku-dev-103905-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::629128950328:role/amplify-sudoku-dev-103905-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-sudoku-dev-103905-deployment",
+      "UnauthRoleName": "amplify-sudoku-dev-103905-unauthRole",
+      "StackName": "amplify-sudoku-dev-103905",
+      "StackId": "arn:aws:cloudformation:eu-west-1:629128950328:stack/amplify-sudoku-dev-103905/af738ed0-8f6c-11ee-9a52-061d84a4d609",
+      "AmplifyAppId": "d6qcwmidknk4v"
+    },
+    "categories": {
+      "auth": {
+        "sudokuddc33516": {}
+      }
+    }
+  }
+}
