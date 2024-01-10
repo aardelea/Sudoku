@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             Amplify.configure(awsmobile);
-            console.log("Amplify config=",Amplify.getConfig())
             
             const { isSignUpComplete, userId, nextStep } = await signUp({
                 username: email,
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            console.log(userId);
             document.getElementById('registrationMessage').textContent = 'Registration successful! Check your email for verification.';
         } catch (error) {
             console.error('Error signing up:', error);
