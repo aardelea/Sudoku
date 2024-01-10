@@ -31,8 +31,9 @@ body {
 .input-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-#email, #password {
+#email, #password, #verification-code {
     margin-top: 10px;
     width: 100%;
     height: 40px;
