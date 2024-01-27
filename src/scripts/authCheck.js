@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
         Amplify.configure(awsmobile);
         const { username, userId, signInDetails } = await getCurrentUser();
-        console.log("username=",username)
-        console.log("userId=",userId)
-        console.log("signInDetails=",signInDetails)
-        document.getElementById('auth-container').innerHTML = 'User logged in -> More coming soon.';
+        document.getElementById('auth-container').innerHTML = `
+            <div class="auth-message-container" style="margin-top: 15%;">
+                User logged in -> More coming soon.
+            </div>
+        `;
 
     } catch (err) {
         document.getElementById('auth-container').innerHTML = `
