@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
                 <button class="auth-button" id="create-account-page">Create account</button>
             `;
-            document.getElementById('create-account-page').addEventListener('click', createAccountButton());
-            document.getElementById('log-in').addEventListener('click', logInButton());
+            document.getElementById('create-account-page').addEventListener('click', createAccountButton);
+            document.getElementById('log-in').addEventListener('click', logInButton);
             
         } else {
             document.getElementById('auth-container').innerHTML = `
