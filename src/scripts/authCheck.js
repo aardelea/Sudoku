@@ -7,8 +7,6 @@ import { createAccountButton } from 'scripts/components/createAccountButton.js';
 import { proceedAsGuestButton } from 'scripts/components/proceedAsGuestButton.js';
 
 
-
-
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         Amplify.configure(awsmobile);
