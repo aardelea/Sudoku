@@ -46,15 +46,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 function renderAuthContainer(content) {
     const authContainer = document.getElementById('auth-container');
     authContainer.innerHTML = content;
+    attachEventListeners();
 };
 
 
 function attachEventListeners() {
-    const guestLoginBtn = document.getElementById('guest-login');
-    const loginBtn = document.getElementById('log-in');
-    const createAccountBtn = document.getElementById('create-account-page');
+    const authContainer = document.getElementById('auth-container');
 
-    if (guestLoginBtn) guestLoginBtn.addEventListener('click', proceedAsGuestButton);
-    if (loginBtn) loginBtn.addEventListener('click', logInButton);
-    if (createAccountBtn) createAccountBtn.addEventListener('click', createAccountButton);
+    authContainer.addEventListener('mousedown', function(event) {
+        if (event.target.id === 'guest-login') {
+            proceedAsGuestButton();
+        } else if (event.target.id === 'log-in') {
+            logInButton();
+        } else if (event.target.id === 'create-account-page') {
+            createAccountButton();
+        }
+    });
 };
