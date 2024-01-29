@@ -3,6 +3,7 @@ import { fetchAuthSession } from 'aws-amplify/auth';
 
 import awsmobile from 'scripts/aws-exports.js';
 import { logInButton } from 'scripts/components/logInButton.js';
+import { signOutButton } from 'scripts/components/signOutButton.js';
 import { createAccountButton } from 'scripts/components/createAccountButton.js';
 import { proceedAsGuestButton } from 'scripts/components/proceedAsGuestButton.js';
 
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         Amplify.configure(awsmobile);
         const { idToken } = (await fetchAuthSession()).tokens ?? {};
 
-        const authMessage = `<div class="auth-message-container" style="margin-top: 15%;">Welcome back, ${idToken.payload.email}!</div>`;
+        const authMessage = `<div class="auth-message-container" style="margin-top: 15%;">Welcome back, ${idToken.payload.email}!</div> <button class="auth-button" id="sign-out">Sign out</button><p id="registrationMessage"></p>`;
         
         if (window.location.pathname === '/my-puzzles.html') {
             renderAuthContainer(authMessage);
@@ -60,6 +61,9 @@ function attachEventListeners() {
             logInButton();
         } else if (event.target.id === 'create-account-page') {
             createAccountButton();
-        }
+        }  else if (event.target.id === 'sign-out') {
+            signOutButton();
+        };
+        
     });
 };
