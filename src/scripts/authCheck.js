@@ -1,17 +1,20 @@
 import { Amplify } from 'aws-amplify';
-import { getCurrentUser } from 'aws-amplify/auth';
+import { fetchAuthSession } from 'aws-amplify/auth';
+
 import awsmobile from 'scripts/aws-exports.js';
 import { logInButton } from 'scripts/components/logInButton.js';
 import { createAccountButton } from 'scripts/components/createAccountButton.js';
 import { proceedAsGuestButton } from 'scripts/components/proceedAsGuestButton.js';
 
 
+
+
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         Amplify.configure(awsmobile);
-        const currentUser = await getCurrentUser();
+        const { idToken } = (await fetchAuthSession()).tokens ?? {};
 
-        const authMessage = `<div class="auth-message-container" style="margin-top: 15%;">Welcome back, ${currentUser.username}!</div>`;
+        const authMessage = `<div class="auth-message-container" style="margin-top: 15%;">Welcome back, ${idToken.payload.email}!</div>`;
         
         if (window.location.pathname === '/my-puzzles.html') {
             renderAuthContainer(authMessage);
