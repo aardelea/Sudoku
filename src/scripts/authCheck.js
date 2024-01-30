@@ -9,18 +9,12 @@ import { createAccountButton } from 'scripts/components/createAccountButton.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        document.querySelectorAll('.my-puzzles-button, .create-puzzle-button').forEach(button => {
-            button.classList.remove('disabled');
-        });
         Amplify.configure(awsmobile);
         const { idToken } = (await fetchAuthSession()).tokens ?? {};
         const authMessage = `<div class="auth-message-container">Welcome back, ${idToken.payload.email}!</div> <button class="auth-button" id="sign-out">Sign out</button><p id="registrationMessage"></p>`;
         renderAuthContainer(authMessage);
 
     } catch (err) {
-        document.querySelectorAll('.my-puzzles-button, .create-puzzle-button').forEach(button => {
-            button.classList.add('disabled');
-        });
         const notLoggedInMessage = `
             <button class="auth-button" id="log-in">Log In</button>
             <div class="auth-input-container">

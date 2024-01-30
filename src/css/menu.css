@@ -41,10 +41,3 @@
     color: var(--colour-white);
     background-color: var(--colour-keypad-button-background);
 }
-.menu-button.disabled {
-    color: #ccc;
-    background-color: #eee;
-    border-color: #ddd;
-    cursor: not-allowed;
-    pointer-events: none;
-}
