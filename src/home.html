@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/auth.css">
     <title>Home</title>
 </head>
 
@@ -28,7 +29,13 @@
         <script>fetch('item-home-stats.html').then(response => response.text()).then(data => { document.getElementById('container-home').innerHTML = data })</script>
     </div>
 
+    <div class="auth-container" id="auth-container">
+        <!-- populated by authCheck.js -->
+    </div>
+
     <script type="module" src="scripts/menu.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+
 </body>
 
 </html>

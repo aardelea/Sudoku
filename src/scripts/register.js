@@ -57,7 +57,7 @@ async function authConfirmSignUp(event) {
         document.getElementById('registrationMessage').textContent = 'Account verified! Redirecting...';
         setTimeout(() => {
             window.location.href = '/home.html';
-        }, 2000); // Redirect after 2 seconds
+        }, 1000); // Redirect after 2 seconds
     } catch (error) {
         console.error('Error verifying account:', error);
         document.getElementById('registrationMessage').textContent = error.message;
