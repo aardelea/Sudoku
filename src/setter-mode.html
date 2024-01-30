@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/keypad.css">
+    <link rel="stylesheet" href="css/auth.css">
     <title>Setter Mode</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
         </script>
     </div>
 
-    <div class="content-container">
+    <div class="content-container" id="content-container">
         <div id="container-create-puzzle">
             <script>fetch('item-create-puzzle.html').then(response => response.text()).then(data => { document.getElementById('container-create-puzzle').innerHTML = data })</script>
         </div>
@@ -38,10 +39,15 @@
     <div id="container-create-puzzle-modal">
         <script>fetch('item-create-puzzle-modal.html').then(response => response.text()).then(data => { document.getElementById('container-create-puzzle-modal').innerHTML = data })</script>
     </div>
+
+    <div class="auth-container" id="auth-container">
+        <!-- populated by authCheck.js -->
+    </div>
     
     <script type="module" src="scripts/menu.js"></script>
     <script type="module" src="scripts/setterMode.js"></script>
     <script type="module" src="scripts/grid.js"></script>
     <script type="module" src="scripts/keypad.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
