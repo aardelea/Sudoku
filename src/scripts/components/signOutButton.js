@@ -12,9 +12,9 @@ async function authSignOut(event) {
     try {
         await signOut();
         document.getElementById('registrationMessage').textContent = 'Signout successful!';
-        setTimeout(() => {
-            window.location.href = '/home.html';
-        }, 1000); // Redirect after 2 seconds
+        document.querySelectorAll('.my-puzzles-button, .create-puzzle-button').forEach(button => {
+            button.classList.add('disabled');
+        });
     } catch (error) {
         console.log('Error signing out: ', error);
         document.getElementById('registrationMessage').textContent = error.message;

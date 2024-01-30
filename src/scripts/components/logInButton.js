@@ -17,9 +17,6 @@ async function authLogin(event) {
             password,
         });
         document.getElementById('registrationMessage').textContent = 'Login successful!';
-        setTimeout(() => {
-            window.location.href = '/home.html';
-        }, 1000); // Redirect after 2 seconds
     } catch (error) {
         console.error('Error signing in:', error);
         document.getElementById('registrationMessage').textContent = error.message;
