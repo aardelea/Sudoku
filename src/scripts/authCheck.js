@@ -15,9 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const authMessage = `<div class="auth-message-container">Welcome back, ${idToken.payload.email}!</div> <button class="auth-button" id="sign-out">Sign out</button><p id="registrationMessage"></p>`;
         
-        if (window.location.pathname === '/my-puzzles.html') {
-            renderAuthContainer(authMessage);
-        } else if (window.location.pathname === '/home.html') {
+        if (window.location.pathname === '/home.html') {
             renderAuthContainer(authMessage);
         } else {
             renderAuthContainer(authMessage + `<button class="landing-button" id="guest-login">Continue</button>`);
@@ -35,9 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <button class="auth-button" id="create-account-page">Create account</button>
         `;
 
-        if (window.location.pathname === '/my-puzzles.html') {
-            renderAuthContainer(`<div class="auth-message-container"">You must be logged in to access your puzzles.</div>` + notLoggedInMessage);
-        } else if (window.location.pathname === '/home.html') {
+        if (window.location.pathname === '/home.html') {
             renderAuthContainer(notLoggedInMessage);
         } else {
             renderAuthContainer(`<button class="landing-button" id="guest-login">Proceed as Guest</button>` + notLoggedInMessage);
