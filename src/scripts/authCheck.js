@@ -32,26 +32,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function renderAuthContainer(content) {
     try{
-        const authContainer = document.getElementById('auth-container');
-        authContainer.innerHTML = content;
-        attachEventListeners();
+        document.getElementById('auth-container').innerHTML = content;
+        document.getElementById('auth-container').addEventListener('mousedown', function(event) {
+            if (event.target.id === 'log-in') {
+                logInButton();
+            } else if (event.target.id === 'create-account-page') {
+                createAccountButton();
+            }  else if (event.target.id === 'sign-out') {
+                signOutButton();
+            };
+        });
+
     } catch (err) {
         console.log(err)
     };
-};
-
-
-function attachEventListeners() {
-    const authContainer = document.getElementById('auth-container');
-
-    authContainer.addEventListener('mousedown', function(event) {
-        if (event.target.id === 'log-in') {
-            logInButton();
-        } else if (event.target.id === 'create-account-page') {
-            createAccountButton();
-        }  else if (event.target.id === 'sign-out') {
-            signOutButton();
-        };
-        
-    });
 };
