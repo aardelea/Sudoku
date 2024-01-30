@@ -12,7 +12,7 @@ export const vars = {
     digitsColourButton: document.querySelector('.colour-button'),
     homeButton: document.querySelector('.home-button'),
     myPuzzlesButton: document.querySelector('.my-puzzles-button'),
-    findPuzzlesButton: document.querySelector('.find-puzzles-button'),
+    findPuzzlesButton: document.querySelector('.play-puzzles-button'),
     setterModeButton: document.querySelector('.create-puzzle-button'),
     ctrlOrShiftPressed: false,
     cell: null,

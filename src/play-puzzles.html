@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/auth.css">
-    <title>Find Puzzles</title>
+    <title>Play</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <script>
             fetch('item-menu.html').then(response => response.text()).then(data => {
                 document.getElementById('container-menu').innerHTML = data;
-                document.getElementById('container-menu').querySelector('.find-puzzles-button').classList.add('button-pressed');
+                document.getElementById('container-menu').querySelector('.play-puzzles-button').classList.add('button-pressed');
             })
         </script>
     </div>
