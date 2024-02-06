@@ -1,0 +1,10 @@
+{
+  "resourceName": "DynamoSudoku",
+  "tableName": "DynamoSudoku",
+  "partitionKey": {
+    "fieldName": "UID",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
