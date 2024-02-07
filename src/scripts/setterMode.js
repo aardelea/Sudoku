@@ -20,7 +20,9 @@ import { puzzleSaveButton } from './components/puzzleSaveButton.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     puzzleSetterPositionButton();
-    vars.puzzleSetterPositionButton.click();
+    if(vars.puzzleSetterPositionButton){
+        vars.puzzleSetterPositionButton.click();
+    };
     puzzleSetterDigitsButton();
     puzzleSetterXVButton();
     puzzleSetterXButton();
@@ -35,35 +37,55 @@ document.addEventListener('DOMContentLoaded', () => {
     puzzleEditTitleButton();
     puzzleSaveButton();
 
-    vars.setterButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, vars.setterButtonsGroup);
+    if(vars.setterButtonsGroup){
+        vars.setterButtonsGroup.forEach(button => {
+            if(button){
+                button.addEventListener('click', function() {
+                    toggleButtonStateInGroup(button, vars.setterButtonsGroup);
+                });
+            }
         });
-    });
+    };
 
-    vars.setterDigitsButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, vars.setterDigitsButtonsGroup);
+    if(vars.setterDigitsButtonsGroup){
+        vars.setterDigitsButtonsGroup.forEach(button => {
+            if(button){
+                button.addEventListener('click', function() {
+                    toggleButtonStateInGroup(button, vars.setterDigitsButtonsGroup);
+                });
+            };
         });
-    });
+    };
+    
+    if(vars.setterXVButtonsGroup){
+        vars.setterXVButtonsGroup.forEach(button => {
+            if(button){
+                button.addEventListener('click', function() {
+                    toggleButtonStateInGroup(button, vars.setterXVButtonsGroup);
+                });
+            };
+        });
+    };
 
-    vars.setterXVButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, vars.setterXVButtonsGroup);
+    if(vars.setterKropkiButtonsGroup){
+        vars.setterKropkiButtonsGroup.forEach(button => {
+            if(button){
+                button.addEventListener('click', function() {
+                    toggleButtonStateInGroup(button, vars.setterKropkiButtonsGroup);
+                });
+            };
         });
-    });
+    };    
 
-    vars.setterKropkiButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, vars.setterKropkiButtonsGroup);
+    if(vars.setterInequalityButtonsGroup){
+        vars.setterInequalityButtonsGroup.forEach(button => {
+            if(button){
+                button.addEventListener('click', function() {
+                    toggleButtonStateInGroup(button, vars.setterInequalityButtonsGroup);
+                });
+            };
         });
-    });
-
-    vars.setterInequalityButtonsGroup.forEach(button => {
-        button.addEventListener('click', function() {
-            toggleButtonStateInGroup(button, vars.setterInequalityButtonsGroup);
-        });
-    });
+    };
 });
 
 manageAddingSymbolToBorder();
