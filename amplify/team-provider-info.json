@@ -17,6 +17,9 @@
       },
       "storage": {
         "dynamoa8c0db5d": {}
+      },
+      "api": {
+        "sudoku": {}
       }
     }
   }
