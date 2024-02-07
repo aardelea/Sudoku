@@ -15,6 +15,7 @@ import {
 } from './components/puzzleSetterSymbolButton.js';
 import { manageAddingSymbolToBorder } from './eventHandlers/manageAddingSymbolToBorder.js';
 import { puzzleEditTitleButton } from './components/puzzleEditTitleButton.js';
+import { puzzleSaveButton } from './components/puzzleSaveButton.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     puzzleSetterInequalityLowerButton();
 
     puzzleEditTitleButton();
+    puzzleSaveButton();
 
     vars.setterButtonsGroup.forEach(button => {
         button.addEventListener('click', function() {

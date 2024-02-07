@@ -29,6 +29,7 @@ export const vars = {
     puzzleRules: 'Edit the rules.',
     puzzleSetterPositionButton: document.querySelector('.puzzle-setter-position-button'),
     puzzleEditTitleButton: document.querySelector('.puzzle-edit-title-button'),
+    puzzleSaveButton: document.querySelector('.puzzle-save-button'),
     puzzleSetterDigitsButton: document.querySelector('.puzzle-setter-digits-button'),
     puzzleSetterXVButton: document.querySelector('.puzzle-setter-x-v-button'),
     puzzleSetterXButton: document.querySelector('.puzzle-setter-x-button'),
