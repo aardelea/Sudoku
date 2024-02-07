@@ -2,7 +2,10 @@ import { signIn } from 'aws-amplify/auth';
 
 
 export function logInButton() {
-    document.getElementById('log-in').addEventListener('click', authLogin);
+    const logInButton = document.getElementById('log-in');
+    if (logInButton) {
+        logInButton.addEventListener('click', authLogin);
+    };
 };
 
 

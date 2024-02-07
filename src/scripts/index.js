@@ -1,5 +1,5 @@
-import { logInButton } from 'scripts/components/logInButton.js';
-import { createAccountButton } from 'scripts/components/createAccountButton.js';
+import { logInButton } from './components/logInButton.js';
+import { createAccountButton } from './components/createAccountButton.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
