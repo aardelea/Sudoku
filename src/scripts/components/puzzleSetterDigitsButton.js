@@ -1,5 +1,5 @@
-import { vars } from '/scripts/config.js';
-import { unpressAllButtonsInGroup } from '/scripts/utils/unpressAllButtonsInGroup.js';
+import { vars } from '../config.js';
+import { unpressAllButtonsInGroup } from '../utils/unpressAllButtonsInGroup.js';
 
 
 export function puzzleSetterDigitsButton() {

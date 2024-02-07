@@ -1,6 +1,6 @@
-import { vars } from '/scripts/config.js';
-import { checkIfInnerBorder } from '/scripts/utils/checkIfInnerBorder.js';
-import { addSymbolToBorder } from '/scripts/utils/addSymbolToBorder.js';
+import { vars } from '../config.js';
+import { checkIfInnerBorder } from '../utils/checkIfInnerBorder.js';
+import { addSymbolToBorder } from '../utils/addSymbolToBorder.js';
 
 
 export function manageAddingSymbolToBorder() {

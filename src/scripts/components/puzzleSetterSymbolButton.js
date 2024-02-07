@@ -1,4 +1,4 @@
-import { vars } from '/scripts/config.js';
+import { vars } from '../config.js';
 
 
 export function puzzleSetterXVButton() {
