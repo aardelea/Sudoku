@@ -1,5 +1,8 @@
 export function createAccountButton() {
-    document.getElementById('create-account-page').addEventListener('click', () => {
-        window.location.href = '/register.html';
-    });
+    const createAccButton = document.getElementById('create-account-page');
+    if (createAccButton) {
+        createAccButton.addEventListener('click', () => {
+            window.location.href = '/register.html';
+        });
+    };
 };
