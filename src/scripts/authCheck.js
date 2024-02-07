@@ -51,17 +51,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function renderAuthContainer(content) {
     try{
-        document.getElementById('auth-container').innerHTML = content;
-        document.getElementById('auth-container').addEventListener('mousedown', function(event) {
-            if (event.target.id === 'log-in') {
-                logInButton();
-            } else if (event.target.id === 'create-account-page') {
-                createAccountButton();
-            }  else if (event.target.id === 'sign-out') {
-                signOutButton();
-            };
-        });
-
+        if(document.getElementById('auth-container')){
+            document.getElementById('auth-container').innerHTML = content;
+            document.getElementById('auth-container').addEventListener('mousedown', function(event) {
+                if (event.target.id === 'log-in') {
+                    logInButton();
+                } else if (event.target.id === 'create-account-page') {
+                    createAccountButton();
+                }  else if (event.target.id === 'sign-out') {
+                    signOutButton();
+                };
+            });
+        };
     } catch (err) {
         console.log(err)
     };
