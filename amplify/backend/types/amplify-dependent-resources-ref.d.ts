@@ -11,7 +11,7 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "storage": {
-    "DynamoSudoku": {
+    "dynamoa8c0db5d": {
       "Arn": "string",
       "Name": "string",
       "PartitionKeyName": "string",

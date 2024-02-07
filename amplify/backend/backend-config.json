@@ -28,7 +28,7 @@
     }
   },
   "storage": {
-    "DynamoSudoku": {
+    "dynamoa8c0db5d": {
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB"
     }
