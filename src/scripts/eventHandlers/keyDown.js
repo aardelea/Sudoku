@@ -13,6 +13,12 @@ export function keyDown() {
     updateMostRecentActiveCell();
 
     document.addEventListener('keydown', (event) => {
+
+        // Check if the modal for editing puzzle details is displayed.
+        if (vars.modal.style.display === "block") {
+            return;
+        }
+
         vars.ctrlOrShiftPressed = event.ctrlKey || event.shiftKey;
 
         if (event.altKey) {
