@@ -7,8 +7,16 @@ import awsmobile from 'scripts/aws-exports.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('create-account').addEventListener('click', authSignUp);
-    document.getElementById('verify-account').addEventListener('click', authConfirmSignUp);
+    const createAccountBtn = document.getElementById('create-account');
+    const verifyAccountBtn = document.getElementById('verify-account');
+
+    if (createAccountBtn) {
+        createAccountBtn.addEventListener('click', authSignUp);
+    };
+
+    if (verifyAccountBtn) {
+        verifyAccountBtn.addEventListener('click', authConfirmSignUp);
+    };
 });
 
 
