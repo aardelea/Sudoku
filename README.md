@@ -1,0 +1,37 @@
+Advanced Sudoku web-app with auth & puzzle saving features built using JS, NPM, AWS Amplify, DynamoDB, Cognito
+
+Puzzle featues
+- Border highlighting of selected cells.
+- Multi-cell selection and removal of highlighted-shared cells.
+- Double-clicking on digit selects all other digits of same value in the grid.
+- Ability to enter normal digits and 2 types of pencilmarks (centre and corner)
+- Pencilmarks change in size depending how many are added to a cell, making sure they don't overflow to other cells.
+- Corner-pencilmarks are placed clock-wise around the cell.
+- Conflict-highlighting: if the same digit exists in the same box, column or row, it will be highlighted with red. Same applies to Pencilmarks.
+- Switching between normal digits and pencilmarks can be done via keyboard using SPACE (iterates through options), SHIFT (corner pencilmarks), CTRL (centre-pencilmarks).
+- Can move throughout the grid using arrow-keys.
+- Can multi-select using SHIFT + arrow-keys.
+- Ability to shade cells using various colours.
+- Undo and Redo which capture the full history of changes: normal digits, pencilmarks, colours.
+- Ability to enter advanced sudoku symbols: X-V signs, Kropki dots, inequality signs.
+- Reset button to clear everything off.
+
+Auth:
+- Ability to play puzzles as guest, without logging in.
+- Some content (e.g. creating puzzles) locked for guests.
+- Auth handled by AWS Cognito.
+- Register an account with email, a verificiation code will be sent to that email, return to Sudoku app to enter code.
+- Session tracking across multiple pages
+- If logged in, all content is unlocked.
+
+Puzzle saving:
+- For signed-in users only.
+- Handled by GraphQL API and stored in DynamoDB.
+- Can set puzzle title, author and rules.
+
+Not done, wishlist:
+- Retrieve and play saved puzzles when navigating to "Play" page.
+- Retrieve puzzles you've created, started or completed in the "My Puzzles" page.
+- Don't allow someone to create a puzzle with the same name.
+- Auto update statistics on Home page using data from Cognito and DynamoDB.
+- Custom and public URL.
