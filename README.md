@@ -16,6 +16,7 @@ Puzzle featues
 - Ability to enter advanced sudoku symbols: X-V signs, Kropki dots, inequality signs.
 - Reset button to clear everything off.
 
+
 Auth:
 - Ability to play puzzles as guest, without logging in.
 - Some content (e.g. creating puzzles) locked for guests.
@@ -35,3 +36,15 @@ Not done, wishlist:
 - Don't allow someone to create a puzzle with the same name.
 - Auto update statistics on Home page using data from Cognito and DynamoDB.
 - Custom and public URL.
+- Add more tests to cover all features.
+
+Screenshots:
+![image](https://github.com/aardelea/Sudoku/assets/98484362/c2975294-2711-431b-bfd2-5a1266023386)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/3189681c-3554-4050-b2a5-89d4979235b6)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/69b20d71-491e-48a0-b214-cc10edbd9769)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/88afe976-8198-489a-960f-4dbeb95ddd1a)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/de7b05bf-f1f4-47be-8d66-05357052f6e8)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/e9067fa9-4fb9-4cd7-a1dd-9418f43da54b)
+
+
+
