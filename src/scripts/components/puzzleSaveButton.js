@@ -1,5 +1,8 @@
 import { Amplify } from 'aws-amplify';
+import { generateClient } from 'aws-amplify/api';
 import { createSudokuTable } from '../../graphql/mutations.js';
+import config from '../../amplifyconfiguration.json';
+
 import { vars } from '../config.js';
 
 
@@ -20,10 +23,17 @@ export function puzzleSaveButton() {
                 solvers: [], 
             };
     
-            console.log('puzzleData = ',puzzleData);
+            console.log("puzzleData = ",puzzleData);
     
             try {
-                await Amplify.API.graphql(Amplify.graphqlOperation(createSudokuTable, { input: puzzleData }));
+                Amplify.configure(config);
+                const client = generateClient();
+                const result = await client.graphql({
+                    query: createSudokuTable,
+                    variables: {
+                        input: puzzleData
+                    }
+                });
                 console.log('Puzzle saved successfully');
             } catch (error) {
                 console.error('Error saving puzzle:', error);
