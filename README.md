@@ -7,6 +7,10 @@ Screenshots:
 ![image](https://github.com/aardelea/Sudoku/assets/98484362/88afe976-8198-489a-960f-4dbeb95ddd1a)
 ![image](https://github.com/aardelea/Sudoku/assets/98484362/de7b05bf-f1f4-47be-8d66-05357052f6e8)
 ![image](https://github.com/aardelea/Sudoku/assets/98484362/e9067fa9-4fb9-4cd7-a1dd-9418f43da54b)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/37c1c007-3f1a-40b5-b59b-8f2aeebd6579)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/800d7fe6-c3a8-4593-ba78-889caaaea039)
+![image](https://github.com/aardelea/Sudoku/assets/98484362/d7008da9-e2e4-461a-b1fd-b223e1aa4ef2)
+
 
 Puzzle featues
 - Border highlighting of selected cells.
